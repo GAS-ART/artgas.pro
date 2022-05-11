@@ -233,6 +233,14 @@ body.lock {
   position: relative;
   max-width: 500px;
 }
+.header__actions {
+  display: flex;
+  align-items: center;
+  color: #288FB1;
+}
+.header__language {
+  margin-right: 40px;
+}
 .logo__video {
   position: absolute;
   top: 0;
@@ -270,6 +278,83 @@ body.lock {
          1.875rem + 4.375 * (100vw - 20rem) / 55
       );
   }
+}
+
+.actions-header__language {
+  position: relative;
+  font-size: 1.125rem;
+}
+.actions-header__language::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 9px;
+}
+.actions-header__language:hover .language__select {
+  opacity: 1;
+  visibility: visible;
+}
+.actions-header__language:hover .language__select:not(:first-child) {
+  bottom: -30px;
+}
+.actions-header__language:hover .language__select:last-child {
+  bottom: -60px;
+}
+
+.language__select {
+  transition: all 0.3s ease 0s;
+}
+.language__select:not(:first-child) {
+  position: absolute;
+  bottom: -40px;
+  opacity: 0;
+  visibility: hidden;
+}
+.language__select:last-child {
+  bottom: -70px;
+}
+.language__select:last-child::before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: 0;
+  width: 100%;
+  height: 9px;
+}
+.language__select:last-child .language__link .language__icon.ru {
+  left: 2px;
+}
+.language__link {
+  display: flex;
+  align-items: center;
+}
+.language__text {
+  margin-right: 10px;
+  height: 100%;
+  cursor: pointer;
+  font-weight: 600;
+}
+.language__icon {
+  width: 35px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+.language__icon.ua {
+  background-image: url("/img/flags/ua/2.jpg");
+}
+.language__icon.en {
+  background-image: url("/img/flags/en/1.jpg");
+}
+.language__icon.ru {
+  position: relative;
+  background-image: url("/img/flags/ru/russia.svg");
+  background-size: cover;
+  top: -5px;
+  left: 3px;
 }
 
 /*

@@ -15,25 +15,22 @@
                <div class="actions-header__language language">
                   <div class="language__select">
                      <a class="language__link" href="{{ route('locale', __('language.current_lang')) }}">
-                        <br>
                         <div class="language__text">@lang('language.current_lang')</div>
                         <div class="language__icon @lang('language.current_lang')"></div>
                      </a>
                   </div>
                   <div class="language__select">
                      <a class="language__link" href="{{ route('locale', __('language.set_lang')) }}">
-                        <br>
                         <div class="language__text">@lang('language.set_lang')</div>
                         <div class="language__icon @lang('language.set_lang')"></div>
                      </a>
                   </div>
-               </div>
-               <div class="language__select">
-                  <a class="language__link" href="{{ route('locale', __('language.set_lang_2')) }}">
-                     <br>
-                     <div class="language__text">@lang('language.set_lang_2')</div>
-                     <div class="language__icon @lang('language.set_lang_2')"></div>
-                  </a>
+                  <div class="language__select">
+                     <a class="language__link" href="{{ route('locale', __('language.set_lang_2')) }}">
+                        <div class="language__text">@lang('language.set_lang_2')</div>
+                        <div class="language__icon @lang('language.set_lang_2')"></div>
+                     </a>
+                  </div>
                </div>
             </div>
             <div data-popup-id="contats" class="header__contacts link-on-popup">Контакти</div>
