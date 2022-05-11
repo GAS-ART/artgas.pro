@@ -1,6 +1,7 @@
 @section('header')
 <header class="header">
    <div class="header__wraper">
+      <div class="header__left"></div>
       <div class="header__container">
          <div class="header__logo logo">
             <video autoplay playsinline muted loop preload="auto" class="logo__video">
@@ -39,5 +40,6 @@
             <div data-popup-id="lead" class="header__contacts link-on-popup">Зворотній зв'язок</div>
          </div>
       </div>
+      <div class="header__right"></div>
    </div>
 </header>

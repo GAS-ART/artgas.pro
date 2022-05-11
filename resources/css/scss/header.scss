@@ -3,12 +3,20 @@
 	
 
 	&__wraper {
-		//background: linear-gradient(to left,#288FB1, 10%, #000);
 		background-color: #000;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
-
+&__left {
+	width: 100%;
+	background: linear-gradient(to right,#288FB1, 65%, #000);
+}
+&__right {
+	width: 100%;
+	background: linear-gradient(to left,#288FB1, 65%, #000);
+}
 	&__container {
-		
+		min-width: 1170px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;

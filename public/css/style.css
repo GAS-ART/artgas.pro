@@ -212,8 +212,19 @@ body.lock {
 
 .header__wraper {
   background-color: #000;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.header__left {
+  width: 100%;
+  background: linear-gradient(to right, #288FB1, 65%, #000);
+}
+.header__right {
+  width: 100%;
+  background: linear-gradient(to left, #288FB1, 65%, #000);
 }
 .header__container {
+  min-width: 1170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -307,10 +318,6 @@ body.lock {
 	}
 }
 */
-.page {
-  background-color: #288FB1;
-}
-
 .test-text {
   font-family: "Russo One";
   font-size: 30px;
