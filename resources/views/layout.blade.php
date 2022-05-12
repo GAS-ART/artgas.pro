@@ -9,7 +9,6 @@
          </main>
       @include('inc.footer')
    </div>
-   @include('inc.scroll_top')
    @include('inc.popup')
    @include('inc.messengers')
 </body>

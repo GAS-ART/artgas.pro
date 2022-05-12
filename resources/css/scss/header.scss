@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	
+z-index: 50;
 
 	&__wraper {
 		background-color: #000;
@@ -12,6 +12,9 @@
 	width: 100%;
 	background: linear-gradient(to right,#288FB1, 65%, #000);
 	min-width: 50px;
+	@media (max-width: em(374.98)) {
+		min-width: unset;
+	}
 }
 &__right {
 	width: 100%;
@@ -28,11 +31,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		
 	}
 
 	&__logo {
 		position: relative;
 		max-width: 500px;
+		z-index: 5;
 	}
 
 	&__actions {
@@ -43,9 +48,16 @@
 		@media (max-width: em(1250)) {
 		left: -65px;
 		}
+		@media (max-width: $mobileSmall) {
+			left: -35px;
+		}
+		@media (max-width: em(374.98)) {
+			left: 0px;
+		}
 	}
 
 	&__language {
+		z-index: 5;
 		@include adaptiveValueREM('margin-right',40,10, 1170,768,1);
 	}
 
@@ -58,6 +70,19 @@
 		}
 		cursor: pointer;
 		white-space: nowrap;
+		transition: all 0.5s ease 0s;
+		&:hover{
+		text-shadow:
+		0 0 10px rgba(0, 123, 255, .7),
+		0 0 40px rgba(0, 123, 255, .7),
+		0 0 100px rgba(0, 123, 255, .7);
+		//color: #fff;
+		//letter-spacing: 3px;
+	//		text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff, 0 0 100px #0000ff, 0 0 150px #0000ff;
+}
+@media (max-width: $mobile) {
+	display: none ;
+}
 	}
 }
 .logo {
@@ -83,8 +108,13 @@
 		mix-blend-mode: lighten;*/
 		cursor: pointer;
 		user-select: none;
+		&:hover{
+			animation: neon 2s alternate-reverse infinite;
+		}
+		
 	}
 }
+
 .actions-header {
 
 	&__language {
@@ -163,6 +193,11 @@
 	&__link {
 		display: flex;
 		align-items: center;
+		&:hover{
+			.language__text{
+				animation: neon 2s alternate-reverse infinite;
+			}
+		}
 	}
 
 	&__text {
@@ -170,6 +205,7 @@
 		height: 100%;
 		cursor: pointer;
 		font-weight: 600;
+		
 	}
 
 	&__icon {
@@ -193,12 +229,27 @@
 		}
 	}
 }
+@keyframes neon {
+	from {
+		 text-shadow:
+			0 0 10px rgba(0, 123, 255, .7),
+			0 0 40px rgba(0, 123, 255, .7),
+			0 0 100px rgba(0, 123, 255, .7);
+	  }
+	  to {
+		 text-shadow:
+			0 0 5px rgba(0, 123, 255, .7),
+			0 0 20px rgba(0, 123, 255, .7),
+			0 0 60px rgba(0, 123, 255, .7);
+	  }
+}
+
 
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -206,8 +257,12 @@
 		position: relative;
 		width: 30px;
 		height: 18px;
+		left: -65px;
 		cursor: pointer;
-		z-index: 5;
+		z-index: 10;
+		@media (max-width: em(374.98)) {
+			left: -20px;
+		}
 		span,
 		&::before,
 		&::after {
@@ -217,7 +272,7 @@
 			position: absolute;
 			width: 100%;
 			height: 2px;
-			background-color: #000;
+			background-color: $mainColor;
 		}
 		&::before {
 			top: 0px;
@@ -243,4 +298,90 @@
 		}
 	}
 }
-*/
+
+.burger {
+	right: 0;
+	top: 0;
+	position: fixed;
+	height: 100vh;
+	background: linear-gradient(to top,#288FB1, 35%, #000);
+
+	&__body {
+		padding: 50px;
+		@media (max-width: $mobileSmall) {
+			padding: 50px 30px;
+		}
+	}
+
+	&__menu {
+		@include adaptiveValueREM('font-size', 30,25, 768,320, 1 );
+		font-weight: 600;
+		margin-bottom: 50px;
+	}
+
+	&__contacts {
+	}
+}
+.menu-burger {
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__item-link {
+	}
+}
+.contacts-burger {
+
+	&__tittle {
+		font-size: rem(22);
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+
+	&__contacts {
+		p{
+			&:last-child{
+				font-weight: 600;
+				margin-top: 4px;
+			}
+		}
+	}
+
+	&__address {
+		margin: 0 0 10px 0;
+		p{
+			&:last-child{
+				font-weight: 600;
+				margin-top: 4px;
+			}
+		}
+	}
+
+	&__phone {
+		margin: 0 0 10px 0;
+		a{
+			font-weight: 600;
+			margin-top: 4px;
+		}
+	}
+
+	&__email {
+		margin: 0 0 10px 0;
+		a{
+				font-weight: 600;
+				margin-top: 4px;
+		}
+	}
+
+	&__social {
+	}
+}
+.social-burger {
+
+	&__meta {
+	}
+}
+
