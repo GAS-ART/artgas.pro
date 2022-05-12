@@ -214,33 +214,97 @@ body.lock {
   background-color: #000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  position: relative;
 }
 .header__left {
   width: 100%;
   background: linear-gradient(to right, #288FB1, 65%, #000);
+  min-width: 50px;
 }
 .header__right {
   width: 100%;
   background: linear-gradient(to left, #288FB1, 65%, #000);
+  /*	@media (max-width: em(1250)) {
+  		position: absolute;
+  		right: 0;
+  		width: 50px;
+  		height: 100%;
+  	}*/
 }
 .header__container {
-  min-width: 1170px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@supports (min-width: clamp( 20rem , 0.6818181818rem  +  96.5909090909vw , 73.125rem )) {
+  .header__container {
+    min-width: clamp( 20rem , 0.6818181818rem  +  96.5909090909vw , 73.125rem );
+  }
+}
+@supports not (min-width: clamp( 20rem , 0.6818181818rem  +  96.5909090909vw , 73.125rem )) {
+  .header__container {
+    min-width: calc(
+         20rem + 53.125 * (100vw - 20rem) / 55
+      );
+  }
 }
 .header__logo {
   position: relative;
   max-width: 500px;
 }
 .header__actions {
+  position: relative;
   display: flex;
   align-items: center;
   color: #288FB1;
 }
-.header__language {
-  margin-right: 40px;
+@media (max-width: 78.125em) {
+  .header__actions {
+    left: -65px;
+  }
 }
+@supports (margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem )) {
+  .header__language {
+    margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem )) {
+  .header__language {
+    margin-right: calc(
+         0.625rem + 1.875 * (100vw - 48rem) / 25.125
+      );
+  }
+}
+.header__contacts {
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+@supports (font-size: clamp( 1.125rem , 0.4085820896rem  +  1.4925373134vw , 1.5rem )) {
+  .header__contacts {
+    font-size: clamp( 1.125rem , 0.4085820896rem  +  1.4925373134vw , 1.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 0.4085820896rem  +  1.4925373134vw , 1.5rem )) {
+  .header__contacts {
+    font-size: calc(
+         1.125rem + 0.375 * (100vw - 48rem) / 25.125
+      );
+  }
+}
+@supports (margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem )) {
+  .header__contacts:not(:last-child) {
+    margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.625rem , -2.9570895522rem  +  7.4626865672vw , 2.5rem )) {
+  .header__contacts:not(:last-child) {
+    margin-right: calc(
+         0.625rem + 1.875 * (100vw - 48rem) / 25.125
+      );
+  }
+}
+
 .logo__video {
   position: absolute;
   top: 0;
@@ -292,15 +356,29 @@ body.lock {
   width: 100%;
   height: 9px;
 }
-.actions-header__language:hover .language__select {
-  opacity: 1;
-  visibility: visible;
+@media (pointer: fine) {
+  .actions-header__language:hover .language__select {
+    opacity: 1;
+    visibility: visible;
+  }
+  .actions-header__language:hover .language__select:not(:first-child) {
+    bottom: -30px;
+  }
+  .actions-header__language:hover .language__select:last-child {
+    bottom: -60px;
+  }
 }
-.actions-header__language:hover .language__select:not(:first-child) {
-  bottom: -30px;
-}
-.actions-header__language:hover .language__select:last-child {
-  bottom: -60px;
+@media (any-pointer: coarse) {
+  .actions-header__language.active .language__select {
+    opacity: 1;
+    visibility: visible;
+  }
+  .actions-header__language.active .language__select:not(:first-child) {
+    bottom: -30px;
+  }
+  .actions-header__language.active .language__select:last-child {
+    bottom: -60px;
+  }
 }
 
 .language__select {
@@ -413,4 +491,195 @@ body.lock {
   height: 50px;
   padding: 5px;
   background-color: rgb(255, 101, 80) !important;
+}
+
+.messengers {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 2;
+}
+
+.svg-messengers__btn {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background-color: #288FB1;
+  background: linear-gradient(#288FB1, #000);
+  border-radius: 50%;
+  z-index: 2;
+  cursor: pointer;
+}
+.svg-messengers__btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 11px;
+}
+.svg-messengers__close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
+}
+.svg-messengers__close svg {
+  transition: all 0.5s linear 0s;
+}
+.svg-messengers__close.active {
+  opacity: 1;
+  visibility: visible;
+}
+.svg-messengers__close.active svg {
+  transform: rotate(360deg);
+}
+.svg-messengers__open {
+  transition: all 0.2s ease 0s;
+}
+.svg-messengers__open svg {
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease 0s;
+}
+.svg-messengers__open.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+.svg-messengers__open.hide svg {
+  transform: rotate(180deg);
+}
+.svg-messengers__icons {
+  position: relative;
+  top: 100px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.5s ease 0s;
+}
+.svg-messengers__icons.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  top: 0;
+}
+.svg-messengers__icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+.svg-messengers__icon.whatsapp-icon {
+  background-color: #4DC247;
+}
+.svg-messengers__icon.telegram-icon {
+  background-color: #0088CC;
+}
+.svg-messengers__icon.viber-icon {
+  background-color: #7B519D;
+}
+.svg-messengers__icon:hover {
+  box-shadow: rgba(0, 0, 0, 0.7) 2px 2px 11px;
+}
+.svg-messengers__icon:hover .svg-messengers__label {
+  right: calc(100% + 20px);
+  opacity: 1;
+  visibility: visible;
+}
+.svg-messengers__whatsapp {
+  width: 40px;
+  height: 40px;
+}
+.svg-messengers__telegram {
+  width: 40px;
+  height: 40px;
+}
+.svg-messengers__label {
+  display: none;
+}
+@media (pointer: fine) {
+  .svg-messengers__label {
+    display: block;
+    transition: all 0.1s ease 0s;
+    position: absolute;
+    font-family: "Muller";
+    font-size: 13px;
+    border: 1px solid rgb(226, 226, 226);
+    padding: 4px 9px 6px;
+    border-radius: 4px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 5px;
+    line-height: 15px;
+    pointer-events: none;
+    right: calc(50% + 20px);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.svg-messengers__controls {
+  position: relative;
+}
+.svg-messengers__label-btn {
+  position: absolute;
+  font-family: "Muller";
+  font-size: 14px;
+  right: calc(100% + 20px);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  white-space: nowrap;
+  box-shadow: rgba(0, 0, 0, 0.1) 2px 2px 13px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 5px;
+  background: white;
+  transition: all 0.4s ease 0s;
+}
+.svg-messengers__label-btn.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.svg-messengers__label-btn p {
+  padding: 7px 10px;
+  line-height: 14px;
+  margin: auto;
+}
+.svg-messengers__label-btn p::before {
+  content: "";
+  position: absolute;
+  background: white;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  border-right: 1px solid rgb(226, 226, 226);
+  right: -5px;
+  top: 50%;
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+.svg-messengers__label-btn p::after {
+  content: "";
+  position: absolute;
+  background: white;
+  border-bottom: 1px solid rgb(226, 226, 226);
+  border-right: 1px solid rgb(226, 226, 226);
+  right: -5px;
+  top: 50%;
+  margin-top: -4px;
+  width: 8px;
+  height: 8px;
+  z-index: 1;
+  transform: rotate(-45deg);
+}
+@media (max-width: 61.99875em) {
+  .svg-messengers__label-btn {
+    display: none;
+  }
 }

@@ -8,7 +8,7 @@
 {{app()->setLocale('ru')}}
 @endif
 @if(!Str::contains(url()->current(), ['/ua', '/en' ,'/ru']))
-<script>window.location = "<?php echo Str::of(url()->current())->substrReplace('/ua/',22,0) ?>";</script> // проверить нужна ли "/" перед ua
+<script>window.location = "<?php echo Str::of(url()->current())->substrReplace('/ua/',22,0) ?>";</script> <!-- проверить нужна ли "/" перед ua -->
 {{app()->setLocale('ua')}}
 @endif
 @extends('layout')

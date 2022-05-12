@@ -8,7 +8,62 @@
 /***/ (() => {
 
 //require('./bootstrap');
-window.onload = function () {};
+window.onload = function () {
+  //Переключение языков (комп и мобилка)
+  var languageBtn = document.querySelector('.language-btn');
+  languageBtn.addEventListener('click', function (e) {
+    if (window.matchMedia("(pointer: coarse)").matches) {
+      // Устройства со стилусом
+      if (!languageBtn.classList.contains('active')) {
+        e.preventDefault();
+      }
+
+      languageBtn.classList.toggle('active');
+    }
+  }); //Messendgers
+
+  var messendgers = document.querySelector('.svg-messengers__icons');
+  var messendgerBtn = document.querySelector('.svg-messengers__btn');
+  var messendgerClose = document.querySelector('.svg-messengers__close');
+  var messendgerOpen = document.querySelector('.svg-messengers__open');
+  var massendgerLabelBtn = document.querySelector('.svg-messengers__label-btn');
+
+  if (window.matchMedia("(pointer: fine)").matches) {
+    messendgerBtn.addEventListener('click', function () {
+      messendgers.classList.remove('active');
+      messendgerClose.classList.remove('active');
+      messendgerOpen.classList.remove('hide');
+      massendgerLabelBtn.classList.remove('hide');
+    });
+    messendgerBtn.addEventListener('mouseenter', function () {
+      activeMessengersForDesktop();
+    });
+    massendgerLabelBtn.addEventListener('click', function () {
+      activeMessengersForDesktop();
+    });
+  } else if (window.matchMedia("(pointer: coarse)").matches) {
+    messendgerBtn.addEventListener('click', function () {
+      activeMessengersForMobile();
+    });
+    massendgerLabelBtn.addEventListener('click', function () {
+      activeMessengersForMobile();
+    });
+  }
+
+  function activeMessengersForDesktop() {
+    messendgers.classList.add('active');
+    messendgerClose.classList.add('active');
+    messendgerOpen.classList.add('hide');
+    massendgerLabelBtn.classList.add('hide');
+  }
+
+  function activeMessengersForMobile() {
+    messendgers.classList.toggle('active');
+    messendgerClose.classList.toggle('active');
+    messendgerOpen.classList.toggle('hide');
+    massendgerLabelBtn.classList.toggle('hide');
+  }
+};
 
 /***/ }),
 
