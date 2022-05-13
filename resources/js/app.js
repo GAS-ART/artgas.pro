@@ -1,6 +1,8 @@
 //require('./bootstrap');
 window.onload = function () {
 
+   document.addEventListener('click', documentActions);
+
    //Переключение языков (комп и мобилка)
    const languageBtn = document.querySelector('.language-btn');
    languageBtn.addEventListener('click', function (e) {
@@ -9,6 +11,16 @@ window.onload = function () {
             e.preventDefault()
          }
          languageBtn.classList.toggle('active');
+      }
+   });
+
+   //Показываем контакты на мобилке
+   const contactsBtn = document.querySelector('.contacts-header__title-text');
+   const contactsRow = document.querySelector('.contacts-header__row');
+   contactsBtn.addEventListener('click', function (e) {
+      if (window.matchMedia("(pointer: coarse)").matches) { // Устройства со стилусом
+         console.log(e.target);
+         contactsRow.classList.toggle('active');
       }
    });
 
@@ -53,4 +65,33 @@ window.onload = function () {
       messendgerOpen.classList.toggle('hide');
       massendgerLabelBtn.classList.toggle('hide');
    }
+
+   //Menu burger
+   const menuBtn = document.querySelector('.icon-menu');
+   const burger = document.querySelector('.burger');
+   menuBtn.addEventListener('click', function () {
+      menuBtn.classList.toggle('open');
+      burger.classList.toggle('open');
+   });
+
+   function documentActions(e) {
+      const target = e.target;
+
+      //remove burger
+      if (!target.closest('.burger') && !target.closest('.icon-menu')) {
+         menuBtn.classList.remove('open');
+         burger.classList.remove('open');
+      }
+      //remove language select
+      if (!target.closest('.language-btn')) {
+         languageBtn.classList.remove('active');
+      }
+      //remove contacts block
+      if (!target.closest('.contacts-header__row')) {
+         console.log(target);
+         contactsRow.classList.remove('active');
+      }
+   }
+
+
 };

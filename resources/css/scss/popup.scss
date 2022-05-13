@@ -6,6 +6,7 @@
    top: 0;
    left: 0;
    background-color: rgba(0, 0, 0, 0.8);
+   background: linear-gradient(120deg,#000, 45%,  #288FB1, #000,);
    z-index: 9999;
    opacity: 0;
    visibility: hidden;
@@ -30,6 +31,7 @@
    transition: all 0.8s ease 0s;
    opacity: 0;
    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+   background: linear-gradient(120deg,#000, 45%,  #288FB1, #000,);
 }
 .popup__close {
    position: absolute;
@@ -37,23 +39,6 @@
    top: 10px;
    color: #fff;
    font-size: 20px;
-}
-.popup__title {
-   text-align: center;
-   padding: 0 0 30px 0;
-}
-.popup__title h4 {
-   font-size: 25px;
-   font-weight: 500;
-   color: #fff;
-}
-.popup__text {
-   display: flex;
-   justify-content: center;
-}
-.popup__button {
-   display: flex;
-   justify-content: center;
 }
 
 /*----POP-UP-JS----*/
@@ -68,40 +53,225 @@
 }
 
 /*----POP-UP-JS----*/
-.popup-phone {
-   text-align: center;
-   margin: 0;
-}
 
-.submit {
-   cursor: pointer;
-}
+/*----POP-UP----*/
 
-.confirm {
-   position: absolute;
-   opacity: 0;
-   visibility: hidden;
-   transition: all 0.8s ease 0s;
-}
-.confirm__button {
-   display: flex;
-   justify-content: center;
-}
+.popup {
 
-.confirm.send {
-   opacity: 1;
-   visibility: visible;
-}
 
-.popup__title.send,
-.popup__text.send {
-   opacity: 0;
-   visibility: hidden;
-}
+   &__row {
+      position: relative;
+   }
 
-@media (max-width: 500px) {
-   .popup__content {
-      padding: 10px;
+   &__send-load{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+   }
+
+   &__form {
+   }
+
+   &__title {
+      @include adaptiveValueREM('font-size', 40,20 );
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 40px;
+      color: aliceblue;
+   }
+
+   &__text {
+      text-align: center;
+   }
+
+   &__button {
    }
 }
-/*----POP-UP----*/
+.open {
+}
+.close-popup {
+}
+.send-load {
+}
+.form {
+}
+.contacts-form {
+
+   &__item {
+      &:not(:last-child){
+      margin-bottom: 20px;
+      }
+      input{
+         width: 70%;
+         height: 40px;
+         padding-left: 15px;
+         outline:none;
+         border-radius: 15px;
+         background-color: $mainColor;
+         color: #000;
+         font-weight: 600;
+         box-shadow: rgb(0 0 0 / 70%) 2px 2px 11px;
+         &::placeholder{
+            color: #000;
+            font-weight: 600;
+         }
+      }
+
+      textarea{
+         width: 70%;
+         height: 200px;
+         padding-left: 15px;
+         padding-top: 15px;
+         resize: none;
+         outline: #288FB1;
+         border-radius: 15px;
+         background-color: $mainColor;
+         color: #000;
+         font-weight: 600;
+         box-shadow: rgb(0 0 0 / 70%) 2px 2px 11px;
+         &::placeholder{
+            color: #000;
+            font-weight: 600;
+         }
+      }
+      
+   }
+}
+.data {
+
+   &__text-field {
+   }
+}
+.popup-data {
+}
+.name-error {
+}
+.error {
+}
+.popup-phone {
+}
+.phone {
+}
+.phone-error {
+}
+.popup-email {
+}
+.email {
+}
+.email-error {
+}
+.popup-text-area {
+}
+.popup-download {
+   position: relative;
+   line-height: 1.8;
+   z-index: 300;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   .file-button {
+      padding-left: 40px;
+      position: relative;
+      top: 4px;
+      display: inline-block;
+   }
+   
+}
+.file {
+   width: 170px;
+}
+.popup-file {
+   position: absolute;
+   top: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 170px !important;
+   height: calc(100% + 3px) !important;
+   opacity: 0;
+   font-size: 0 !important;
+   z-index: 500;
+   display: block;
+   cursor: pointer;  
+}
+.file-button {
+   position: relative;
+   background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+    border-radius: 6px;
+    box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+    color: aliceblue;
+    height: 48px;
+    padding-left: 16px;
+    padding-right: 16px;
+    transition: box-shadow 0.15s, transform 0.15s;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-top: 8px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-image: url("../../../public/img/icons/donwload.svg");
+      background-repeat: no-repeat;
+     // margin-right: 120px;
+     left: 10px;
+      z-index: 300;
+      top: 50%;
+      transform: translateY(-50%);
+   }
+}
+.file:active{
+   .file-button{
+      box-shadow: #288FB1 0 3px 7px inset;
+      transform: translateY(2px);
+   }
+}
+.file-error {
+}
+.preview-file {
+}
+.submit {
+   color: aliceblue;
+   @include adaptiveValueREM('font-size', 30,18 );
+   letter-spacing: 3px;
+   line-height: 1.8;
+   font-weight: 600;
+   background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+    border-radius: 6px;
+    box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+    transition: box-shadow 0.15s, transform 0.15s;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    cursor: pointer;
+    margin-top: 50px;
+
+
+    padding-left: 16px;
+    padding-right: 16px;
+    &:hover{
+      text-shadow:
+      0 0 10px rgba(0, 123, 255, .7),
+      0 0 40px rgba(0, 123, 255, .7),
+      0 0 100px rgba(0, 123, 255, .7);
+}
+   }
+   .submit:active{
+         box-shadow: #288FB1 0 3px 7px inset;
+         transform: translateY(2px);
+   }
+.confirm {
+   position: absolute;
+   top: 0;
+   left: 0;
+   display: none;
+}
+.confirm-button {
+}
+
