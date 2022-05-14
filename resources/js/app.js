@@ -31,7 +31,6 @@ window.onload = function () {
    const contactsRow = document.querySelector('.contacts-header__row');
    contactsBtn.addEventListener('click', function (e) {
       if (window.matchMedia("(pointer: coarse)").matches) { // Устройства со стилусом
-         console.log(e.target);
          contactsRow.classList.toggle('active');
       }
    });
@@ -100,7 +99,6 @@ window.onload = function () {
       }
       //remove contacts block
       if (!target.closest('.contacts-header__row')) {
-         console.log(target);
          contactsRow.classList.remove('active');
       }
    }
@@ -178,9 +176,145 @@ window.onload = function () {
       if (file?.size) {
          reader.readAsDataURL(file);
       }
-
    }
 
+   // Отпарвка данных из формы
+   $("#bookingform").submit(function (event) {
+      event.preventDefault();
+      $(".send-load").addClass('active');
+      $.ajax({
+         type: 'POST',
+         url: 'http://127.0.0.1:8000/feedback',
+         data: new FormData(this),
+         contentType: false,
+         cache: false,
+         processData: false,
+         success: function () {
+            $(".email-error").html('');
+            $(".name-error").html('');
+            $(".phone-error").html('');
+            $(".file-error").html('');
+            $(".popup").addClass("send");
+            bookingForm.reset();
+            $(".send-load").removeClass('active');
+         },
+         error: function (err) {
+            $(".send-load").removeClass('active');
+            if (bookingForm.classList.contains('ua')) {
+               if (err?.responseJSON?.errors?.email) {
+                  let text = err.responseJSON.errors.email[0];
+                  if (text == 'Не заполнено поле "email"') {
+                     $(".email-error").html('Не заповнено поле "email"');
+                  } else if (text == 'Указан некорректный email адрес') {
+                     $(".email-error").html('Вказана не коректна email адреса');
+                  }
+               } else {
+                  $(".email-error").html('');
+               }
+               if (err?.responseJSON?.errors?.name) {
+                  let text = err.responseJSON.errors.name[0];
+                  if (text == 'Не заполнено поле "Имя"') {
+                     $(".name-error").html('Не заповнено поле "Ім\'я"');
+                  } else if (text == 'Поле "Имя" не должно содержать цифр') {
+                     $(".name-error").html('Поле "Ім\'я" не повинно містити цифр');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+                     $(".name-error").html('Поле "Ім\'я" має містити 2 або більше символів');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+                     $(".name-error").html('Поле Ім\'я має містити не більше 80 символів');
+                  }
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  let text = err.responseJSON.errors.phone[0];
+                  if (text == 'Не заполнено поле "Номер телефона"') {
+                     $(".phone-error").html('Не заповнено поле "Номер телефону"');
+                  } else if (text == 'Неверный формат номера телефона') {
+                     $(".phone-error").html('Невірний формат номера телефону');
+                  }
+               } else {
+                  $(".phone-error").html('');
+               }
+               if (err?.responseJSON?.errors?.text) {
+                  $(".text-error").html('У полі "Повідомлення" надто багато символів');
+               }
+               if (!err?.responseJSON && err.statusText) {
+                  alert("Помилка завантаження файлу");
+                  formPreview.innerHTML = '';
+               }
+            } else if (bookingForm.classList.contains('en')) {
+               if (err?.responseJSON?.errors?.email) {
+                  let text = err.responseJSON.errors.email[0];
+                  if (text == 'Не заполнено поле "email"') {
+                     $(".email-error").html('Field "email" is not filled');
+                  } else if (text == 'Указан некорректный email адрес') {
+                     $(".email-error").html('Incorrect e-mail address specified');
+                  }
+               } else {
+                  $(".email-error").html('');
+               }
+               if (err?.responseJSON?.errors?.name) {
+                  let text = err.responseJSON.errors.name[0];
+                  if (text == 'Не заполнено поле "Имя"') {
+                     $(".name-error").html('Field "Name" is not filled');
+                  } else if (text == 'Поле "Имя" не должно содержать цифр') {
+                     $(".name-error").html('The "Name" field must not contain numbers');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать 2 или больше символов') {
+                     $(".name-error").html('The "Name" field must contain 2 or more characters');
+                  }
+                  else if (text == 'Поле "Имя" должно содержать не больше 80 символов') {
+                     $(".name-error").html('The "Name" field must contain no more than 80 characters');
+                  }
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  let text = err.responseJSON.errors.phone[0];
+                  if (text == 'Не заполнено поле "Номер телефона"') {
+                     $(".phone-error").html('Phone number field not filled');
+                  } else if (text == 'Неверный формат номера телефона') {
+                     $(".phone-error").html('Invalid phone number format');
+                  }
+               } else {
+                  $(".phone-error").html('');
+               }
+               if (err?.responseJSON?.errors?.text) {
+                  $(".text-error").html('There are too many characters in the Message field');
+               }
+               if (!err?.responseJSON && err.statusText) {
+                  alert("Error loading file");
+                  formPreview.innerHTML = '';
+               }
+            } else {
+               if (err?.responseJSON?.errors?.email) {
+                  $(".email-error").html(err.responseJSON.errors.email[0]);
+               } else {
+                  $(".email-error").html('');
+               }
+               if (err?.responseJSON?.errors?.name) {
+                  $(".name-error").html(err.responseJSON.errors.name[0]);
+               } else {
+                  $(".name-error").html('');
+               }
+               if (err?.responseJSON?.errors?.phone) {
+                  $(".phone-error").html(err.responseJSON.errors.phone[0]);
+               } else {
+                  $(".phone-error").html('');;
+               }
+               if (err?.responseJSON?.errors?.text) {
+                  $(".text-error").html(err.responseJSON.errors.text[0]);
+               }
+               if (!err?.responseJSON && err.statusText) {
+                  alert("Ошибка загрузки файла");
+                  formPreview.innerHTML = '';
+               }
+            }
+         }
+      });
+   });
 
    //Polifill for closest
    (function () {

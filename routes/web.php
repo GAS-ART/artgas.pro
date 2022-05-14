@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
+Route::post('feedback', 'App\Http\Controllers\ContactController@feedBackForm')->name('contactForm');
 
 Route::get('/', function () {App::setLocale('ua'); return view('home');})->name('index');
 Route::get('/ua', function () {App::setLocale('ua'); return  redirect('/');});

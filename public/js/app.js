@@ -41,7 +41,6 @@ window.onload = function () {
   contactsBtn.addEventListener('click', function (e) {
     if (window.matchMedia("(pointer: coarse)").matches) {
       // Устройства со стилусом
-      console.log(e.target);
       contactsRow.classList.toggle('active');
     }
   }); //Messendgers
@@ -111,7 +110,6 @@ window.onload = function () {
 
 
     if (!target.closest('.contacts-header__row')) {
-      console.log(target);
       contactsRow.classList.remove('active');
     }
   } //file preview
@@ -196,8 +194,167 @@ window.onload = function () {
     if (file !== null && file !== void 0 && file.size) {
       reader.readAsDataURL(file);
     }
-  } //Polifill for closest
+  } // Отпарвка данных из формы
 
+
+  $("#bookingform").submit(function (event) {
+    event.preventDefault();
+    $(".send-load").addClass('active');
+    $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:8000/feedback',
+      data: new FormData(this),
+      contentType: false,
+      cache: false,
+      processData: false,
+      success: function success() {
+        $(".email-error").html('');
+        $(".name-error").html('');
+        $(".phone-error").html('');
+        $(".file-error").html('');
+        $(".popup").addClass("send");
+        bookingForm.reset();
+        $(".send-load").removeClass('active');
+      },
+      error: function error(err) {
+        $(".send-load").removeClass('active');
+
+        if (bookingForm.classList.contains('ua')) {
+          var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er, _err$responseJSON3, _err$responseJSON3$er, _err$responseJSON4, _err$responseJSON4$er;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON = err.responseJSON) !== null && _err$responseJSON !== void 0 && (_err$responseJSON$err = _err$responseJSON.errors) !== null && _err$responseJSON$err !== void 0 && _err$responseJSON$err.email) {
+            var text = err.responseJSON.errors.email[0];
+
+            if (text == 'Не заполнено поле "email"') {
+              $(".email-error").html('Не заповнено поле "email"');
+            } else if (text == 'Указан некорректный email адрес') {
+              $(".email-error").html('Вказана не коректна email адреса');
+            }
+          } else {
+            $(".email-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON2 = err.responseJSON) !== null && _err$responseJSON2 !== void 0 && (_err$responseJSON2$er = _err$responseJSON2.errors) !== null && _err$responseJSON2$er !== void 0 && _err$responseJSON2$er.name) {
+            var _text = err.responseJSON.errors.name[0];
+
+            if (_text == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('Не заповнено поле "Ім\'я"');
+            } else if (_text == 'Поле "Имя" не должно содержать цифр') {
+              $(".name-error").html('Поле "Ім\'я" не повинно містити цифр');
+            } else if (_text == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('Поле "Ім\'я" має містити 2 або більше символів');
+            } else if (_text == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('Поле Ім\'я має містити не більше 80 символів');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON3 = err.responseJSON) !== null && _err$responseJSON3 !== void 0 && (_err$responseJSON3$er = _err$responseJSON3.errors) !== null && _err$responseJSON3$er !== void 0 && _err$responseJSON3$er.phone) {
+            var _text2 = err.responseJSON.errors.phone[0];
+
+            if (_text2 == 'Не заполнено поле "Номер телефона"') {
+              $(".phone-error").html('Не заповнено поле "Номер телефону"');
+            } else if (_text2 == 'Неверный формат номера телефона') {
+              $(".phone-error").html('Невірний формат номера телефону');
+            }
+          } else {
+            $(".phone-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON4 = err.responseJSON) !== null && _err$responseJSON4 !== void 0 && (_err$responseJSON4$er = _err$responseJSON4.errors) !== null && _err$responseJSON4$er !== void 0 && _err$responseJSON4$er.text) {
+            $(".text-error").html('У полі "Повідомлення" надто багато символів');
+          }
+
+          if (!(err !== null && err !== void 0 && err.responseJSON) && err.statusText) {
+            alert("Помилка завантаження файлу");
+            formPreview.innerHTML = '';
+          }
+        } else if (bookingForm.classList.contains('en')) {
+          var _err$responseJSON5, _err$responseJSON5$er, _err$responseJSON6, _err$responseJSON6$er, _err$responseJSON7, _err$responseJSON7$er, _err$responseJSON8, _err$responseJSON8$er;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON5 = err.responseJSON) !== null && _err$responseJSON5 !== void 0 && (_err$responseJSON5$er = _err$responseJSON5.errors) !== null && _err$responseJSON5$er !== void 0 && _err$responseJSON5$er.email) {
+            var _text3 = err.responseJSON.errors.email[0];
+
+            if (_text3 == 'Не заполнено поле "email"') {
+              $(".email-error").html('Field "email" is not filled');
+            } else if (_text3 == 'Указан некорректный email адрес') {
+              $(".email-error").html('Incorrect e-mail address specified');
+            }
+          } else {
+            $(".email-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON6 = err.responseJSON) !== null && _err$responseJSON6 !== void 0 && (_err$responseJSON6$er = _err$responseJSON6.errors) !== null && _err$responseJSON6$er !== void 0 && _err$responseJSON6$er.name) {
+            var _text4 = err.responseJSON.errors.name[0];
+
+            if (_text4 == 'Не заполнено поле "Имя"') {
+              $(".name-error").html('Field "Name" is not filled');
+            } else if (_text4 == 'Поле "Имя" не должно содержать цифр') {
+              $(".name-error").html('The "Name" field must not contain numbers');
+            } else if (_text4 == 'Поле "Имя" должно содержать 2 или больше символов') {
+              $(".name-error").html('The "Name" field must contain 2 or more characters');
+            } else if (_text4 == 'Поле "Имя" должно содержать не больше 80 символов') {
+              $(".name-error").html('The "Name" field must contain no more than 80 characters');
+            }
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON7 = err.responseJSON) !== null && _err$responseJSON7 !== void 0 && (_err$responseJSON7$er = _err$responseJSON7.errors) !== null && _err$responseJSON7$er !== void 0 && _err$responseJSON7$er.phone) {
+            var _text5 = err.responseJSON.errors.phone[0];
+
+            if (_text5 == 'Не заполнено поле "Номер телефона"') {
+              $(".phone-error").html('Phone number field not filled');
+            } else if (_text5 == 'Неверный формат номера телефона') {
+              $(".phone-error").html('Invalid phone number format');
+            }
+          } else {
+            $(".phone-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON8 = err.responseJSON) !== null && _err$responseJSON8 !== void 0 && (_err$responseJSON8$er = _err$responseJSON8.errors) !== null && _err$responseJSON8$er !== void 0 && _err$responseJSON8$er.text) {
+            $(".text-error").html('There are too many characters in the Message field');
+          }
+
+          if (!(err !== null && err !== void 0 && err.responseJSON) && err.statusText) {
+            alert("Error loading file");
+            formPreview.innerHTML = '';
+          }
+        } else {
+          var _err$responseJSON9, _err$responseJSON9$er, _err$responseJSON10, _err$responseJSON10$e, _err$responseJSON11, _err$responseJSON11$e, _err$responseJSON12, _err$responseJSON12$e;
+
+          if (err !== null && err !== void 0 && (_err$responseJSON9 = err.responseJSON) !== null && _err$responseJSON9 !== void 0 && (_err$responseJSON9$er = _err$responseJSON9.errors) !== null && _err$responseJSON9$er !== void 0 && _err$responseJSON9$er.email) {
+            $(".email-error").html(err.responseJSON.errors.email[0]);
+          } else {
+            $(".email-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON10 = err.responseJSON) !== null && _err$responseJSON10 !== void 0 && (_err$responseJSON10$e = _err$responseJSON10.errors) !== null && _err$responseJSON10$e !== void 0 && _err$responseJSON10$e.name) {
+            $(".name-error").html(err.responseJSON.errors.name[0]);
+          } else {
+            $(".name-error").html('');
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON11 = err.responseJSON) !== null && _err$responseJSON11 !== void 0 && (_err$responseJSON11$e = _err$responseJSON11.errors) !== null && _err$responseJSON11$e !== void 0 && _err$responseJSON11$e.phone) {
+            $(".phone-error").html(err.responseJSON.errors.phone[0]);
+          } else {
+            $(".phone-error").html('');
+            ;
+          }
+
+          if (err !== null && err !== void 0 && (_err$responseJSON12 = err.responseJSON) !== null && _err$responseJSON12 !== void 0 && (_err$responseJSON12$e = _err$responseJSON12.errors) !== null && _err$responseJSON12$e !== void 0 && _err$responseJSON12$e.text) {
+            $(".text-error").html(err.responseJSON.errors.text[0]);
+          }
+
+          if (!(err !== null && err !== void 0 && err.responseJSON) && err.statusText) {
+            alert("Ошибка загрузки файла");
+            formPreview.innerHTML = '';
+          }
+        }
+      }
+    });
+  }); //Polifill for closest
 
   (function () {
     // проверяем поддержку
