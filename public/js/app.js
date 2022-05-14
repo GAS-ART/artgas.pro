@@ -1,15 +1,28 @@
 /******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _modules_popup_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/popup.js */ "./resources/js/modules/popup.js");
 //require('./bootstrap');
+
+
 window.onload = function () {
-  document.addEventListener('click', documentActions); //Переключение языков (комп и мобилка)
+  document.addEventListener('click', documentActions); //popUp
+
+  var popUpButtons = document.querySelectorAll('.link-on-popup');
+  popUpButtons.forEach(function (item) {
+    item.addEventListener('click', function (e) {
+      (0,_modules_popup_js__WEBPACK_IMPORTED_MODULE_0__.popUp)(e.target.dataset.popupId);
+      e.preventDefault();
+    });
+  }); //Переключение языков (комп и мобилка)
 
   var languageBtn = document.querySelector('.language-btn');
   languageBtn.addEventListener('click', function (e) {
@@ -101,8 +114,155 @@ window.onload = function () {
       console.log(target);
       contactsRow.classList.remove('active');
     }
-  }
+  } //file preview
+
+
+  var formImage = document.getElementById('fileImage');
+  var formPreview = document.getElementById('filePreview');
+  var bookingForm = document.querySelector('#bookingform');
+  formImage.addEventListener('change', function () {
+    formPreview.innerHTML = '';
+    formPreview.classList.add('load');
+
+    if (this.files[0] == undefined) {
+      formPreview.classList.remove('load');
+    }
+
+    uploadFile(formImage.files[0]);
+  });
+
+  function uploadFile(file) {
+    if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('ru')) {
+      alert("Максимум 25 мегабайт");
+      formPreview.classList.remove('load');
+      $(".send-load").removeClass('active');
+      return;
+    } else if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('es')) {
+      alert("el tamaño maximo 25");
+      formPreview.classList.remove('load');
+      return;
+    }
+
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      if (file.type.match('image.*')) {
+        formPreview.innerHTML = "<img src=\"".concat(e.target.result, "\" alt=\"\">");
+        formPreview.classList.remove('load');
+      } else if (file.type.match('video.*')) {
+        formPreview.innerHTML = "<video src=\"".concat(e.target.result, "\" controls></video>");
+        formPreview.classList.remove('load');
+      } else if (file.type.match('application/pdf')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/pdf.svg\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.type.match('application/msword')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/word.png\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.type.match('application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/word.png\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.type.match('application/vnd.ms-excel')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/excel.svg\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.type.match('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/excel.svg\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.name.slice(-4) == ".rar") {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/rar.png\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.name.slice(-4) == ".zip") {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/zip.png\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.name.slice(-4) == ".psd") {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/psd.png\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else if (file.type.match('text/plain')) {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/txt.svg\" alt=\"\">";
+        formPreview.classList.remove('load');
+      } else {
+        formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/file.svg\" alt=\"\">";
+        formPreview.classList.remove('load');
+      }
+    };
+
+    reader.onerror = function (e) {
+      if (bookingForm.classList.contains('ru')) {
+        alert("Ошибка загрузки файла");
+      } else if (bookingForm.classList.contains('es')) {
+        alert("Error al cargar el archivo");
+      }
+    };
+
+    if (file !== null && file !== void 0 && file.size) {
+      reader.readAsDataURL(file);
+    }
+  } //Polifill for closest
+
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.closest) {
+      // реализуем
+      Element.prototype.closest = function (css) {
+        var node = this;
+
+        while (node) {
+          if (node.matches(css)) return node;else node = node.parentElement;
+        }
+
+        return null;
+      };
+    }
+  })();
+
+  (function () {
+    // проверяем поддержку
+    if (!Element.prototype.matches) {
+      // определяем свойство
+      Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
+    }
+  })();
 };
+
+/***/ }),
+
+/***/ "./resources/js/modules/popup.js":
+/*!***************************************!*\
+  !*** ./resources/js/modules/popup.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "popUp": () => (/* binding */ popUp)
+/* harmony export */ });
+function popUp(popupId) {
+  var popUp = document.getElementById(popupId);
+  var bodyLock = document.getElementById('body');
+  var popupCloseIcon = popUp.querySelector('.close-popup');
+  var popupBtn = popUp.querySelector('.popup__button');
+  popUp.classList.add('open');
+  bodyLock.classList.add('lock');
+  popupCloseIcon.addEventListener('click', function (e) {
+    popupClose(popUp);
+    e.preventDefault();
+  });
+  popupBtn.addEventListener('click', function () {
+    popupClose(popUp);
+  });
+
+  function popupClose(popupActive) {
+    popupActive.classList.remove('open');
+    bodyLock.classList.remove("lock");
+  }
+
+  popUp.addEventListener('click', function (e) {
+    if (!e.target.closest('.popup__content')) {
+      popupClose(popUp);
+    }
+  });
+}
+;
 
 /***/ }),
 
@@ -112,7 +272,6 @@ window.onload = function () {
   \***************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
@@ -178,6 +337,18 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
 /******/ 		};
 /******/ 	})();
 /******/ 	

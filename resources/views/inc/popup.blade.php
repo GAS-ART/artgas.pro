@@ -1,8 +1,8 @@
 @section('popup')
-<div id="popup" class="popup opn">
+<div id="lead" class="popup">
    <div class="popup__body">
       <div class="popup__content">
-         <a href="#" class="popup__close close-popup">X</a>
+         <a href="#" class="popup__close close-popup"><span></span><span></span></a>
          <div class="popup__row">
             <div class="send-load">
                <img src="{{asset('img/form/load.gif')}}" alt="">
