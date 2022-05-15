@@ -406,6 +406,8 @@ function popUp(popupId) {
   var popupCloseIcon = popUp.querySelector('.close-popup');
   var popupBtn = popUp.querySelector('.popup__button');
   var popupSending = popUp.querySelector('.popup__send-load');
+  var filePreview = popUp.querySelector('.preview-file') || false;
+  console.log(filePreview);
   popUp.classList.add('open');
   bodyLock.classList.add('lock');
   popupCloseIcon.addEventListener('click', function (e) {
@@ -419,9 +421,14 @@ function popUp(popupId) {
   function popupClose(popupActive) {
     popupActive.classList.remove('open');
     bodyLock.classList.remove("lock");
+    popUp.classList.remove('send');
+
+    if (filePreview) {
+      filePreview.innerHTML = '';
+    }
   }
 
-  popUp.addEventListener('click', function (e) {
+  popUp.addEventListener('mousedown', function (e) {
     if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
       popupClose(popUp);
     }
