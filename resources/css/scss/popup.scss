@@ -5,7 +5,6 @@
    height: 100%;
    top: 0;
    left: 0;
-   background-color: rgba(0, 0, 0, 0.8);
    background: linear-gradient(120deg,#000, 45%,  #288FB1, #000,);
    z-index: 9999;
    opacity: 0;
@@ -124,12 +123,81 @@
    }
 
    &__send-load{
-      position: absolute;
+     position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
+      z-index: 800;
+      background-color: rgba(0,0,0,0.6);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: all 0.3s ease 0s;
+      &.active{
+         opacity: 1;
+         visibility: visible;
+         pointer-events: all;
+      }
+}
+&__loading{
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform:translate(-50%,-50%);
+   width:150px;
+   height:150px;
+   background:linear-gradient(120deg,#000, 45%,  #288FB1, #000,);
+   //border:3px solid #3c3c3c;
+   border:3px solid #fff;
+   border-radius:50%;
+   text-align:center;
+   line-height:150px;
+   font-size:20px;
+   color:$white;
+   letter-spacing:4px;
+   text-transform:uppercase;
+   text-shadow:0 0 10px rgba(0, 123, 255, .7),
+       0 0 40px rgba(0, 123, 255, .7),
+       0 0 100px rgba(0, 123, 255, .7);
+   box-shadow:0 0 20px rgba(0,0,0,.5);
+   &::before{
+    content:'';
+    position:absolute;
+    top:-3px;
+    left:-3px;
+    width:104%;
+    height:104%;
+    border:3px solid transparent;
+    border-top:3px solid $white;
+    border-right:3px solid $white;
+    border-radius:50%;
+    box-shadow:0 0 10px #fff000;
+    //animation:borderLine 2s linear infinite;
    }
+   span{
+    display:block;
+    position:absolute;
+    top:calc(50% - 2px);
+    left:50%;
+    width:50%;
+    height:4px;
+    background:transparent;
+    transform-origin:left;
+    animation:loadingBall 2s linear infinite;
+    &::before{
+       content:'';
+   position:absolute;
+   width:16px;
+   height:16px;
+   border-radius:50%;
+   background:$white;
+   top:-6px;
+   right:-8px;
+   box-shadow:0 0 20px #fff000;
+    }
+   }
+}
 
    &__form {
    }
@@ -148,6 +216,28 @@
 
    &__button {
    }
+}
+@keyframes borderLine
+{
+  0%
+  {
+    transform:rotate(0deg);
+  }
+  100%
+  {
+    transform:rotate(360deg);
+  }
+}
+@keyframes loadingBall
+{
+  0%
+  {
+    transform:rotate(45deg);
+  }
+  100%
+  {
+    transform:rotate(405deg);
+  }
 }
 .open {
 }
@@ -313,6 +403,7 @@
 .preview-file {
    margin-left: 20px;
    position: relative;
+   height: 96px;
    
    img, video {
       position: relative;
@@ -322,7 +413,7 @@
       height: 96px;
       object-fit: cover;
    }
-   &::before{
+   /*&::before{
       content: "";
       position: absolute;
       left: 0;
@@ -337,13 +428,47 @@
      z-index: 50;
       transition: all 0.3s ease 0s;
       top: 0;
-   }
+   }*/
+   
    &.load{
-      width: 96px;
+      
+    /*  width: 96px;
       height: 96px;
       &::before{
          opacity: 1;
          visibility: visible;
+      }*/
+   }
+}
+.loading-preview{
+  position: relative;
+   .popup__loading{
+      left: 20px;
+      top: 0px;
+      width: 96px;
+      height: 96px;
+      font-size: 14px;
+      z-index: 50;
+      transform: translate(0, 0);
+      transition: all 0s ease 0s;
+      display: none;
+      &::before{
+         width: 106%;
+         height: 106%;
+      }
+     p{
+        position: absolute;
+        top: -24px;
+        font-size: 12px;
+        left: 4px;
+     }
+   }
+   &.load{
+      .preview-file{
+         width: 96px;
+      }
+      .popup__loading{
+         display: block;
       }
    }
 }

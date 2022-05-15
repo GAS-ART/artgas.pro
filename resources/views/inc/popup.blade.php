@@ -1,12 +1,15 @@
 @section('popup')
 <div id="lead" class="popup">
+   <div class="popup__send-load">
+      <div class="popup__loading">
+         Loading<span></span>
+      </div>
+
+   </div>
    <div class="popup__body">
       <div class="popup__content">
          <a href="#" class="popup__close close-popup"><span></span><span></span></a>
          <div class="popup__row">
-            <div class="send-load">
-               <img src="{{asset('img/form/load.gif')}}" alt="">
-            </div>
             <div class="popup__form">
                <div class="popup__title">
                   <h4>Форма зворотнього зв'язку</h4>
@@ -37,7 +40,13 @@
                            <div class="file-button">Додати файл</div>
                            <p class="file-error error"></p>
                         </div>
-                        <div id="filePreview" class="preview-file"></div>
+                        <div class="loading-preview">
+                           <div class="popup__loading">
+                              <p>Loading</p><span></span>
+                           </div>
+                           <div id="filePreview" class="preview-file"></div>
+                        </div>
+
                      </div>
                      <div class="confirm__button">
                         <button class="submit" type="submit">Відправити</button>

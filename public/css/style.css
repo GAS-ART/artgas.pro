@@ -876,7 +876,6 @@ body.lock {
   height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
   background: linear-gradient(120deg, #000, 45%, #288FB1, #000);
   z-index: 9999;
   opacity: 0;
@@ -1004,6 +1003,72 @@ body.lock {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 800;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s ease 0s;
+}
+.popup__send-load.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.popup__loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(120deg, #000, 45%, #288FB1, #000);
+  border: 3px solid #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 150px;
+  font-size: 20px;
+  color: #f0f8ff;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.popup__loading::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 104%;
+  height: 104%;
+  border: 3px solid transparent;
+  border-top: 3px solid #f0f8ff;
+  border-right: 3px solid #f0f8ff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff000;
+}
+.popup__loading span {
+  display: block;
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 50%;
+  width: 50%;
+  height: 4px;
+  background: transparent;
+  transform-origin: left;
+  -webkit-animation: loadingBall 2s linear infinite;
+          animation: loadingBall 2s linear infinite;
+}
+.popup__loading span::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f0f8ff;
+  top: -6px;
+  right: -8px;
+  box-shadow: 0 0 20px #fff000;
 }
 .popup__title {
   font-weight: 600;
@@ -1025,6 +1090,38 @@ body.lock {
 }
 .popup__text {
   text-align: center;
+}
+@-webkit-keyframes borderLine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes borderLine {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loadingBall {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+@keyframes loadingBall {
+  0% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
 }
 .contacts-form__item:not(:last-child) {
   margin-bottom: 20px;
@@ -1174,6 +1271,23 @@ body.lock {
 .preview-file {
   margin-left: 20px;
   position: relative;
+  height: 96px;
+  /*&::before{
+     content: "";
+     position: absolute;
+     left: 0;
+     width: 96px;
+     height: 96px;
+     background-image: url('/img/form/load_2.gif');
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+     opacity: 0;
+     visibility: hidden;
+    z-index: 50;
+     transition: all 0.3s ease 0s;
+     top: 0;
+  }*/
 }
 .preview-file img, .preview-file video {
   position: relative;
@@ -1184,29 +1298,44 @@ body.lock {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.preview-file::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 96px;
-  height: 96px;
-  background-image: url("/img/form/load_2.gif");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 50;
-  transition: all 0.3s ease 0s;
-  top: 0;
-}
 .preview-file.load {
+  /*  width: 96px;
+    height: 96px;
+    &::before{
+       opacity: 1;
+       visibility: visible;
+    }*/
+}
+
+.loading-preview {
+  position: relative;
+}
+.loading-preview .popup__loading {
+  left: 20px;
+  top: 0px;
   width: 96px;
   height: 96px;
+  font-size: 14px;
+  z-index: 50;
+  transform: translate(0, 0);
+  transition: all 0s ease 0s;
+  display: none;
 }
-.preview-file.load::before {
-  opacity: 1;
-  visibility: visible;
+.loading-preview .popup__loading::before {
+  width: 106%;
+  height: 106%;
+}
+.loading-preview .popup__loading p {
+  position: absolute;
+  top: -24px;
+  font-size: 12px;
+  left: 4px;
+}
+.loading-preview.load .preview-file {
+  width: 96px;
+}
+.loading-preview.load .popup__loading {
+  display: block;
 }
 
 .submit {

@@ -107,70 +107,77 @@ window.onload = function () {
    const formImage = document.getElementById('fileImage');
    const formPreview = document.getElementById('filePreview');
    const bookingForm = document.querySelector('#bookingform');
+   const loadingPreview = document.querySelector('.loading-preview');
    formImage.addEventListener('change', function () {
       formPreview.innerHTML = '';
-      formPreview.classList.add('load');
+      loadingPreview.classList.add('load');
       if (this.files[0] == undefined) {
-         formPreview.classList.remove('load');
+         loadingPreview.classList.remove('load');
       }
       uploadFile(formImage.files[0]);
    });
    function uploadFile(file) {
       if (file?.size > 2.5e+7 && bookingForm.classList.contains('ru')) {
          alert("Максимум 25 мегабайт");
-         formPreview.classList.remove('load');
-         $(".send-load").removeClass('active');
+         loadingPreview.classList.remove('load');
+         $(".popup__send-load").removeClass('active');
          return
-      } else if (file?.size > 2.5e+7 && bookingForm.classList.contains('es')) {
-         alert("el tamaño maximo 25");
-         formPreview.classList.remove('load');
+      } else if (file?.size > 2.5e+7 && bookingForm.classList.contains('en')) {
+         alert("Maximum 25 megabytes");
+         loadingPreview.classList.remove('load');
+         return
+      } else if (file?.size > 2.5e+7 && bookingForm.classList.contains('ua')) {
+         alert("Максимум 25 мегабайт");
+         loadingPreview.classList.remove('load');
          return
       }
       let reader = new FileReader();
       reader.onload = function (e) {
          if (file.type.match('image.*')) {
             formPreview.innerHTML = `<img src="${e.target.result}" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('video.*')) {
             formPreview.innerHTML = `<video src="${e.target.result}" controls></video>`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('application/pdf')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/pdf.svg" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('application/msword')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/word.png" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/word.png" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('application/vnd.ms-excel')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/excel.svg" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/excel.svg" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.name.slice(-4) == ".rar") {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/rar.png" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.name.slice(-4) == ".zip") {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/zip.png" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.name.slice(-4) == ".psd") {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/psd.png" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else if (file.type.match('text/plain')) {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/txt.svg" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          } else {
             formPreview.innerHTML = `<img src="https://colorit.agency/public/img/form/file.svg" alt="">`;
-            formPreview.classList.remove('load');
+            loadingPreview.classList.remove('load');
          }
       }
       reader.onerror = function (e) {
          if (bookingForm.classList.contains('ru')) {
             alert("Ошибка загрузки файла");
-         } else if (bookingForm.classList.contains('es')) {
-            alert("Error al cargar el archivo");
+         } else if (bookingForm.classList.contains('en')) {
+            alert("File upload error");
+         } else if (bookingForm.classList.contains('ua')) {
+            alert("Помилка завантаження файлу");
          }
       };
       if (file?.size) {
@@ -181,7 +188,7 @@ window.onload = function () {
    // Отпарвка данных из формы
    $("#bookingform").submit(function (event) {
       event.preventDefault();
-      $(".send-load").addClass('active');
+      $(".popup__send-load").addClass('active');
       $.ajax({
          type: 'POST',
          url: 'http://127.0.0.1:8000/feedback',
@@ -196,10 +203,10 @@ window.onload = function () {
             $(".file-error").html('');
             $(".popup").addClass("send");
             bookingForm.reset();
-            $(".send-load").removeClass('active');
+            $(".popup__send-load").removeClass('active');
          },
          error: function (err) {
-            $(".send-load").removeClass('active');
+            $(".popup__send-load").removeClass('active');
             if (bookingForm.classList.contains('ua')) {
                if (err?.responseJSON?.errors?.email) {
                   let text = err.responseJSON.errors.email[0];

@@ -118,12 +118,13 @@ window.onload = function () {
   var formImage = document.getElementById('fileImage');
   var formPreview = document.getElementById('filePreview');
   var bookingForm = document.querySelector('#bookingform');
+  var loadingPreview = document.querySelector('.loading-preview');
   formImage.addEventListener('change', function () {
     formPreview.innerHTML = '';
-    formPreview.classList.add('load');
+    loadingPreview.classList.add('load');
 
     if (this.files[0] == undefined) {
-      formPreview.classList.remove('load');
+      loadingPreview.classList.remove('load');
     }
 
     uploadFile(formImage.files[0]);
@@ -132,12 +133,16 @@ window.onload = function () {
   function uploadFile(file) {
     if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('ru')) {
       alert("Максимум 25 мегабайт");
-      formPreview.classList.remove('load');
-      $(".send-load").removeClass('active');
+      loadingPreview.classList.remove('load');
+      $(".popup__send-load").removeClass('active');
       return;
-    } else if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('es')) {
-      alert("el tamaño maximo 25");
-      formPreview.classList.remove('load');
+    } else if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('en')) {
+      alert("Maximum 25 megabytes");
+      loadingPreview.classList.remove('load');
+      return;
+    } else if ((file === null || file === void 0 ? void 0 : file.size) > 2.5e+7 && bookingForm.classList.contains('ua')) {
+      alert("Максимум 25 мегабайт");
+      loadingPreview.classList.remove('load');
       return;
     }
 
@@ -146,48 +151,50 @@ window.onload = function () {
     reader.onload = function (e) {
       if (file.type.match('image.*')) {
         formPreview.innerHTML = "<img src=\"".concat(e.target.result, "\" alt=\"\">");
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('video.*')) {
         formPreview.innerHTML = "<video src=\"".concat(e.target.result, "\" controls></video>");
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('application/pdf')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/pdf.svg\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('application/msword')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/word.png\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('application/vnd.openxmlformats-officedocument.wordprocessingml.document')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/word.png\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('application/vnd.ms-excel')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/excel.svg\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('application/vnd.openxmlformats-officedocument.spreadsheetml.sheet')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/excel.svg\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.name.slice(-4) == ".rar") {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/rar.png\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.name.slice(-4) == ".zip") {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/zip.png\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.name.slice(-4) == ".psd") {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/psd.png\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else if (file.type.match('text/plain')) {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/txt.svg\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       } else {
         formPreview.innerHTML = "<img src=\"https://colorit.agency/public/img/form/file.svg\" alt=\"\">";
-        formPreview.classList.remove('load');
+        loadingPreview.classList.remove('load');
       }
     };
 
     reader.onerror = function (e) {
       if (bookingForm.classList.contains('ru')) {
         alert("Ошибка загрузки файла");
-      } else if (bookingForm.classList.contains('es')) {
-        alert("Error al cargar el archivo");
+      } else if (bookingForm.classList.contains('en')) {
+        alert("File upload error");
+      } else if (bookingForm.classList.contains('ua')) {
+        alert("Помилка завантаження файлу");
       }
     };
 
@@ -199,7 +206,7 @@ window.onload = function () {
 
   $("#bookingform").submit(function (event) {
     event.preventDefault();
-    $(".send-load").addClass('active');
+    $(".popup__send-load").addClass('active');
     $.ajax({
       type: 'POST',
       url: 'http://127.0.0.1:8000/feedback',
@@ -214,10 +221,10 @@ window.onload = function () {
         $(".file-error").html('');
         $(".popup").addClass("send");
         bookingForm.reset();
-        $(".send-load").removeClass('active');
+        $(".popup__send-load").removeClass('active');
       },
       error: function error(err) {
-        $(".send-load").removeClass('active');
+        $(".popup__send-load").removeClass('active');
 
         if (bookingForm.classList.contains('ua')) {
           var _err$responseJSON, _err$responseJSON$err, _err$responseJSON2, _err$responseJSON2$er, _err$responseJSON3, _err$responseJSON3$er, _err$responseJSON4, _err$responseJSON4$er;
@@ -398,6 +405,7 @@ function popUp(popupId) {
   var bodyLock = document.getElementById('body');
   var popupCloseIcon = popUp.querySelector('.close-popup');
   var popupBtn = popUp.querySelector('.popup__button');
+  var popupSending = popUp.querySelector('.popup__send-load');
   popUp.classList.add('open');
   bodyLock.classList.add('lock');
   popupCloseIcon.addEventListener('click', function (e) {
@@ -414,7 +422,7 @@ function popUp(popupId) {
   }
 
   popUp.addEventListener('click', function (e) {
-    if (!e.target.closest('.popup__content')) {
+    if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
       popupClose(popUp);
     }
   });

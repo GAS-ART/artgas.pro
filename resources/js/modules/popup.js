@@ -3,6 +3,7 @@ export function popUp(popupId) {
 	const bodyLock = document.getElementById('body');
 	const popupCloseIcon = popUp.querySelector('.close-popup');
 	const popupBtn = popUp.querySelector('.popup__button');
+	const popupSending = popUp.querySelector('.popup__send-load');
 
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
@@ -22,7 +23,7 @@ export function popUp(popupId) {
 	}
 
 	popUp.addEventListener('click', function (e) {
-		if (!e.target.closest('.popup__content')) {
+		if (!e.target.closest('.popup__content') && !popupSending.classList.contains('active')) {
 			popupClose(popUp);
 		}
 	});
