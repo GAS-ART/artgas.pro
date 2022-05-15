@@ -307,6 +307,8 @@ body.lock {
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  padding-left: 16px;
+  padding-right: 16px;
   transition: all 0.5s ease 0s;
 }
 @supports (font-size: clamp( 1.125rem , 0.4085820896rem  +  1.4925373134vw , 1.5rem )) {
@@ -333,8 +335,47 @@ body.lock {
       );
   }
 }
-.header__contacts:last-child:hover {
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
+@media (max-width: 50em) {
+  .header__contacts {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (pointer: fine) {
+  .header__contacts:hover {
+    background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+    border-radius: 6px;
+    box-shadow: #288fb1 0 0 0 1.5px inset, rgba(40, 143, 177, 0.4) 0 2px 4px, rgba(40, 143, 177, 0.3) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1.8;
+  }
+}
+@media (pointer: fine) and (max-width: 50em) {
+  .header__contacts:hover {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (any-pointer: coarse) {
+  .header__contacts {
+    background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+    border-radius: 6px;
+    box-shadow: #288fb1 0 0 0 1.5px inset, rgba(40, 143, 177, 0.4) 0 2px 4px, rgba(40, 143, 177, 0.3) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+    padding-left: 16px;
+    padding-right: 16px;
+    line-height: 1.8;
+  }
+}
+@media (any-pointer: coarse) and (max-width: 50em) {
+  .header__contacts {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+.header__contacts:active {
+  box-shadow: #288FB1 0 3px 7px inset;
+  transform: translateY(2px);
 }
 @media (max-width: 47.99875em) {
   .header__contacts {
@@ -347,6 +388,7 @@ body.lock {
     visibility: visible;
     pointer-events: all;
     top: 100%;
+    line-height: 1;
   }
 }
 .header .contacts-header__row.active .contacts-header__contacts {
@@ -355,12 +397,9 @@ body.lock {
   pointer-events: all;
   top: 100%;
 }
-.header .contacts-header__title-text:hover {
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
-}
 .header .contacts-header__contacts {
   position: absolute;
-  left: 0;
+  left: 0px;
   top: 200%;
   background: linear-gradient(to right, #288FB1, 15%, #000);
   transform: translate(calc(-50% + 55px), 0%);
@@ -369,8 +408,23 @@ body.lock {
   visibility: hidden;
   pointer-events: none;
 }
+@media (min-width: 62em) and (max-width: 75em) {
+  .header .contacts-header__contacts {
+    transform: translate(calc(-50% + 100px), 0%);
+  }
+}
+@media (max-width: 56.25em) {
+  .header .contacts-header__contacts {
+    transform: translate(calc(-50% + 90px), 0%);
+  }
+}
 .header .contacts-header__body {
   padding: 50px 50px 30px 50px;
+}
+@media (min-width: 62em) and (max-width: 75em) {
+  .header .contacts-header__body {
+    padding: 30px 20px;
+  }
 }
 .header .contacts-header__link {
   font-size: 1.25rem;
@@ -579,13 +633,23 @@ body.lock {
   align-items: center;
 }
 .language__link:hover .language__text {
-  animation: neon 2s alternate-reverse infinite;
+  color: #f0f8ff;
+  background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+  border-radius: 6px;
+  box-shadow: #288fb1 0 0 0 1.5px inset, rgba(40, 143, 177, 0.4) 0 2px 4px, rgba(40, 143, 177, 0.3) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+}
+.language__link:active .language__text {
+  box-shadow: #288FB1 0 3px 7px inset;
+  transform: translateY(2px);
 }
 .language__text {
   margin-right: 10px;
   height: 100%;
   cursor: pointer;
   font-weight: 600;
+  padding-left: 5px;
+  padding-right: 5px;
+  line-height: 1.2;
 }
 .language__icon {
   width: 35px;

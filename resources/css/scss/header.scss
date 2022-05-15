@@ -74,102 +74,130 @@ z-index: 200;
 		}
 		cursor: pointer;
 		white-space: nowrap;
-		transition: all 0.5s ease 0s;
-		&:last-child{
-			&:hover{
-				text-shadow:
-				0 0 10px rgba(0, 123, 255, .7),
-				0 0 40px rgba(0, 123, 255, .7),
-				0 0 100px rgba(0, 123, 255, .7);
-			}
+		padding-left: 16px;
+		padding-right: 16px;
+		@media (max-width: em(800)) {
+			padding-left: 8px;
+			padding-right: 8px;
 		}
-		
+		transition: all 0.5s ease 0s;
+			@media (pointer: fine) {
+			&:hover {
+				background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+				border-radius: 6px;
+				box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+				padding-left: 16px;
+				padding-right: 16px;
+				line-height: 1.8;
+				@media (max-width: em(800)) {
+					padding-left: 8px;
+					padding-right: 8px;
+				}
+			}
+			}
+			@media (any-pointer: coarse) {
+				background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+				border-radius: 6px;
+				box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+				padding-left: 16px;
+				padding-right: 16px;
+				line-height: 1.8;
+			}
+			@media (any-pointer: coarse) and (max-width: em(800)){
+				padding-left: 8px;
+				padding-right: 8px;
+			}
+			&:active{
+				box-shadow: #288FB1 0 3px 7px inset;
+         transform: translateY(2px);
+			}
 @media (max-width: $mobile) {
 	display: none ;
 }
 	}
 
-	.contacts-header {
-		&__row{
-			@media (pointer: fine) {
-					&:hover {
-						.contacts-header__contacts{
-							opacity: 1;
-							visibility: visible;
-							pointer-events: all;
-							top: 100%;
-					}
+.contacts-header {
+	&__row{
+		@media (pointer: fine) {
+				&:hover {
+					.contacts-header__contacts{
+						opacity: 1;
+						visibility: visible;
+						pointer-events: all;
+						top: 100%;
+						line-height: 1;
 				}
 			}
-			&.active{
-				.contacts-header__contacts{
-					opacity: 1;
-					visibility: visible;
-					pointer-events: all;
-					top: 100%;
-				
+		}
+		&.active{
+			.contacts-header__contacts{
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+				top: 100%;
 			}
+		}
+	}
+	&__title-text{
+		
+	}
+
+	&__contacts {
+		position: absolute;
+		left: 0px;
+		top: 200%;
+		background: linear-gradient(to right,#288FB1, 15%, #000);
+		transform: translate(calc(-50% + 55px), 0%);
+		transition: all 0.5s ease 0s;
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		@media (min-width: em(992)) and (max-width: em(1200)) {
+			transform: translate(calc(-50% + 100px), 0%);
+		}
+		@media (max-width: em(900)) {
+			transform: translate(calc(-50% + 90px), 0%);;
+		}
 	}
 	
+	&__body {
+		padding: 50px 50px 30px 50px;
+		@media (min-width: em(992)) and (max-width: em(1200)) {
+			padding: 30px 20px;
 		}
-		&__title-text{
-			&:hover{
-				text-shadow:
-				0 0 10px rgba(0, 123, 255, .7),
-				0 0 40px rgba(0, 123, 255, .7),
-				0 0 100px rgba(0, 123, 255, .7);
-				//color: #fff;
-				//letter-spacing: 3px;
-			//		text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #0000ff, 0 0 80px #0000ff, 0 0 90px #0000ff, 0 0 100px #0000ff, 0 0 150px #0000ff;
-		}
-		}
-
-		&__contacts {
-			position: absolute;
-			left: 0;
-			top: 200%;
-			background: linear-gradient(to right,#288FB1, 15%, #000);
-			transform: translate(calc(-50% + 55px), 0%);
-			transition: all 0.5s ease 0s;
-			opacity: 0;
-			visibility: hidden;
-			pointer-events: none;
-		}
+	}
 	
-		&__body {
-			padding: 50px 50px 30px 50px;
-		}
-	
-		&__link {
-			font-size: rem(20);
-			color: aliceblue;
-			margin-bottom: 30px;
-			@media (max-width: $tablet) {
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				justify-content: center;
-			}
-		}
-	
-		&__phone-item {
-			&:not(:last-child){
-				margin-right: 40px;
-			}
-			&:hover{
-				text-shadow:
-				0 0 10px rgba(0, 123, 255, .7),
-				0 0 40px rgba(0, 123, 255, .7),
-				0 0 100px rgba(0, 123, 255, .7);
-		}
+	&__link {
+		font-size: rem(20);
+		color: aliceblue;
+		margin-bottom: 30px;
 		@media (max-width: $tablet) {
-			&:not(:last-child){
-				margin-right: 0;
-				margin-bottom: 15px;
-			}
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 		}
+	}
+	
+	&__phone-item{
+		&:not(:last-child){
+			margin-right: 40px;
 		}
+		&:hover{
+			text-shadow:
+			0 0 10px rgba(0, 123, 255, .7),
+			0 0 40px rgba(0, 123, 255, .7),
+			0 0 100px rgba(0, 123, 255, .7);
+	}
+	@media (max-width: $tablet) {
+		&:not(:last-child){
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+	}
+	
 	
 		&__address {
 			font-size: rem(20);
@@ -388,7 +416,16 @@ z-index: 200;
 		align-items: center;
 		&:hover{
 			.language__text{
-				animation: neon 2s alternate-reverse infinite;
+			color: $white;
+			background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+			border-radius: 6px;
+			box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+			}
+		}
+		&:active{
+			.language__text{
+				box-shadow: #288FB1 0 3px 7px inset;
+				transform: translateY(2px);
 			}
 		}
 	}
@@ -398,7 +435,9 @@ z-index: 200;
 		height: 100%;
 		cursor: pointer;
 		font-weight: 600;
-		
+		padding-left: 5px;
+		padding-right: 5px;
+		line-height: 1.2;
 	}
 
 	&__icon {
