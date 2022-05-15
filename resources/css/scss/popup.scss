@@ -130,6 +130,10 @@
 .popup {
    &__row {
       position: relative;
+      min-width: 505px;
+      @media (max-width: $mobile) {
+         min-width: unset;
+      }
    }
 
    &__send-load{
@@ -467,6 +471,7 @@
     margin-top: 50px;
     padding-left: 16px;
     padding-right: 16px;
+    min-width: 230px;
     &:hover{
       text-shadow:
       0 0 10px rgba(0, 123, 255, .7),

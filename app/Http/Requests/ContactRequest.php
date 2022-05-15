@@ -27,7 +27,7 @@ class ContactRequest extends FormRequest
          'name' => 'required||min:2|max:80|regex:/^[^0-9]+$/',
          'email' => 'required|email',
          'filename' => 'max:25000',
-         'phone' => 'regex:/^((\s*)?(\+)?)([- _():=+]?\d[- _():=+]?){10,12}(\s*)?$/',
+         'phone' => 'required|regex:/^((\s*)?(\+)?)([- _():=+]?\d[- _():=+]?){10,12}(\s*)?$/',
          'text' => 'max:10000',
         ];
     }
@@ -42,6 +42,7 @@ class ContactRequest extends FormRequest
            'email.required' => "Не заполнено поле \"email\"",
            'email.email' => "Указан некорректный email адрес",
            'filename.max' => "Максимально допустимый размер файла 25 мегабайт",
+           'phone.required' => "Не заполнено поле \"Номер телефона\"",
            'phone.regex' => "Неверный формат номера телефона",
            'text.max' => "В поле \"Сообщение\" слишком много символов",
         ];

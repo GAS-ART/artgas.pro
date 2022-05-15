@@ -1006,6 +1006,12 @@ body.lock {
 /*----POP-ELEMENTS----*/
 .popup__row {
   position: relative;
+  min-width: 505px;
+}
+@media (max-width: 47.99875em) {
+  .popup__row {
+    min-width: unset;
+  }
 }
 .popup__send-load {
   position: absolute;
@@ -1372,6 +1378,7 @@ body.lock {
   margin-top: 50px;
   padding-left: 16px;
   padding-right: 16px;
+  min-width: 230px;
 }
 .submit:hover {
   text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
