@@ -1,3 +1,173 @@
 //====================================================================================================
+.footer {
+   display: flex;
+   background: linear-gradient(125deg,#288FB1,15%,#000, 85%,  #288FB1, #000,);
+   &__left-side {
+      flex: 1 1 auto;
+      padding: 50px 0;
+	min-width: 50px;
+
+	@media (max-width: em(374.98)) {
+		min-width: unset;
+	}
+   }
+
+   &__container {
+      flex: 1 1 100%;
+      display: flex;
+
+   }
+
+   &__row {
+      display: flex;
+      &:not(:last-child){
+         @include adaptiveValueREM('margin-right',40,15);
+      }
+      padding: 50px 0;
+   }
+
+   &__avatar {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      @include adaptiveValueREM('margin-right',40,15);
+   }
+
+   &__center-items {
+      display: flex;
+   }
+
+   &__about-me {
+      @include adaptiveValueREM('margin-right',40,15);
+   }
+
+   &__title {
+      text-align: center;
+   }
+
+   &__programs {
+   }
+   &__list-item{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+   }
+   &__icon {
+      margin-right: 10px;
+      svg{
+         width:30px;
+         height: 30px;
+      }
+   }
+
+   &__skills {
+      @include adaptiveValueREM('margin-right',40,15);
+   }
+
+   &__framework {
+   }
+
+   &__right-side {
+      flex: 1 1 auto;
+      padding: 50px 0;
+   }
+}
+.avatar {
+
+   &__full {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      }
+   }
+
+   &__mini {
+      position: absolute;
+width: 80px;
+height: 80px;
+top: 50%;
+transition: all 1.5s ease 0s;
+img {
+   transition: all 1.5s ease 0s;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+object-fit: fill;
+}
+   }
+
+   &__mini-left {
+      left: 0%;
+      transform: translate(0%, -50%);
+   }
+
+   &__mini-middle {
+      left: 50%;
+      transform: translate(-50%, -50%);
+   }
+
+   &__mini-right {
+      right: 0%;
+      transform: translate(0%, -50%);
+   }
+}
+.about-me {
+
+   &__list {
+   }
+
+   &__list-item {
+   }
+
+   &__text {
+   }
+}
+.programs-footer {
+
+   &__list {
+   }
+
+   &__list-item {
+  
+   }
+
+   &__img {
+   }
+}
+.framework-footer {
+
+   &__text {
+   }
+
+   &__list {
+   }
+
+   &__list-item {
+   }
+}
+.skills-footer {
+
+   &__list {
+   }
+
+   &__list-item {
+   }
+
+   &__img {
+   }
+
+   &__text {
+   }
+}
 
 //====================================================================================================

@@ -6,7 +6,10 @@ z-index: 200;
 		background-color: #000;
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
-		position: relative;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
 		@media (max-width: $mobile) {
 			height: 70px;
 		}
@@ -22,12 +25,6 @@ z-index: 200;
 &__right {
 	width: 100%;
 	background: linear-gradient(to left,#288FB1, 65%, #000);
-/*	@media (max-width: em(1250)) {
-		position: absolute;
-		right: 0;
-		width: 50px;
-		height: 100%;
-	}*/
 }
 	&__container {
 		@include adaptiveValueREM('min-width',1170,320);
@@ -484,12 +481,15 @@ z-index: 200;
 
 .icon-menu {
 	display: none;
+	left: -65px;
+	@media (min-width: $mobileSmall) {
+		left: -100px;
+	}
 	@media (max-width: $mobile) {
 		display: block;
 		position: relative;
 		width: 30px;
 		height: 18px;
-		left: -65px;
 		cursor: pointer;
 		z-index: 10;
 		@media (max-width: em(374.98)) {

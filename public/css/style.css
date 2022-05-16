@@ -217,7 +217,10 @@ body.lock {
   background-color: #000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 @media (max-width: 47.99875em) {
   .header__wraper {
@@ -237,12 +240,6 @@ body.lock {
 .header__right {
   width: 100%;
   background: linear-gradient(to left, #288FB1, 65%, #000);
-  /*	@media (max-width: em(1250)) {
-  		position: absolute;
-  		right: 0;
-  		width: 50px;
-  		height: 100%;
-  	}*/
 }
 .header__container {
   display: flex;
@@ -691,6 +688,12 @@ body.lock {
 }
 .icon-menu {
   display: none;
+  left: -65px;
+}
+@media (min-width: 29.99875em) {
+  .icon-menu {
+    left: -100px;
+  }
 }
 @media (max-width: 47.99875em) {
   .icon-menu {
@@ -698,7 +701,6 @@ body.lock {
     position: relative;
     width: 30px;
     height: 18px;
-    left: -65px;
     cursor: pointer;
     z-index: 10;
   }
@@ -920,6 +922,149 @@ body.lock {
   border-radius: 50%;
   -o-object-fit: fill;
      object-fit: fill;
+}
+
+.footer {
+  display: flex;
+  background: linear-gradient(125deg, #288FB1, 15%, #000, 85%, #288FB1, #000);
+}
+.footer__left-side {
+  flex: 1 1 auto;
+  padding: 50px 0;
+  min-width: 50px;
+}
+@media (max-width: 23.43625em) {
+  .footer__left-side {
+    min-width: unset;
+  }
+}
+.footer__container {
+  flex: 1 1 100%;
+  display: flex;
+}
+.footer__row {
+  display: flex;
+  padding: 50px 0;
+}
+@supports (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__row:not(:last-child) {
+    margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__row:not(:last-child) {
+    margin-right: calc(
+         0.9375rem + 1.5625 * (100vw - 20rem) / 55
+      );
+  }
+}
+.footer__avatar {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+@supports (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__avatar {
+    margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__avatar {
+    margin-right: calc(
+         0.9375rem + 1.5625 * (100vw - 20rem) / 55
+      );
+  }
+}
+.footer__center-items {
+  display: flex;
+}
+@supports (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__about-me {
+    margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__about-me {
+    margin-right: calc(
+         0.9375rem + 1.5625 * (100vw - 20rem) / 55
+      );
+  }
+}
+.footer__title {
+  text-align: center;
+}
+.footer__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.footer__icon {
+  margin-right: 10px;
+}
+.footer__icon svg {
+  width: 30px;
+  height: 30px;
+}
+@supports (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__skills {
+    margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem );
+  }
+}
+@supports not (margin-right: clamp( 0.9375rem , 0.3693181818rem  +  2.8409090909vw , 2.5rem )) {
+  .footer__skills {
+    margin-right: calc(
+         0.9375rem + 1.5625 * (100vw - 20rem) / 55
+      );
+  }
+}
+.footer__right-side {
+  flex: 1 1 auto;
+  padding: 50px 0;
+}
+
+.avatar__full {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.avatar__full img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.avatar__mini {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50%;
+  transition: all 1.5s ease 0s;
+}
+.avatar__mini img {
+  transition: all 1.5s ease 0s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.avatar__mini-left {
+  left: 0%;
+  transform: translate(0%, -50%);
+}
+.avatar__mini-middle {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar__mini-right {
+  right: 0%;
+  transform: translate(0%, -50%);
 }
 
 /*----POP-UP----*/
