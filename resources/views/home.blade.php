@@ -23,7 +23,7 @@
    <br>
    <?php echo URL::previous(); ?>
 
-   <div class="image-test">
+ <!--  <div class="image-test">
       <div class="image-test-1 full">
          <img src="{{ asset('img/avatar/1.jpg') }}" alt="avatar artgas">
       </div>
@@ -36,7 +36,7 @@
       <div class="image-test-4 mini mini-right">
          <img src="{{ asset('img/avatar/4.jpg') }}" alt="picture artgas">
       </div>
-   </div>
+   </div>-->
 </div>
 
 @endsection
