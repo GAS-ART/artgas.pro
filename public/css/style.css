@@ -1068,6 +1068,18 @@ body.lock {
   height: 100%;
   position: relative;
 }
+.avatar__full.avatar__mini {
+  transition: unset;
+  position: absolute;
+  width: 115px;
+  height: 115px;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+.avatar__full.avatar__mini img {
+  position: absolute;
+}
 .avatar__full img {
   position: relative;
   top: 0;
@@ -1077,43 +1089,104 @@ body.lock {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.avatar__full::before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 160px);
+  transform: translate(-80px, -120px);
+  height: calc(100% + 120px);
+  display: none;
+  z-index: 1;
+}
+.avatar__full.active::before {
+  display: block;
+}
 .avatar__mini {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 115px;
+  height: 115px;
   top: 50%;
-  transition: all 1.5s ease 0s;
+  transition: all 1.2s ease 0s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10;
 }
 .avatar__mini img {
-  transition: all 1.5s ease 0s;
+  transition: all 1.2s ease 0s;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.avatar__mini.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.avatar__mini.active.hover:hover img {
+  transform: scale(2);
+}
+.avatar__mini.hide {
+  transition: all 0.5s ease 0s;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+.avatar__mini.fly {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.avatar__mini.transform {
+  transition: all 1.2s ease 1.2s;
+  width: 100%;
+  height: 100%;
+}
+.avatar__mini.transform img {
+  border-radius: 0;
 }
 .avatar__mini-left {
-  left: 0%;
-  transform: translate(0%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar__mini-left.active {
+  left: 0;
+  top: 0;
+  transform: translate(-100%, -100%);
 }
 .avatar__mini-middle {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+.avatar__mini-middle.active {
+  top: 0;
+  transform: translate(-50%, -150%);
+}
 .avatar__mini-right {
-  right: 0%;
-  transform: translate(0%, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.avatar__mini-right.active {
+  left: 100%;
+  top: 0;
+  transform: translate(0%, -100%);
 }
 
 .about-me__text {
   display: flex;
   align-items: center;
 }
-.about-me__text .language__icon {
+.about-me__text .flag {
   margin-left: 10px;
+  width: 100px;
+  height: 100px;
+  background-image: url("/img/flags/ua/3.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /*----POP-UP----*/

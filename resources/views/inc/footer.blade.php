@@ -4,17 +4,17 @@
    <div class="footer__container">
       <div class="footer__row">
          <div class="footer__avatar avatar">
-            <div class="avatar__full">
-               <img src="{{ asset('img/avatar/1.jpg') }}" alt="avatar artgas">
-            </div>
             <div class="avatar__mini avatar__mini-left">
                <img data-src="{{ asset('img/avatar/2.jpg') }}" src="{{ asset('img/avatar/2.jpg') }}" alt="foto artgas">
             </div>
             <div class="avatar__mini avatar__mini-middle">
-               <img src="{{ asset('img/avatar/3.jpg') }}" alt="artgas">
+               <img src="{{ asset('img/avatar/1.jpg') }}" alt="artgas">
             </div>
             <div class="avatar__mini avatar__mini-right">
                <img src="{{ asset('img/avatar/4.jpg') }}" alt="picture artgas">
+            </div>
+            <div class="avatar__full">
+               <img src="{{ asset('img/avatar/3.jpg') }}" alt="avatar artgas">
             </div>
          </div>
          <div class="footer__center-items">
@@ -36,7 +36,7 @@
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text">Україна
                         <!--Caution - associated with the flag in header!!!-->
-                        <div class="language__icon ua"></div>
+                        <div class="flag"></div>
                         <!--Caution - associated with the flag in header!!!-->
                      </div>
                   </li>

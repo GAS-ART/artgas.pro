@@ -112,6 +112,8 @@ window.onload = function () {
     if (!target.closest('.contacts-header__row')) {
       contactsRow.classList.remove('active');
     }
+
+    ;
   } //file preview
 
 
@@ -360,6 +362,78 @@ window.onload = function () {
           }
         }
       }
+    });
+  }); //View avatar images
+
+  var avatars = document.querySelector('.avatar');
+  var avatarSide = ['avatar__mini-left', 'avatar__mini-right', 'avatar__mini-middle'];
+  var avatarFull = "";
+  var avatarIcons = "";
+  avatars.addEventListener('mouseenter', function (e) {
+    avatarFull = e.target.querySelector('.avatar__full');
+    avatarIcons = e.target.querySelectorAll('.avatar__mini');
+
+    if (avatarFull.classList.contains('hide')) {
+      avatarFull.classList.remove('hide');
+    }
+
+    avatarIcons.forEach(function (icon) {
+      if (icon.classList.contains('hover')) {
+        icon.classList.remove('hover');
+      }
+
+      if (!avatarFull.classList.contains('hold')) {
+        avatarFull.classList.add('active');
+        icon.classList.add('active');
+        setTimeout(function () {
+          icon.classList.add('hover');
+        }, 1300);
+      }
+
+      icon.addEventListener('click', function (e) {
+        avatarIcons.forEach(function (icon) {
+          if (icon != e.target.closest('.avatar__mini')) {
+            icon.classList.add('hide');
+            setTimeout(function () {
+              icon.classList.remove('hover');
+              icon.classList.remove('active');
+              icon.classList.remove('hide');
+            }, 1000);
+          } else {
+            var targetIcon = icon;
+            var sideIcon;
+            avatarSide.forEach(function (className) {
+              if (targetIcon.classList.contains(className)) {
+                sideIcon = className;
+              }
+            });
+            avatarFull.classList.add('hold');
+            icon.classList.add('fly');
+            icon.classList.remove('hover');
+            icon.classList.remove('active');
+            setTimeout(function () {
+              icon.classList.add('transform');
+            }, 1220);
+            setTimeout(function () {
+              avatarFull.classList.remove('hold');
+              avatarFull.classList.add('avatar__mini');
+              icon.className = 'avatar__full';
+            }, 3500);
+            setTimeout(function () {
+              avatarFull.className = 'avatar__mini';
+              avatarFull.classList.add(sideIcon);
+            }, 3550);
+          }
+        });
+      });
+    });
+  });
+  avatars.addEventListener('mouseleave', function (e) {
+    avatarFull.classList.remove('active');
+    avatarIcons.forEach(function (icon) {
+      icon.classList.remove('active');
+      icon.classList.remove('hover');
+      icon.classList.remove('hide');
     });
   }); //Polifill for closest
 

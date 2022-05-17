@@ -88,6 +88,18 @@
       width: 100%;
       height: 100%;
       position: relative;
+      &.avatar__mini{
+         transition: unset;
+         position: absolute;
+         width: 115px;
+         height: 115px;
+         top: 50%;
+         left: 50%;
+         display: none;
+         img {
+            position: absolute;
+         }
+      }
       img {
       position: relative;
       top: 0;
@@ -96,39 +108,103 @@
       height: 100%;
       object-fit: cover;
       }
+      &::before{
+         content: '';
+         position: absolute;
+         width: calc(100% + 160px);
+         transform: translate(-80px,-120px);
+         height: calc(100% + 120px);
+         display: none;
+         z-index: 1;
+      }
+      &.active{
+         &::before{
+            display: block;
+         }
+      }
    }
 
    &__mini {
-      position: absolute;
-width: 80px;
-height: 80px;
-top: 50%;
-transition: all 1.5s ease 0s;
-img {
-   transition: all 1.5s ease 0s;
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-border-radius: 50%;
-object-fit: fill;
-}
+   position: absolute;
+   width: 115px;
+   height: 115px;
+   top: 50%;
+   transition: all 1.2s ease 0s;
+   opacity: 0;
+   visibility: hidden;
+   border-radius: 50%;
+   pointer-events: none;
+   z-index: 10;
+   img {
+   transition: all 1.2s ease 0s;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   object-fit: cover;
+   
    }
+   &.active{
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+      &.hover{
+         &:hover{
+            img{
+               transform: scale(2);
+             }
+         }
+      }
+   }
+   &.hide{
+      transition: all 0.5s ease 0s;
+      opacity: 0 !important;
+      visibility: hidden !important;
+   }
+   &.fly{
+      opacity: 1 !important;
+      visibility: visible !important;
+   }
+   &.transform{
+      transition: all 1.2s ease 1.2s;
+      width: 100%;
+      height: 100%;
+     
+      img{
+         border-radius: 0;
+      }
+   }
+}
 
    &__mini-left {
-      left: 0%;
-      transform: translate(0%, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      &.active{
+         left: 0;
+         top: 0;
+         transform: translate(-100%, -100%);
+      }
    }
 
    &__mini-middle {
       left: 50%;
       transform: translate(-50%, -50%);
+      &.active{
+         top: 0;
+         transform: translate(-50%, -150%);
+      }
    }
 
    &__mini-right {
-      right: 0%;
-      transform: translate(0%, -50%);
+     left: 50%;
+     transform: translate(-50%, -50%);
+     &.active{
+      left: 100%;
+      top: 0;
+      transform: translate(-0%, -100%);
+      }
    }
 }
 .about-me {
@@ -142,8 +218,13 @@ object-fit: fill;
    &__text {
       display: flex;
       align-items: center;
-      .language__icon{
+      .flag{
          margin-left: 10px;
+         width: 100px;
+         height: 100px;
+         background-image: url('/img/flags/ua/3.png');
+         background-size: contain;
+         background-repeat: no-repeat;
       }
    }
 }
