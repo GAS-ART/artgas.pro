@@ -414,7 +414,7 @@ z-index: 200;
 		&:hover{
 			.language__text{
 			color: $white;
-			background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+			background: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
 			border-radius: 6px;
 			box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
 			}

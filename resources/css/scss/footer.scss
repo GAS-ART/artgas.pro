@@ -1,21 +1,10 @@
 //====================================================================================================
 .footer {
-   display: flex;
    background: linear-gradient(125deg,#288FB1,15%,#000, 85%,  #288FB1, #000,);
-   &__left-side {
-      flex: 1 1 auto;
-      padding: 50px 0;
-	min-width: 50px;
-
-	@media (max-width: em(374.98)) {
-		min-width: unset;
-	}
-   }
+   padding: 50px 0;
 
    &__container {
-      flex: 1 1 100%;
       display: flex;
-
    }
 
    &__row {
@@ -23,7 +12,6 @@
       &:not(:last-child){
          @include adaptiveValueREM('margin-right',40,15);
       }
-      padding: 50px 0;
    }
 
    &__avatar {
@@ -41,18 +29,26 @@
    &__about-me {
       @include adaptiveValueREM('margin-right',40,15);
       min-width: 180px;
-      white-space: nowrap;
+     // white-space: nowrap;
    }
 
    &__title {
       text-align: center;
-      @include adaptiveValueREM('font-size', 24,18 );
+      @include adaptiveValueREM('font-size', 24,20 );
       font-weight: 600;
       margin-bottom: 15px;
       min-height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+         color: $white;
+         text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
+      }
    }
 
    &__programs {
@@ -71,15 +67,22 @@
    }
 
    &__skills {
+      min-width: 140px;
       @include adaptiveValueREM('margin-right',40,15);
    }
 
    &__framework {
    }
 
-   &__right-side {
-      flex: 1 1 auto;
-      padding: 50px 0;
+   &__text {
+      @include adaptiveValueREM('font-size', 20, 18);
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+      &:hover {
+         font-weight: 600;
+         color: $white;
+         text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
+      }
    }
 }
 .avatar {
@@ -208,16 +211,30 @@
    }
 }
 .about-me {
+  // min-width: 222px;
 
    &__list {
+      width: 100%;
    }
 
    &__list-item {
+      &:not(:last-child){
+         margin-bottom: 10px;
+      }
+    /*  &:last-child{
+         .about-me__text{
+            display: flex;
+            align-items: center;
+         }
+      }  */
    }
 
    &__text {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      font-weight: 600;
+      width: 100%;
       .flag{
          margin-left: 10px;
          width: 100px;
@@ -226,10 +243,22 @@
          background-size: contain;
          background-repeat: no-repeat;
       }
+      p{
+      }
+      span{
+        // margin-right: 30px;
+         @include adaptiveValueREM('font-size', 18, 16);
+         padding: 5px;
+         color: $white;
+			background: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+			border-radius: 6px;
+			box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+      }
    }
 }
 .programs-footer {
-
+   
+   min-width: 215px;
    &__list {
    }
 
@@ -241,9 +270,6 @@
    }
 }
 .framework-footer {
-
-   &__text {
-   }
 
    &__list {
    }
@@ -262,8 +288,6 @@
    &__img {
    }
 
-   &__text {
-   }
 }
 
 //====================================================================================================

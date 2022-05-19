@@ -376,6 +376,10 @@ window.onload = function () {
     if (avatarFull.classList.contains('hide')) {
       avatarFull.classList.remove('hide');
     }
+    /*avatarFull.addEventListener('click', function (e) {
+       avatarFull.classList.remove('active');
+    });*/
+
 
     avatarIcons.forEach(function (icon) {
       if (icon.classList.contains('hover')) {
@@ -391,6 +395,7 @@ window.onload = function () {
       }
 
       icon.addEventListener('click', function (e) {
+        avatarFull.classList.remove('active');
         avatarIcons.forEach(function (icon) {
           if (icon != e.target.closest('.avatar__mini')) {
             icon.classList.add('hide');

@@ -1,6 +1,5 @@
 @section('footer')
 <footer class="footer">
-   <div class="footer__left-side"></div>
    <div class="footer__container">
       <div class="footer__row">
          <div class="footer__avatar avatar">
@@ -22,19 +21,19 @@
                <div class="footer__title">Про мене</div>
                <ul class="about-me__list">
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text">Ім'я -<span> Артем</span></div>
+                     <div class="about-me__text footer__text"><p>Ім'я:</p> <span> Артем</span></div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text">Вік -<span> 36 років</span></div>
+                     <div class="about-me__text footer__text"><p>Вік:</p> <span> 36 років</span></div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text">Досвід роботи -<span> 2 роки</span></div>
+                     <div class="about-me__text footer__text"><p>Досвід:</p> <span> 2 роки</span></div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text">Місто -<span> Дніпро</span></div>
+                     <div class="about-me__text footer__text"><p>Місто:</p> <span> Дніпро</span></div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text">Україна
+                     <div class="about-me__text footer__text"><p>Україна<p>
                         <!--Caution - associated with the flag in header!!!-->
                         <div class="flag"></div>
                         <!--Caution - associated with the flag in header!!!-->
@@ -52,7 +51,7 @@
                               d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
                            </path>
                         </svg></div>
-                     <div class="framework-footer__text">GitHub</div>
+                     <div class="footer__text">GitHub</div>
                   </li>
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +63,7 @@
                                  d="M92.71,44.408L52.591,4.291c-2.31-2.311-6.057-2.311-8.369,0l-8.33,8.332L46.459,23.19   c2.456-0.83,5.272-0.273,7.229,1.685c1.969,1.97,2.521,4.81,1.67,7.275l10.186,10.185c2.465-0.85,5.307-0.3,7.275,1.671   c2.75,2.75,2.75,7.206,0,9.958c-2.752,2.751-7.208,2.751-9.961,0c-2.068-2.07-2.58-5.11-1.531-7.658l-9.5-9.499v24.997   c0.67,0.332,1.303,0.774,1.861,1.332c2.75,2.75,2.75,7.206,0,9.959c-2.75,2.749-7.209,2.749-9.957,0c-2.75-2.754-2.75-7.21,0-9.959   c0.68-0.679,1.467-1.193,2.307-1.537V36.369c-0.84-0.344-1.625-0.853-2.307-1.537c-2.083-2.082-2.584-5.14-1.516-7.698   L31.798,16.715L4.288,44.222c-2.311,2.313-2.311,6.06,0,8.371l40.121,40.118c2.31,2.311,6.056,2.311,8.369,0L92.71,52.779   C95.021,50.468,95.021,46.719,92.71,44.408z" />
                            </g>
                         </svg></div>
-                     <div class="framework-footer__text">Git</div>
+                     <div class="footer__text">Git</div>
                   </li>
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg"
@@ -89,7 +88,7 @@
                               </g>
                            </g>
                         </svg></div>
-                     <div class="framework-footer__text">Gulp</div>
+                     <div class="footer__text">Gulp</div>
                   </li>
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +149,7 @@
                               </linearGradient>
                            </defs>
                         </svg></div>
-                     <div class="framework-footer__text">VSCode</div>
+                     <div class="footer__text">VSCode</div>
                   </li>
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg"
@@ -165,7 +164,7 @@
                                  fill="#E37400" />
                            </g>
                         </svg></div>
-                     <div class="framework-footer__text">Google Analytics</div>
+                     <div class="footer__text">Google Analytics</div>
                   </li>
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg"
@@ -202,7 +201,7 @@
                                  d="M-207.6,409.7c-0.6-1,0-1.8,0.6-2.5c0.1,0.1,0.4,0.4,0.6,0.6L-207.6,409.7" />
                            </g>
                         </svg></div>
-                     <div class="framework-footer__text">Google Ads</div>
+                     <div class="footer__text">Google Ads</div>
                   </li>
                </ul>
             </div>
@@ -230,7 +229,7 @@
                            </g>
                         </symbol>
                      </svg></div>
-                  <div class="skills-footer__text">HTML</div>
+                  <div class="footer__text">HTML</div>
                </li>
                <li class="skills-footer__list-item footer__list-item">
                   <div class="skills-footer__img footer__icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -247,7 +246,7 @@
                         <path fill="#EBEBEB"
                            d="M64.048 23.435v13.831000000000001h-33.407999999999994l-.277-3.108-.63-7.012-.331-3.711h34.646zM64.001 51.431v13.831000000000001h-15.209l-.277-3.108-.631-7.012-.33-3.711h16.447z" />
                      </svg></div>
-                  <div class="skills-footer__text">CSS</div>
+                  <div class="footer__text">CSS</div>
                </li>
                <li class="skills-footer__list-item footer__list-item">
                   <div class="skills-footer__img footer__icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -268,7 +267,7 @@
                         <g>
                         </g>
                      </svg></div>
-                  <div class="skills-footer__text">SCSS</div>
+                  <div class="footer__text">SCSS</div>
                </li>
                <li class="skills-footer__list-item footer__list-item">
                   <div class="skills-footer__img footer__icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +276,7 @@
                         <path
                            d="m423.2 492.19c12.69 20.72 29.2 35.95 58.4 35.95 24.53 0 40.2-12.26 40.2-29.2 0-20.3-16.1-27.49-43.1-39.3l-14.8-6.35c-42.72-18.2-71.1-41-71.1-89.2 0-44.4 33.83-78.2 86.7-78.2 37.64 0 64.7 13.1 84.2 47.4l-46.1 29.6c-10.15-18.2-21.1-25.37-38.1-25.37-17.34 0-28.33 11-28.33 25.37 0 17.76 11 24.95 36.4 35.95l14.8 6.34c50.3 21.57 78.7 43.56 78.7 93 0 53.3-41.87 82.5-98.1 82.5-54.98 0-90.5-26.2-107.88-60.54zm-209.13 5.13c9.3 16.5 17.76 30.45 38.1 30.45 19.45 0 31.72-7.61 31.72-37.2v-201.3h59.2v202.1c0 61.3-35.94 89.2-88.4 89.2-47.4 0-74.85-24.53-88.81-54.075z" />
                      </svg></div>
-                  <div class="skills-footer__text">JavaScript</div>
+                  <div class="footer__text">JavaScript</div>
                </li>
                <li class="skills-footer__list-item footer__list-item">
                   <div class="skills-footer__img footer__icon"><svg xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -725,7 +724,7 @@
                               style="fill:#363254;fill-opacity:1;fill-rule:nonzero;stroke:none" id="path328" />
                         </g>
                      </svg></div>
-                  <div class="skills-footer__text">PHP</div>
+                  <div class="footer__text">PHP</div>
                </li>
             </ul>
          </div>
@@ -740,7 +739,7 @@
                            d="M49.626 11.564a.809.809 0 0 1 .028.209v10.972a.8.8 0 0 1-.402.694l-9.209 5.302V39.25c0 .286-.152.55-.4.694L20.42 51.01c-.044.025-.092.041-.14.058-.018.006-.035.017-.054.022a.805.805 0 0 1-.41 0c-.022-.006-.042-.018-.063-.026-.044-.016-.09-.03-.132-.054L.402 39.944A.801.801 0 0 1 0 39.25V6.334c0-.072.01-.142.028-.21.006-.023.02-.044.028-.067.015-.042.029-.085.051-.124.015-.026.037-.047.055-.071.023-.032.044-.065.071-.093.023-.023.053-.04.079-.06.029-.024.055-.05.088-.069h.001l9.61-5.533a.802.802 0 0 1 .8 0l9.61 5.533h.002c.032.02.059.045.088.068.026.02.055.038.078.06.028.029.048.062.072.094.017.024.04.045.054.071.023.04.036.082.052.124.008.023.022.044.028.068a.809.809 0 0 1 .028.209v20.559l8.008-4.611v-10.51c0-.07.01-.141.028-.208.007-.024.02-.045.028-.068.016-.042.03-.085.052-.124.015-.026.037-.047.054-.071.024-.032.044-.065.072-.093.023-.023.052-.04.078-.06.03-.024.056-.05.088-.069h.001l9.611-5.533a.801.801 0 0 1 .8 0l9.61 5.533c.034.02.06.045.09.068.025.02.054.038.077.06.028.029.048.062.072.094.018.024.04.045.054.071.023.039.036.082.052.124.009.023.022.044.028.068zm-1.574 10.718v-9.124l-3.363 1.936-4.646 2.675v9.124l8.01-4.611zm-9.61 16.505v-9.13l-4.57 2.61-13.05 7.448v9.216l17.62-10.144zM1.602 7.719v31.068L19.22 48.93v-9.214l-9.204-5.209-.003-.002-.004-.002c-.031-.018-.057-.044-.086-.066-.025-.02-.054-.036-.076-.058l-.002-.003c-.026-.025-.044-.056-.066-.084-.02-.027-.044-.05-.06-.078l-.001-.003c-.018-.03-.029-.066-.042-.1-.013-.03-.03-.058-.038-.09v-.001c-.01-.038-.012-.078-.016-.117-.004-.03-.012-.06-.012-.09v-.002-21.481L4.965 9.654 1.602 7.72zm8.81-5.994L2.405 6.334l8.005 4.609 8.006-4.61-8.006-4.608zm4.164 28.764l4.645-2.674V7.719l-3.363 1.936-4.646 2.675v20.096l3.364-1.937zM39.243 7.164l-8.006 4.609 8.006 4.609 8.005-4.61-8.005-4.608zm-.801 10.605l-4.646-2.675-3.363-1.936v9.124l4.645 2.674 3.364 1.937v-9.124zM20.02 38.33l11.743-6.704 5.87-3.35-8-4.606-9.211 5.303-8.395 4.833 7.993 4.524z"
                            fill="#FF2D20" fill-rule="evenodd" />
                      </svg></div>
-                  <div class="framework-footer__text">Laravel</div>
+                  <div class="footer__text">Laravel</div>
                </li>
                <li class="framework-footer__list-item footer__list-item">
                   <div class="framework-footer footer__icon"><svg xmlns="http://www.w3.org/2000/svg" version="1.0"
@@ -761,11 +760,10 @@
                               d="M3307 2988 c-13 -40 -199 -579 -412 -1198 -213 -619 -388 -1131 -389 -1139 -1 -18 49 -34 234 -71 216 -43 348 -53 618 -47 298 6 501 38 755 118 84 26 96 32 88 47 -5 9 -201 544 -436 1187 -235 644 -428 1171 -430 1173 -1 2 -14 -30 -28 -70z" />
                         </g>
                      </svg></div>
-                  <div class="framework-footer__text">Wordpress</div>
+                  <div class="footer__text">Wordpress</div>
                </li>
             </ul>
          </div>
       </div>
    </div>
-   <div class="footer__right-side"></div>
 </footer>
