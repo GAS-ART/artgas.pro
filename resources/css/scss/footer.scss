@@ -5,12 +5,35 @@
 
    &__container {
       display: flex;
+      @media (max-width: em(1200)) {
+         flex-direction: column;
+      }
    }
 
    &__row {
       display: flex;
       &:not(:last-child){
-         @include adaptiveValueREM('margin-right',40,15);
+    margin-right: 40px;
+      }
+      @media (max-width: em(1200)) {
+         &:not(:last-child){
+            margin-right: 0px;
+            margin-bottom: 25px;
+         }
+         &:last-child{
+            justify-content: space-around;
+         }
+      }
+      @media (max-width: $tablet) {
+      &:first-child{
+         flex-direction: column;
+      }
+      }
+      @media (max-width: $mobile) {
+      &:last-child{
+         flex-direction: column;
+         align-items: center;
+      }
       }
    }
 
@@ -18,23 +41,50 @@
       position: relative;
       width: 300px;
       height: 300px;
-      @include adaptiveValueREM('margin-right',40,15);
+   margin-right: 40px;
       cursor: pointer;
+      @media (max-width: em(1200)) {
+         flex: 0 0 300px;
+      }
+      @media (max-width: $tablet) {
+      order: 2;
+      align-self: center;
+      margin: 25px 0;
+      }
+      @media (max-width: $mobile) {
+      order: 1;
+      }
    }
 
    &__center-items {
       display: flex;
+      @media (max-width: em(1200)) {
+         flex: 1 1 100%;
+         justify-content: space-around;
+      }
+      @media (max-width: $tablet) {
+         order: 1;
+         }
+      @media (max-width: $mobile) {
+      flex-direction: column;
+      order: 2;
+      }
    }
 
    &__about-me {
-      @include adaptiveValueREM('margin-right',40,15);
+    margin-right: 40px;
       min-width: 180px;
-     // white-space: nowrap;
+      @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
    }
 
    &__title {
       text-align: center;
-      @include adaptiveValueREM('font-size', 24,20 );
+      font-size: rem(24);
+   //   @include adaptiveValueREM('font-size', 24,20 );
       font-weight: 600;
       margin-bottom: 15px;
       min-height: 48px;
@@ -43,7 +93,7 @@
       justify-content: center;
       text-align: center;
       text-transform: uppercase;
-      cursor: pointer;
+      cursor: default;
       transition: all 0.3s ease 0s;
       &:hover {
          color: $white;
@@ -52,13 +102,44 @@
    }
 
    &__programs {
+      min-width: 215px;
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
    }
    &__list-item{
       display: flex;
       align-items: center;
       justify-content: flex-start;
+      white-space: nowrap;
+      width: min-content;
+      &:hover{
+         .footer__icon{
+            transform: scale(1.2);
+         }
+         .footer__text{
+            font-weight: 600;
+            color: $white;
+            text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
+         }
+      }
+      &.active{
+         .footer__text{
+            font-weight: 600;
+            color: $white;
+            text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
+         }
+         span{
+            color: $mainColor;
+            text-shadow: none;
+         //   text-shadow: 0 0 10px rgb(240 248 255 / 20%), 0 0 40px rgb(240 248 255 / 70%), 0 0 100px rgb(240 248 255 / 20%);
+         }
+      }
    }
    &__icon {
+      transition: all 0.5s ease 0s;
       margin-right: 10px;
       svg{
          width:30px;
@@ -68,21 +149,25 @@
 
    &__skills {
       min-width: 140px;
-      @include adaptiveValueREM('margin-right',40,15);
+      margin-right: 40px;
+      @media (max-width: $mobile) {
+      margin-right: 0;
+      }
    }
 
    &__framework {
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+      }
    }
 
    &__text {
-      @include adaptiveValueREM('font-size', 20, 18);
-      cursor: pointer;
+      font-size: rem(20);
+     // @include adaptiveValueREM('font-size', 20, 18);
+      cursor: default;
       transition: all 0.5s ease 0s;
-      &:hover {
-         font-weight: 600;
-         color: $white;
-         text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
-      }
    }
 }
 .avatar {
@@ -211,22 +296,25 @@
    }
 }
 .about-me {
-  // min-width: 222px;
 
    &__list {
       width: 100%;
+      @media (max-width: $mobile) {
+      width: auto;
+      }
    }
 
    &__list-item {
+      width: 100%;
       &:not(:last-child){
          margin-bottom: 10px;
       }
-    /*  &:last-child{
+      &:hover{
          .about-me__text{
-            display: flex;
-            align-items: center;
+            color: inherit;
+            text-shadow: unset;
          }
-      }  */
+      }
    }
 
    &__text {
@@ -242,28 +330,39 @@
          background-image: url('/img/flags/ua/3.png');
          background-size: contain;
          background-repeat: no-repeat;
+         cursor: default;
       }
       p{
+         cursor: default;
+         &:hover{
+            color: $white;
+            text-shadow: 0 0 10px rgb(0 123 255 / 70%), 0 0 40px rgb(0 123 255 / 70%), 0 0 100px rgb(0 123 255 / 70%);
+         }
       }
       span{
         // margin-right: 30px;
-         @include adaptiveValueREM('font-size', 18, 16);
-         padding: 5px;
+      //   @include adaptiveValueREM('font-size', 18, 16);
+      font-size: rem(18);
          color: $white;
+         padding: 5px;
 			background: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
 			border-radius: 6px;
 			box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+         transition: all 0.5s ease 0s;
+         cursor: default;
       }
    }
 }
 .programs-footer {
-   
-   min-width: 215px;
    &__list {
+      @media (max-width: $mobile) {
+         width: fit-content;
+         margin-left: 45px;
+         }
    }
 
    &__list-item {
-  
+      
    }
 
    &__img {
@@ -279,7 +378,12 @@
 }
 .skills-footer {
 
+   .footer__title{
+     
+   }
+
    &__list {
+     
    }
 
    &__list-item {

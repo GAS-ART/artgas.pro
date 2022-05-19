@@ -363,7 +363,9 @@ window.onload = function () {
         }
       }
     });
-  }); //View avatar images
+  });
+  /*===================FOOTER===================*/
+  //View avatar images
 
   var avatars = document.querySelector('.avatar');
   var avatarSide = ['avatar__mini-left', 'avatar__mini-right', 'avatar__mini-middle'];
@@ -440,7 +442,27 @@ window.onload = function () {
       icon.classList.remove('hover');
       icon.classList.remove('hide');
     });
-  }); //Polifill for closest
+  }); //Skills highlighting
+
+  var skillsHeader = document.querySelectorAll('.footer__title');
+  skillsHeader.forEach(function (header) {
+    header.addEventListener('mouseenter', function (e) {
+      var skills = e.target.nextElementSibling.querySelectorAll('.footer__list-item');
+      skills.forEach(function (skill) {
+        skill.classList.add('active');
+      });
+    });
+    header.addEventListener('mouseleave', function (e) {
+      var skills = e.target.nextElementSibling.querySelectorAll('.footer__list-item');
+      skills.forEach(function (skill) {
+        skill.classList.remove('active');
+      });
+    });
+  });
+  /*===================FOOTER===================*/
+
+  /*===================POLIFILLS===================*/
+  //Polifill for closest
 
   (function () {
     // проверяем поддержку
@@ -465,6 +487,8 @@ window.onload = function () {
       Element.prototype.matches = Element.prototype.matchesSelector || Element.prototype.webkitMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.msMatchesSelector;
     }
   })();
+  /*===================POLIFILLS===================*/
+
 };
 
 /***/ }),

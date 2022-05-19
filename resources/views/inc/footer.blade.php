@@ -21,22 +21,29 @@
                <div class="footer__title">Про мене</div>
                <ul class="about-me__list">
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text footer__text"><p>Ім'я:</p> <span> Артем</span></div>
+                     <div class="about-me__text footer__text">
+                        <p>Ім'я:</p> <span> Артем</span>
+                     </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text footer__text"><p>Вік:</p> <span> 36 років</span></div>
+                     <div class="about-me__text footer__text">
+                        <p>Вік:</p> <span> 36 років</span>
+                     </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text footer__text"><p>Досвід:</p> <span> 2 роки</span></div>
+                     <div class="about-me__text footer__text">
+                        <p>Досвід:</p> <span> 2 роки</span>
+                     </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text footer__text"><p>Місто:</p> <span> Дніпро</span></div>
+                     <div class="about-me__text footer__text">
+                        <p>Місто:</p> <span> Дніпро</span>
+                     </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
-                     <div class="about-me__text footer__text"><p>Україна<p>
-                        <!--Caution - associated with the flag in header!!!-->
+                     <div class="about-me__text footer__text">
+                        <p>Україна</p>
                         <div class="flag"></div>
-                        <!--Caution - associated with the flag in header!!!-->
                      </div>
                   </li>
                </ul>
