@@ -343,6 +343,10 @@
          background-size: contain;
          background-repeat: no-repeat;
          cursor: default;
+         transition: all 0.3s ease 0s;
+         &.active{
+            transform: scale(1.2);
+         }
       }
       p{
          cursor: default;
@@ -362,6 +366,9 @@
 			box-shadow: #288fb1 0 0 0 1.5px inset, rgb(40 143 177 / 40%) 0 2px 4px, rgb(40 143 177 / 30%) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
          transition: all 0.5s ease 0s;
          cursor: default;
+         &.active{
+            color: $mainColor;
+         }
       }
    }
 }

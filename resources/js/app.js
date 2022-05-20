@@ -445,7 +445,7 @@ window.onload = function () {
 
    //Skills highlighting
    let skillsHeader = document.querySelectorAll('.footer__title');
-
+   let aboutMe = document.querySelectorAll('.about-me__text');
    skillsHeader.forEach(function (header) {
       header.addEventListener('mouseenter', function (e) {
          let skills = e.target.nextElementSibling.querySelectorAll('.footer__list-item');
@@ -462,6 +462,16 @@ window.onload = function () {
       });
    });
 
+   aboutMe.forEach(function (text) {
+      text.querySelector('p').addEventListener('mouseenter', function () {
+         if (text.querySelector('span')) text.querySelector('span').classList.add('active');
+         if (text.querySelector('.flag')) text.querySelector('.flag').classList.add('active');
+      });
+      text.querySelector('p').addEventListener('mouseleave', function () {
+         if (text.querySelector('span')) text.querySelector('span').classList.remove('active');
+         if (text.querySelector('.flag')) text.querySelector('.flag').classList.remove('active');
+      });
+   });
    /*===================FOOTER===================*/
 
    /*===================POLIFILLS===================*/

@@ -490,6 +490,7 @@ window.onload = function () {
 
 
   var skillsHeader = document.querySelectorAll('.footer__title');
+  var aboutMe = document.querySelectorAll('.about-me__text');
   skillsHeader.forEach(function (header) {
     header.addEventListener('mouseenter', function (e) {
       var skills = e.target.nextElementSibling.querySelectorAll('.footer__list-item');
@@ -502,6 +503,16 @@ window.onload = function () {
       skills.forEach(function (skill) {
         skill.classList.remove('active');
       });
+    });
+  });
+  aboutMe.forEach(function (text) {
+    text.querySelector('p').addEventListener('mouseenter', function () {
+      if (text.querySelector('span')) text.querySelector('span').classList.add('active');
+      if (text.querySelector('.flag')) text.querySelector('.flag').classList.add('active');
+    });
+    text.querySelector('p').addEventListener('mouseleave', function () {
+      if (text.querySelector('span')) text.querySelector('span').classList.remove('active');
+      if (text.querySelector('.flag')) text.querySelector('.flag').classList.remove('active');
     });
   });
   /*===================FOOTER===================*/

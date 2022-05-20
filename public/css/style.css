@@ -1281,6 +1281,10 @@ body.lock {
   background-size: contain;
   background-repeat: no-repeat;
   cursor: default;
+  transition: all 0.3s ease 0s;
+}
+.about-me__text .flag.active {
+  transform: scale(1.2);
 }
 .about-me__text p {
   cursor: default;
@@ -1298,6 +1302,9 @@ body.lock {
   box-shadow: #288fb1 0 0 0 1.5px inset, rgba(40, 143, 177, 0.4) 0 2px 4px, rgba(40, 143, 177, 0.3) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
   transition: all 0.5s ease 0s;
   cursor: default;
+}
+.about-me__text span.active {
+  color: #288FB1;
 }
 
 @media (max-width: 47.99875em) {
