@@ -18,38 +18,37 @@
          </div>
          <div class="footer__center-items">
             <div class="footer__about-me about-me">
-               <div class="footer__title">Про мене</div>
+               <div class="footer__title">@lang('footer.about.title')</div>
                <ul class="about-me__list">
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text footer__text">
-                        <p>Ім'я:</p> <span> Артем</span>
+                        @lang('footer.about.name')
                      </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text footer__text">
-                        <p>Вік:</p> <span> 36 років</span>
+                     @lang('footer.about.age')
                      </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text footer__text">
-                        <p>Досвід:</p> <span> 2 роки</span>
+                     @lang('footer.about.experience')
                      </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text footer__text">
-                        <p>Місто:</p> <span> Дніпро</span>
+                     @lang('footer.about.city')
                      </div>
                   </li>
                   <li class="about-me__list-item footer__list-item">
                      <div class="about-me__text footer__text">
-                        <p>Україна</p>
-                        <div class="flag"></div>
+                     @lang('footer.about.country')
                      </div>
                   </li>
                </ul>
             </div>
             <div class="footer__programs programs-footer">
-               <div class="footer__title">Сервіси та програми</div>
+               <div class="footer__title">@lang('footer.programs')</div>
                <ul class="programs-footer__list">
                   <li class="programs-footer__list-item footer__list-item">
                      <div class="programs-footer__img footer__icon "><svg xmlns="http://www.w3.org/2000/svg" fill="#fff"
@@ -217,7 +216,7 @@
 
       <div class="footer__row">
          <div class="footer__skills skills-footer">
-            <div class="footer__title">Навички</div>
+            <div class="footer__title">@lang('footer.skills')</div>
             <ul class="skills-footer__list">
                <li class="skills-footer__list-item footer__list-item">
                   <div class="skills-footer__img footer__icon"><svg xmlns="http://www.w3.org/2000/svg"
@@ -736,7 +735,7 @@
             </ul>
          </div>
          <div class="footer__framework framework-footer">
-            <div class="footer__title">CMS / Фреймворки</div>
+            <div class="footer__title">@lang('footer.framework')</div>
             <ul class="framework-footer__list">
                <li class="framework-footer__list-item footer__list-item">
                   <div class="framework-footer footer__icon"><svg xmlns="http://www.w3.org/2000/svg" width="50"

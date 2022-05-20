@@ -230,6 +230,10 @@
    z-index: 10;
    cursor: pointer;
    pointer-events: none;
+   @media (max-width: em(1400)) {
+   width: 80px;
+   height: 80px;
+   }
    img {
    transition: all 1.2s ease 0s;
    position: absolute;
@@ -254,6 +258,9 @@
          &:hover{
             img{
                transform: scale(2);
+               @media (max-width: em(1400)) {
+                  transform: scale(1.5);
+               }
              }
          }
       }
@@ -285,6 +292,9 @@
          left: 0;
          top: 0;
          transform: translate(-100%, -100%);
+         @media (max-width: em(1400)) {
+            transform: translate(-0%, -0%);
+         }
       }
    }
 
@@ -294,7 +304,11 @@
       &.active{
          top: 0;
          transform: translate(-50%, -150%);
+         @media (max-width: em(1400)) {
+            transform: translate(-50%, -50%);
+         }
       }
+      
    }
 
    &__mini-right {
@@ -304,6 +318,9 @@
       left: 100%;
       top: 0;
       transform: translate(-0%, -100%);
+      @media (max-width: em(1400)) {
+         transform: translate(-100%, -0%);
+      }
       }
    }
 }

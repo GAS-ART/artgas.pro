@@ -1176,6 +1176,12 @@ body.lock {
   cursor: pointer;
   pointer-events: none;
 }
+@media (max-width: 87.5em) {
+  .avatar__mini {
+    width: 80px;
+    height: 80px;
+  }
+}
 .avatar__mini img {
   transition: all 1.2s ease 0s;
   position: absolute;
@@ -1204,6 +1210,11 @@ body.lock {
 .avatar__mini.active.hover:hover img {
   transform: scale(2);
 }
+@media (max-width: 87.5em) {
+  .avatar__mini.active.hover:hover img {
+    transform: scale(1.5);
+  }
+}
 .avatar__mini.hide {
   transition: all 0.5s ease 0s;
   opacity: 0 !important;
@@ -1230,6 +1241,11 @@ body.lock {
   top: 0;
   transform: translate(-100%, -100%);
 }
+@media (max-width: 87.5em) {
+  .avatar__mini-left.active {
+    transform: translate(0%, 0%);
+  }
+}
 .avatar__mini-middle {
   left: 50%;
   transform: translate(-50%, -50%);
@@ -1237,6 +1253,11 @@ body.lock {
 .avatar__mini-middle.active {
   top: 0;
   transform: translate(-50%, -150%);
+}
+@media (max-width: 87.5em) {
+  .avatar__mini-middle.active {
+    transform: translate(-50%, -50%);
+  }
 }
 .avatar__mini-right {
   left: 50%;
@@ -1246,6 +1267,11 @@ body.lock {
   left: 100%;
   top: 0;
   transform: translate(0%, -100%);
+}
+@media (max-width: 87.5em) {
+  .avatar__mini-right.active {
+    transform: translate(-100%, 0%);
+  }
 }
 
 .about-me__list {

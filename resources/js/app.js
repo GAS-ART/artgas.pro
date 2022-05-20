@@ -394,7 +394,6 @@ window.onload = function () {
    }
    //This function run from documentActions function
    function clickAvatars(currentAvatar) {
-      console.log(currentAvatar);
       avatarFull.classList.remove('active');
       avatarIcons.forEach(function (icon) {
          if (icon != currentAvatar) {
