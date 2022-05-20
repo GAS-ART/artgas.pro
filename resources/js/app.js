@@ -101,6 +101,16 @@ window.onload = function () {
       if (!target.closest('.contacts-header__row')) {
          contactsRow.classList.remove('active');
       };
+
+      //Click for Avatar icons
+      if (target.closest('.avatar__mini')) {
+         let currentAvatarMini = e.target.closest('.avatar__mini');
+         clickAvatars(currentAvatarMini)
+      } else if (target.classList.contains('active') && window.matchMedia("(pointer: coarse)").matches) {
+         hideAvatarsIcons();
+      } else if (!target.closest('.avatar')) {
+         hideAvatarsIcons();
+      }
    }
 
    //file preview
@@ -329,79 +339,109 @@ window.onload = function () {
    const avatarSide = ['avatar__mini-left', 'avatar__mini-right', 'avatar__mini-middle'];
    let avatarFull = "";
    let avatarIcons = "";
-   avatars.addEventListener('mouseenter', function (e) {
 
-      avatarFull = e.target.querySelector('.avatar__full');
-      avatarIcons = e.target.querySelectorAll('.avatar__mini');
-
-      if (avatarFull.classList.contains('hide')) {
-         avatarFull.classList.remove('hide');
-      }
-
-      /*avatarFull.addEventListener('click', function (e) {
-         avatarFull.classList.remove('active');
-      });*/
-
-      avatarIcons.forEach(function (icon) {
-         if (icon.classList.contains('hover')) {
-            icon.classList.remove('hover');
+   if (window.matchMedia("(pointer: fine)").matches) {
+      avatars.addEventListener('mouseenter', function (e) {
+         avatarFull = e.target.querySelector('.avatar__full');
+         avatarIcons = e.target.querySelectorAll('.avatar__mini');
+         if (avatarFull.classList.contains('hide')) {
+            avatarFull.classList.remove('hide');
          }
-         if (!avatarFull.classList.contains('hold')) {
-            avatarFull.classList.add('active');
-            icon.classList.add('active');
-            setTimeout(function () {
-               icon.classList.add('hover');
-            }, 1300);
-         }
-
-         icon.addEventListener('click', function (e) {
-            avatarFull.classList.remove('active');
-            avatarIcons.forEach(function (icon) {
-               if (icon != e.target.closest('.avatar__mini')) {
-                  icon.classList.add('hide');
-                  setTimeout(function () {
-                     icon.classList.remove('hover');
-                     icon.classList.remove('active');
-                     icon.classList.remove('hide');
-                  }, 1000);
-               } else {
-                  let targetIcon = icon;
-                  let sideIcon;
-                  avatarSide.forEach(function (className) {
-                     if (targetIcon.classList.contains(className)) {
-                        sideIcon = className;
-                     }
-                  });
-                  avatarFull.classList.add('hold');
-                  icon.classList.add('fly');
-                  icon.classList.remove('hover');
-                  icon.classList.remove('active');
-                  setTimeout(function () {
-                     icon.classList.add('transform');
-                  }, 1220);
-                  setTimeout(function () {
-                     avatarFull.classList.remove('hold');
-                     avatarFull.classList.add('avatar__mini');
-                     icon.className = 'avatar__full';
-                  }, 3500);
-                  setTimeout(function () {
-                     avatarFull.className = 'avatar__mini';
-                     avatarFull.classList.add(sideIcon);
-                  }, 3550);
-               }
-            });
+         avatarIcons.forEach(function (icon) {
+            if (icon.classList.contains('hover')) {
+               icon.classList.remove('hover');
+            }
+            if (!avatarFull.classList.contains('hold')) {
+               avatarFull.classList.add('active');
+               icon.classList.add('active');
+               setTimeout(function () {
+                  icon.classList.add('hover');
+               }, 1300);
+            }
          });
       });
-   });
 
-   avatars.addEventListener('mouseleave', function (e) {
+      avatars.addEventListener('mouseleave', function (e) {
+         avatarFull.classList.remove('active');
+         avatarIcons.forEach(function (icon) {
+            icon.classList.remove('active');
+            icon.classList.remove('hover');
+            icon.classList.remove('hide');
+         });
+      });
+
+   } else if (window.matchMedia("(pointer: coarse)").matches) {
+
+      avatars.addEventListener('click', function (e) {
+         avatarFull = avatars.querySelector('.avatar__full');
+         avatarIcons = avatars.querySelectorAll('.avatar__mini');
+         if (avatarFull.classList.contains('hide')) {
+            avatarFull.classList.remove('hide');
+         }
+         avatarIcons.forEach(function (icon) {
+            if (icon.classList.contains('hover')) {
+               icon.classList.remove('hover');
+            }
+            if (!avatarFull.classList.contains('hold')) {
+               avatarFull.classList.add('active');
+               icon.classList.add('active');
+               setTimeout(function () {
+                  icon.classList.add('hover');
+               }, 1300);
+            }
+         });
+      });
+   }
+   //This function run from documentActions function
+   function clickAvatars(currentAvatar) {
+      console.log(currentAvatar);
       avatarFull.classList.remove('active');
+      avatarIcons.forEach(function (icon) {
+         if (icon != currentAvatar) {
+            icon.classList.add('hide');
+            setTimeout(function () {
+               icon.classList.remove('hover');
+               icon.classList.remove('active');
+               icon.classList.remove('hide');
+            }, 1000);
+         } else {
+            let targetIcon = icon;
+            let sideIcon;
+            avatarSide.forEach(function (className) {
+               if (targetIcon.classList.contains(className)) {
+                  sideIcon = className;
+               }
+            });
+            avatarFull.classList.add('hold');
+            icon.classList.add('fly');
+            icon.classList.remove('hover');
+            icon.classList.remove('active');
+            setTimeout(function () {
+               icon.classList.add('transform');
+            }, 1220);
+            setTimeout(function () {
+               avatarFull.classList.remove('hold');
+               avatarFull.classList.add('avatar__mini');
+               icon.className = 'avatar__full';
+            }, 3500);
+            setTimeout(function () {
+               avatarFull.className = 'avatar__mini';
+               avatarFull.classList.add(sideIcon);
+            }, 3550);
+         }
+      });
+   }
+
+   //This function run from documentActions function
+   function hideAvatarsIcons() {
+      let avatarfull = document.querySelector('.avatar__full');
+      avatarfull.classList.remove('active');
       avatarIcons.forEach(function (icon) {
          icon.classList.remove('active');
          icon.classList.remove('hover');
          icon.classList.remove('hide');
       });
-   });
+   }
 
    //Skills highlighting
    let skillsHeader = document.querySelectorAll('.footer__title');
