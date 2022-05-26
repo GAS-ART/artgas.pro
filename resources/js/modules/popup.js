@@ -5,7 +5,6 @@ export function popUp(popupId) {
 	const popupBtn = popUp.querySelector('.popup__button');
 	const popupSending = popUp.querySelector('.popup__send-load');
 	const filePreview = popUp.querySelector('.preview-file') || false;
-	console.log(filePreview);
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
 

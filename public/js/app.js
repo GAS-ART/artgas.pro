@@ -373,6 +373,24 @@ window.onload = function () {
       }
     });
   });
+  /*===================PORTFOLIO===================*/
+
+  var portfolioImg = document.querySelector('.portfolio__image');
+  portfolioImg.addEventListener('click', function (e) {
+    console.log(e.target);
+
+    if (e.target.classList.contains('left')) {
+      e.target.classList.remove('left');
+      e.target.classList.add('right');
+    } else if (e.target.classList.contains('right')) {
+      e.target.classList.remove('right');
+      e.target.classList.add('left');
+    } else {
+      e.target.classList.add('right');
+    }
+  });
+  /*===================PORTFOLIO===================*/
+
   /*===================FOOTER===================*/
   //View avatar images
 
@@ -480,11 +498,14 @@ window.onload = function () {
   function hideAvatarsIcons() {
     var avatarfull = document.querySelector('.avatar__full');
     avatarfull.classList.remove('active');
-    avatarIcons.forEach(function (icon) {
-      icon.classList.remove('active');
-      icon.classList.remove('hover');
-      icon.classList.remove('hide');
-    });
+
+    if (avatarIcons != "") {
+      avatarIcons.forEach(function (icon) {
+        icon.classList.remove('active');
+        icon.classList.remove('hover');
+        icon.classList.remove('hide');
+      });
+    }
   } //Skills highlighting
 
 
@@ -565,7 +586,6 @@ function popUp(popupId) {
   var popupBtn = popUp.querySelector('.popup__button');
   var popupSending = popUp.querySelector('.popup__send-load');
   var filePreview = popUp.querySelector('.preview-file') || false;
-  console.log(filePreview);
   popUp.classList.add('open');
   bodyLock.classList.add('lock');
   popupCloseIcon.addEventListener('click', function (e) {

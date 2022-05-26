@@ -332,7 +332,24 @@ window.onload = function () {
          }
       });
    });
+   /*===================PORTFOLIO===================*/
 
+   const portfolioImg = document.querySelector('.portfolio__image')
+   portfolioImg.addEventListener('click', function (e) {
+      console.log(e.target)
+      if (e.target.classList.contains('left')) {
+         e.target.classList.remove('left');
+         e.target.classList.add('right');
+      } else if (e.target.classList.contains('right')) {
+         e.target.classList.remove('right');
+         e.target.classList.add('left');
+      } else {
+         e.target.classList.add('right');
+      }
+
+   });
+
+   /*===================PORTFOLIO===================*/
    /*===================FOOTER===================*/
    //View avatar images
    let avatars = document.querySelector('.avatar');
@@ -435,11 +452,13 @@ window.onload = function () {
    function hideAvatarsIcons() {
       let avatarfull = document.querySelector('.avatar__full');
       avatarfull.classList.remove('active');
-      avatarIcons.forEach(function (icon) {
-         icon.classList.remove('active');
-         icon.classList.remove('hover');
-         icon.classList.remove('hide');
-      });
+      if (avatarIcons != "") {
+         avatarIcons.forEach(function (icon) {
+            icon.classList.remove('active');
+            icon.classList.remove('hover');
+            icon.classList.remove('hide');
+         });
+      }
    }
 
    //Skills highlighting
