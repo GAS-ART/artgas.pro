@@ -597,7 +597,7 @@
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Збереження версій сайту</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>
@@ -611,7 +611,7 @@
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Заповнення тегів title та description</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>
@@ -625,7 +625,8 @@
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Налаштування відображення у
+                           месенджерах</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>
@@ -641,7 +642,7 @@
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Розподілення подій</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>
@@ -655,7 +656,7 @@
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Кросбраузерність</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>
@@ -669,7 +670,7 @@
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__text">Швидке завантаження</div>
                         <div class="description-portfolio__info-card card-info">
                            <span class="card-info__icon">
                               <i>i</i>

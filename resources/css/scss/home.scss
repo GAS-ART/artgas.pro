@@ -306,16 +306,22 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items:center;
-     // flex: 1 1 180px;
+      //align-items:center;
+      //flex: 1 1 380px;
+      //flex-basis: 380px;
+    // width: min-content;
+    // left: 3%;
+     @include adaptiveValueREM('left',34,20,1920,1200,1);
+     @include adaptiveValueREM('flex-basis',380,40,1200,768,1);
    }
 
    &__text {
-      white-space: nowrap;
+     // white-space: nowrap;
      // margin: 0 auto;
    }
 
    &__info-card {
+      align-self: flex-start;
       position: relative;
       padding: 0;
       height: 30px;
