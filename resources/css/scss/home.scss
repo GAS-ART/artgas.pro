@@ -135,6 +135,10 @@
       }
    }
 
+   &__description {
+      margin-top: 30px;
+   }
+
 }
 
 .image-portfolio {
@@ -272,5 +276,97 @@
    }
    100%{
       background-position: 152% 0%;
+   }
+}
+
+
+.description-portfolio {
+
+   &__container {
+   }
+
+   &__body {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__row{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+   }
+
+   &__item {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items:center;
+     // flex: 1 1 180px;
+   }
+
+   &__text {
+      white-space: nowrap;
+     // margin: 0 auto;
+   }
+
+   &__info-card {
+      position: relative;
+      padding: 0;
+      height: 30px;
+      clip-path: circle(15% at 17px 45%);
+      transition: all 0.8s ease 0s;
+      color: #fff;
+      background:linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
+      width: 27%;
+      &:hover{
+         clip-path: circle(75%);
+         top: 5px;
+         padding: 42px 32px;
+         height: 180px;
+         width: 100%;
+         .card-info__description{
+            height: 180px;
+            opacity: 1;
+         }
+         &:before{
+            top: -50px;
+            left: -20px;
+         }
+      }
+      top: -22px;
+      left: -35px;
+      &:before{
+         content: '';
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: -10px;
+         left: -10px;
+         z-index: -1;
+      }
+   }
+}
+.card-info {
+
+   &__icon {
+      position: absolute;
+      top: 6px;
+      left: 14px;
+      cursor: default;
+   }
+
+   &__description {
+    /*  line-height: 1.8;
+      height: 450px;*/
+      transition: all 0.3s ease 0s;
+      height: 30px;
+      opacity: 0;
+      cursor: default;
    }
 }

@@ -548,7 +548,143 @@
                </div>
             </div>
          </div>
+         <div class="portfolio__description description-portfolio">
+            <div class="description-portfolio__container">
+               <div class="description-portfolio__body">
+                  <div class="description-portfolio__row">
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
 
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Гумова верстка</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Мобільна версія</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="description-portfolio__row">
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="description-portfolio__row">
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text">Адаптивність</div>
+                        <div class="description-portfolio__info-card card-info">
+                           <span class="card-info__icon">
+                              <i>i</i>
+                           </span>
+                           <p class="card-info__description">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
+                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
+                              Blanditiis quasi nemo ad ullam.
+                           </p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
       </div>
    </div>
 </section>
