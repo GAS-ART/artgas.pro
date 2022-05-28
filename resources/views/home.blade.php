@@ -9,14 +9,14 @@
 @section('content')
 <section class="title">
    <div class="title__container">
-      <h1 class="title__text">Портфолио</h1>
+      <h1 class="title__text">@lang('portfolio.title')</h1>
    </div>
 </section>
 <section class="portfolio">
    <div class="portfolio__container">
       <div class="portfolio__item">
          <div class="portfolio__title">
-            <h2 class="portfolio__title-text">Сайт рекламної агенції</h2>
+            <h2 class="portfolio__title-text">@lang('portfolio.colorit')</h2>
             <a href="https://colorit.agency/" target="_blank" class="portfolio__title-link">colorit.agency</a>
          </div>
          <div class="portfolio__image image-portfolio">
@@ -33,7 +33,7 @@
                               fill="#FF2D20" fill-rule="evenodd"></path>
                         </svg>
                      </span>
-                     <span>Розроблено на: Laravel</span>
+                     <span>@lang('portfolio.laravel')</span>
                   </div>
                   <div class="image-portfolio__bacground"></div>
                </div>
@@ -550,22 +550,23 @@
          </div>
          <div class="portfolio__description description-portfolio">
             <div class="description-portfolio__container">
-               <div class="description-portfolio__title">Сайт містить всі сучасні стандарти розробки</div>
+               <div class="description-portfolio__title">@lang('portfolio.standarts.title')</div>
                <div class="description-portfolio__body">
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i><i class="fa fa-info"></i>Адаптивність</span>
+                                 class="fa fa-info"></i><i
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.adaptive')</span>
                         </div>
                      </div>
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Гумова верстка</span>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.responsive')</span>
                         </div>
                      </div>
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Мобільна версія</span>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.mobile')</span>
                         </div>
                      </div>
                   </div>
@@ -573,40 +574,34 @@
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Збереження версій
-                              сайту</span></div>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.save')</span></div>
                      </div>
 
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Заповнення тегів title
-                              та description</span>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.tags')</span>
                         </div>
                      </div>
 
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Налаштування
-                              відображення у
-                              месенджерах</span></div>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.messengers')</span></div>
                      </div>
                   </div>
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Розподілення
-                              подій</span></div>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.events')</span></div>
                      </div>
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Кросбраузерність</span>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.cross-browser')</span>
                         </div>
                      </div>
                      <div class="description-portfolio__item">
                         <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>Швидке
-                              завантаження</span></div>
+                                 class="fa fa-info"></i>@lang('portfolio.standarts.events')</span></div>
                      </div>
                   </div>
                </div>

@@ -1339,6 +1339,33 @@ body.lock {
 .description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.en::before {
   content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
 }
+.description-portfolio__row:last-child .description-portfolio__item:first-child span.ua::before {
+  content: "Розокремлення і налаштування ефектів які можуть відбуватися на пристроях які мають мишу, стилус, не мають миші та стилуса. Сайт починає взаємодіяти з користувачем в залежності від елементів керування які використовує пристрій.";
+}
+.description-portfolio__row:last-child .description-portfolio__item:first-child span.ru::before {
+  content: "Разделение и настройка эффектов, которые могут происходить на устройствах, имеющие мышь, стилус, не имеющие мыши и стилуса. Сайт начинает взаимодействовать с пользователем в зависимости от используемых елементов управления.";
+}
+.description-portfolio__row:last-child .description-portfolio__item:first-child span.en::before {
+  content: "Separation and customization of effects that can occur on devices that have a mouse, stylus, and those that do not have a mouse and stylus. The site begins to interact with the user depending on the controls used.";
+}
+.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.ua::before {
+  content: "Сайт однаково відображається та функціонує відповідно до поставленого завдання в усіх браузерах (chrome, opera, safari, тощо)";
+}
+.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.ru::before {
+  content: "Сайт одинаково отображается и функционирует в соответствии с поставленной задачей во всех браузерах (chrome, opera, safari и т.д.)";
+}
+.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.en::before {
+  content: "The site is equally displayed and functions in accordance with the task in all browsers (chrome, opera, safari, etc.)";
+}
+.description-portfolio__row:last-child .description-portfolio__item:last-child span.ua::before {
+  content: "Стиснення картинок і відео без втрати якості, а також їх переформатування в сучасні розширення файлів. Стиснення всіх скриптів та стилів (production версія).";
+}
+.description-portfolio__row:last-child .description-portfolio__item:last-child span.ru::before {
+  content: "Сжатие картинок и видео без потери качетва, а также их переформатирование в современные расширений файлов. Сжатие всех скриптов и стилей (production версия).";
+}
+.description-portfolio__row:last-child .description-portfolio__item:last-child span.en::before {
+  content: "Compressing pictures and videos without losing quality, as well as reformatting them into modern file extensions. Compression of all scripts and styles (production version).";
+}
 .description-portfolio__item {
   position: relative;
   display: flex;
