@@ -1233,6 +1233,7 @@ body.lock {
   position: relative;
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 @supports (left: clamp( 1.25rem , -0.2083333333rem  +  1.9444444444vw , 2.125rem )) {
   .description-portfolio__item {
@@ -1257,6 +1258,44 @@ body.lock {
          2.5rem + 21.25 * (100vw - 48rem) / 27
       );
   }
+}
+.description-portfolio__text {
+  position: relative;
+  transition: all 0.8s ease 0.3s;
+}
+.description-portfolio__text::before {
+  content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolorum ipsa, dolore nemo maxime porro ea autem voluptate, iste harum soluta tempora! Recusandae laudantium rerum debitis esse minus vitae sint.";
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  -webkit-clip-path: circle(15px at 20px 20px);
+          clip-path: circle(15px at 20px 20px);
+  background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1);
+  transition: all 0.8s ease 0s;
+  color: #fff;
+  padding: 42px 32px;
+}
+.description-portfolio__text::after {
+  content: "i";
+  position: absolute;
+  top: -1px;
+  left: -22px;
+  z-index: 2;
+  color: #fff;
+  transition: all 0.8s ease 0s;
+}
+.description-portfolio__text.active {
+  margin-bottom: 180px;
+  transition: all 0.3s ease 0s;
+}
+.description-portfolio__text.active::before {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  top: 25px;
+  left: -80px;
+}
+.description-portfolio__text.active::after {
+  opacity: 0;
 }
 .description-portfolio__info-card {
   align-self: flex-start;

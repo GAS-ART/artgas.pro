@@ -553,134 +553,51 @@
                <div class="description-portfolio__body">
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Адаптивність</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Адаптивність</span></div>
+
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Гумова верстка</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Гумова верстка</span></div>
+
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Мобільна версія</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Мобільна версія</span></div>
+
                      </div>
                   </div>
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Збереження версій сайту</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Збереження версій сайту</span></div>
+
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Заповнення тегів title та description</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
+                        <div class="description-portfolio__text"><span>Заповнення тегів title та description</span>
                         </div>
+
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Налаштування відображення у
-                           месенджерах</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Налаштування відображення у
+                              месенджерах</span></div>
+
                      </div>
                   </div>
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Розподілення подій</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Розподілення подій</span></div>
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Кросбраузерність</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Кросбраузерність</span></div>
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text">Швидке завантаження</div>
-                        <div class="description-portfolio__info-card card-info">
-                           <span class="card-info__icon">
-                              <i>i</i>
-                           </span>
-                           <p class="card-info__description">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam labore ad vel numquam
-                              consectetur atque quos temporibus tempora delectus cumque saepe, illo et. Ea, molestiae.
-                              Blanditiis quasi nemo ad ullam.
-                           </p>
-                        </div>
+                        <div class="description-portfolio__text"><span>Швидке завантаження</span></div>
                      </div>
                   </div>
                </div>

@@ -374,6 +374,7 @@ window.onload = function () {
     });
   });
   /*===================PORTFOLIO===================*/
+  //Change image
 
   var portfolioImg = document.querySelector('.portfolio__image');
   portfolioImg.addEventListener('click', function (e) {
@@ -388,6 +389,12 @@ window.onload = function () {
     } else {
       e.target.classList.add('right');
     }
+  }); //Open info
+  //const portfolioInfo = document.querySelector('.description-portfolio__text');
+
+  $('.description-portfolio__text span').click(function (event) {
+    $('.description-portfolio__text span').not($(event.target)).closest('.description-portfolio__text').removeClass('active');
+    $(event.target).closest('.description-portfolio__text').toggleClass('active');
   });
   /*===================PORTFOLIO===================*/
 
