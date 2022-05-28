@@ -285,6 +285,13 @@
    &__container {
    }
 
+   &__title {
+      margin-bottom: 50px;
+      @include adaptiveValueREM('font-size', 30, 16 );
+      font-weight: 600;
+      text-align: center;
+   }
+
    &__body {
       position: relative;
       display: flex;
@@ -296,9 +303,127 @@
       flex-direction: row;
       justify-content: center;
       align-items: flex-start;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       &:last-child{
          margin-bottom: 0;
+      }
+      &:first-child{
+         .description-portfolio__item:first-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:nth-child(2){
+            span{
+               &.ua{
+                  &::before{
+                     content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:last-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
+                  }
+               }
+            }
+         }
+      }
+      &:nth-child(2){
+         .description-portfolio__item:first-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Кожний проект використовує систему контролю версії \"git\". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі \"github\"";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Каждый проект использует систему контроля версии \"git\". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе \"github\".";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:nth-child(2){
+            span{
+               &.ua{
+                  &::before{
+                     content: "Заголовок та опис сторінки необхідні для просування вашого сайту в пошуковій системі Google. Це опис повинен буди на кожній сторонці сайту та містити ключові слова.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Заголовок и описание страницы необходимы для продвижения вашего сайта в поисковой системе Google. Это описание должно быть на каждой странице сайта и содержать ключевые слова.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "The title and description of the page are necessary to promote your site in the Google search engine. This description should be on every page of the site and contain keywords.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:last-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
+                  }
+               }
+            }
+         }
       }
    }
 
@@ -313,50 +438,71 @@
     // left: 3%;
      @include adaptiveValueREM('left',34,20,1920,1200,1);
      @include adaptiveValueREM('flex-basis',380,40,1200,768,1);
-     cursor: pointer;
    }
 
    &__text {
-     // white-space: nowrap;
-     // margin: 0 auto;
      position: relative;
-     transition: all 0.8s ease 0.3s;
-     &::before{
-        content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolorum ipsa, dolore nemo maxime porro ea autem voluptate, iste harum soluta tempora! Recusandae laudantium rerum debitis esse minus vitae sint.";
-        position: absolute;
-        top: -15px;
-        left: -40px;
-        clip-path: circle(15px at 20px 20px);
-        background:linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
-        transition: all 0.8s ease 0s;
-      color: #fff;
-      padding: 42px 32px;
+ font-weight: 600;
+     span{
+        display: inline-block;
+      cursor: pointer;
+      transition: all 0.8s ease 0.3s;
+      &::before{
+         content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolorum ipsa, dolore nemo maxime porro ea autem voluptate, iste harum soluta tempora! Recusandae laudantium rerum debitis esse minus vitae sint.";
+         position: absolute;
+         top: -15px;
+         left: -40px;
+         clip-path: circle(15px at 20px 20px);
+         background:linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
+         transition: all 0.8s ease 0s;
+       color: #fff;
+       padding: 42px 32px;
+       line-height: 1.2;
+      }
+     
+      &::after{
+         content: '';
+         position: absolute;
+         top: -1px;
+         left: -22px;
+         z-index: 2;
+         color: #fff;
+         transition: all 0.8s ease 0s;
+         font-weight: 600;
+      }
+      &.active{
+         margin-bottom: 180px;
+         transition: all 0.3s ease 0s;
+         &::before{
+       clip-path: circle(75%);
+       top: 25px;
+       left: -80px;
+         }
+         &::after{
+            transition: all 0.8s ease 0.3s;
+            background-color: $mainColor;
+            clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+            width: 20px;
+            height: 20px;
+            left: -30px;
+            color: transparent;
+         }
+         i{
+            display: none;
+         }
+    }
      }
-     &::after{
-        content: 'i';
-        position: absolute;
-        top: -1px;
-        left: -22px;
-        z-index: 2;
-        color: #fff;
-        transition: all 0.8s ease 0s;
-     }
-     &.active{
-        margin-bottom: 180px;
-        transition: all 0.3s ease 0s;
-        &::before{
-      clip-path: circle(75%);
-      top: 25px;
-      left: -80px;
-        }
-        &::after{
-           
-           opacity: 0;
-        }
-   }
+    i{
+       position: absolute;
+       top: -3px;
+       left: -22.5px;
+       color: #fff;
+       z-index: 5;
+       pointer-events: none;
+    }
    }
 
-   &__info-card {
+/*   &__info-card {
       align-self: flex-start;
       position: relative;
       padding: 0;
@@ -392,7 +538,7 @@
          left: -10px;
          z-index: -1;
       }
-   }
+   }*/
 }
 .card-info {
 

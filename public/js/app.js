@@ -122,6 +122,11 @@ window.onload = function () {
       hideAvatarsIcons();
     } else if (!target.closest('.avatar')) {
       hideAvatarsIcons();
+    } //Remove active class info icons
+
+
+    if (!target.closest('.description-portfolio__text span')) {
+      $('.description-portfolio__text span').removeClass('active');
     }
   } //file preview
 
@@ -390,11 +395,10 @@ window.onload = function () {
       e.target.classList.add('right');
     }
   }); //Open info
-  //const portfolioInfo = document.querySelector('.description-portfolio__text');
 
   $('.description-portfolio__text span').click(function (event) {
-    $('.description-portfolio__text span').not($(event.target)).closest('.description-portfolio__text').removeClass('active');
-    $(event.target).closest('.description-portfolio__text').toggleClass('active');
+    $('.description-portfolio__text span').not($(event.target)).removeClass('active');
+    $(event.target).toggleClass('active');
   });
   /*===================PORTFOLIO===================*/
 

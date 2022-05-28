@@ -1214,6 +1214,62 @@ body.lock {
     background-position: 152% 0%;
   }
 }
+.description-portfolio {
+  /*   &__info-card {
+        align-self: flex-start;
+        position: relative;
+        padding: 0;
+        height: 30px;
+        clip-path: circle(15% at 17px 45%);
+        transition: all 0.8s ease 0s;
+        color: #fff;
+        background:linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
+        width: 27%;
+        &:hover{
+           clip-path: circle(75%);
+           top: 5px;
+           padding: 42px 32px;
+           height: 180px;
+           width: 100%;
+           .card-info__description{
+              height: 180px;
+              opacity: 1;
+           }
+           &:before{
+              top: -50px;
+              left: -20px;
+           }
+        }
+        top: -22px;
+        left: -35px;
+        &:before{
+           content: '';
+           position: absolute;
+           width: 100%;
+           height: 100%;
+           top: -10px;
+           left: -10px;
+           z-index: -1;
+        }
+     }*/
+}
+.description-portfolio__title {
+  margin-bottom: 50px;
+  font-weight: 600;
+  text-align: center;
+}
+@supports (font-size: clamp( 1rem , 0.6818181818rem  +  1.5909090909vw , 1.875rem )) {
+  .description-portfolio__title {
+    font-size: clamp( 1rem , 0.6818181818rem  +  1.5909090909vw , 1.875rem );
+  }
+}
+@supports not (font-size: clamp( 1rem , 0.6818181818rem  +  1.5909090909vw , 1.875rem )) {
+  .description-portfolio__title {
+    font-size: calc(
+         1rem + 0.875 * (100vw - 20rem) / 55
+      );
+  }
+}
 .description-portfolio__body {
   position: relative;
   display: flex;
@@ -1224,16 +1280,69 @@ body.lock {
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .description-portfolio__row:last-child {
   margin-bottom: 0;
+}
+.description-portfolio__row:first-child .description-portfolio__item:first-child span.ua::before {
+  content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:first-child span.ru::before {
+  content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:first-child span.en::before {
+  content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.ua::before {
+  content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.ru::before {
+  content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.en::before {
+  content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:last-child span.ua::before {
+  content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:last-child span.ru::before {
+  content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
+}
+.description-portfolio__row:first-child .description-portfolio__item:last-child span.en::before {
+  content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.ua::before {
+  content: 'Кожний проект використовує систему контролю версії "git". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі "github"';
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.ru::before {
+  content: 'Каждый проект использует систему контроля версии "git". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе "github".';
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.en::before {
+  content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.ua::before {
+  content: "Заголовок та опис сторінки необхідні для просування вашого сайту в пошуковій системі Google. Це опис повинен буди на кожній сторонці сайту та містити ключові слова.";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.ru::before {
+  content: "Заголовок и описание страницы необходимы для продвижения вашего сайта в поисковой системе Google. Это описание должно быть на каждой странице сайта и содержать ключевые слова.";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.en::before {
+  content: "The title and description of the page are necessary to promote your site in the Google search engine. This description should be on every page of the site and contain keywords.";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.ua::before {
+  content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.ru::before {
+  content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
+}
+.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.en::before {
+  content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
 }
 .description-portfolio__item {
   position: relative;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
 }
 @supports (left: clamp( 1.25rem , -0.2083333333rem  +  1.9444444444vw , 2.125rem )) {
   .description-portfolio__item {
@@ -1261,9 +1370,14 @@ body.lock {
 }
 .description-portfolio__text {
   position: relative;
+  font-weight: 600;
+}
+.description-portfolio__text span {
+  display: inline-block;
+  cursor: pointer;
   transition: all 0.8s ease 0.3s;
 }
-.description-portfolio__text::before {
+.description-portfolio__text span::before {
   content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolorum ipsa, dolore nemo maxime porro ea autem voluptate, iste harum soluta tempora! Recusandae laudantium rerum debitis esse minus vitae sint.";
   position: absolute;
   top: -15px;
@@ -1274,67 +1388,48 @@ body.lock {
   transition: all 0.8s ease 0s;
   color: #fff;
   padding: 42px 32px;
+  line-height: 1.2;
 }
-.description-portfolio__text::after {
-  content: "i";
+.description-portfolio__text span::after {
+  content: "";
   position: absolute;
   top: -1px;
   left: -22px;
   z-index: 2;
   color: #fff;
   transition: all 0.8s ease 0s;
+  font-weight: 600;
 }
-.description-portfolio__text.active {
+.description-portfolio__text span.active {
   margin-bottom: 180px;
   transition: all 0.3s ease 0s;
 }
-.description-portfolio__text.active::before {
+.description-portfolio__text span.active::before {
   -webkit-clip-path: circle(75%);
           clip-path: circle(75%);
   top: 25px;
   left: -80px;
 }
-.description-portfolio__text.active::after {
-  opacity: 0;
+.description-portfolio__text span.active::after {
+  transition: all 0.8s ease 0.3s;
+  background-color: #288FB1;
+  -webkit-clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+          clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+  width: 20px;
+  height: 20px;
+  left: -30px;
+  color: transparent;
 }
-.description-portfolio__info-card {
-  align-self: flex-start;
-  position: relative;
-  padding: 0;
-  height: 30px;
-  -webkit-clip-path: circle(15% at 17px 45%);
-          clip-path: circle(15% at 17px 45%);
-  transition: all 0.8s ease 0s;
-  color: #fff;
-  background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1);
-  width: 27%;
-  top: -22px;
-  left: -35px;
+.description-portfolio__text span.active i {
+  display: none;
 }
-.description-portfolio__info-card:hover {
-  -webkit-clip-path: circle(75%);
-          clip-path: circle(75%);
-  top: 5px;
-  padding: 42px 32px;
-  height: 180px;
-  width: 100%;
-}
-.description-portfolio__info-card:hover .card-info__description {
-  height: 180px;
-  opacity: 1;
-}
-.description-portfolio__info-card:hover:before {
-  top: -50px;
-  left: -20px;
-}
-.description-portfolio__info-card:before {
-  content: "";
+.description-portfolio__text i {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: -10px;
-  left: -10px;
-  z-index: -1;
+  top: -3px;
+  left: -22.5px;
+  color: #fff;
+  z-index: 5;
+  pointer-events: none;
 }
 
 .card-info__icon {

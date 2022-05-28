@@ -550,54 +550,63 @@
          </div>
          <div class="portfolio__description description-portfolio">
             <div class="description-portfolio__container">
+               <div class="description-portfolio__title">Сайт містить всі сучасні стандарти розробки</div>
                <div class="description-portfolio__body">
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Адаптивність</span></div>
-
-                     </div>
-
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Гумова верстка</span></div>
-
-                     </div>
-
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Мобільна версія</span></div>
-
-                     </div>
-                  </div>
-
-                  <div class="description-portfolio__row">
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Збереження версій сайту</span></div>
-
-                     </div>
-
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Заповнення тегів title та description</span>
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i><i class="fa fa-info"></i>Адаптивність</span>
                         </div>
-
                      </div>
-
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Налаштування відображення у
-                              месенджерах</span></div>
-
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Гумова верстка</span>
+                        </div>
+                     </div>
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Мобільна версія</span>
+                        </div>
                      </div>
                   </div>
 
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Розподілення подій</span></div>
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Збереження версій
+                              сайту</span></div>
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Кросбраузерність</span></div>
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Заповнення тегів title
+                              та description</span>
+                        </div>
                      </div>
 
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span>Швидке завантаження</span></div>
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Налаштування
+                              відображення у
+                              месенджерах</span></div>
+                     </div>
+                  </div>
+
+                  <div class="description-portfolio__row">
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Розподілення
+                              подій</span></div>
+                     </div>
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Кросбраузерність</span>
+                        </div>
+                     </div>
+                     <div class="description-portfolio__item">
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                                 class="fa fa-info"></i>Швидке
+                              завантаження</span></div>
                      </div>
                   </div>
                </div>
