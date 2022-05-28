@@ -329,7 +329,9 @@ z-index: 200;
 		&:hover{
 			animation: neon 2s alternate-reverse infinite;
 		}
-		
+		a{
+			margin-left: 2px;
+		}
 	}
 }
 

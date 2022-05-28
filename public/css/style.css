@@ -564,6 +564,9 @@ body.lock {
 .logo__title:hover {
   animation: neon 2s alternate-reverse infinite;
 }
+.logo__title a {
+  margin-left: 2px;
+}
 
 .actions-header__language {
   position: relative;
