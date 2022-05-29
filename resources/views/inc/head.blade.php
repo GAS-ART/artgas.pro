@@ -25,9 +25,11 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-   <link
-      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Roboto&amp;display=swap"
-      rel="stylesheet">
+  
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
+
    <link rel="stylesheet" href="{{asset('css/style.css')}}"> 
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

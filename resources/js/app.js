@@ -6,6 +6,13 @@ window.onload = function () {
 
    document.addEventListener('click', documentActions);
 
+   //Change logo
+   let logo = document.querySelector('.logo__title');
+   logo.addEventListener('click', function (e) {
+      logo.classList.toggle('active');
+      e.preventDefault();
+   });
+
    //popUp
    const popUpButtons = document.querySelectorAll('.link-on-popup');
    popUpButtons.forEach(function (item) {

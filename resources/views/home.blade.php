@@ -548,15 +548,34 @@
                </div>
             </div>
          </div>
+         <div class="portfolio__feature feature-portfolio">
+            <div class="feature-portfolio__container">
+               <div class="feature-portfolio__body">
+                  <div class="feature-portfolio__item item-feature">
+                     <div class="item-feature__body">
+                        <div class="item-feature__row">
+                           <div class="item-feature__img">
+                              <img src="{{asset('img/home/colorit/colorit_lang_1.jpg')}}" alt="Сайт с двумя языками">
+                           </div>
+                           <div class="item-feature__text">Дві мови</div>
+                        </div>
+                        <div class="item-feature__btn">Детальніше</div>
+                        <div class="item-feature__more-info">Для кожної мови формується окреме посилання що дозволяє
+                           пошуковим системам розрізняти ці сторінки а майстрам з SEO проводити окремі заходи для
+                           підвищення позицій ціх сторінок в пошуковій системі Google</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
          <div class="portfolio__description description-portfolio">
             <div class="description-portfolio__container">
                <div class="description-portfolio__title">@lang('portfolio.standarts.title')</div>
                <div class="description-portfolio__body">
                   <div class="description-portfolio__row">
                      <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.adaptive')</span>
+                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')">
+                              <i class="fa fa-info"></i>@lang('portfolio.standarts.adaptive')</span>
                         </div>
                      </div>
                      <div class="description-portfolio__item">

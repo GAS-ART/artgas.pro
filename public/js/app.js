@@ -14,7 +14,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 window.onload = function () {
-  document.addEventListener('click', documentActions); //popUp
+  document.addEventListener('click', documentActions); //Change logo
+
+  var logo = document.querySelector('.logo__title');
+  logo.addEventListener('click', function (e) {
+    logo.classList.toggle('active');
+    e.preventDefault();
+  }); //popUp
 
   var popUpButtons = document.querySelectorAll('.link-on-popup');
   popUpButtons.forEach(function (item) {

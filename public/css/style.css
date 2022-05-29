@@ -57,13 +57,13 @@
   font-weight: 400;
   font-style: normal;
 }
-@font-face {
-  font-family: Montserrat;
-  font-display: swap;
-  src: url("/fonts/Montserrat-Regular.woff2") format("woff2"), url("/fonts/Montserrat-Regular.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-}
+/*@font-face {
+	font-family: Montserrat;
+	font-display: swap;
+	src: url("/fonts/Montserrat-Regular.woff2") format("woff2"), url("/fonts/Montserrat-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: normal;
+}*/
 @font-face {
   font-family: Muller;
   font-display: swap;
@@ -127,7 +127,7 @@ body {
 body {
   color: #288FB1;
   line-height: 1;
-  font-family: "Muller";
+  font-family: "Montserrat";
   font-size: 1rem;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
@@ -139,7 +139,7 @@ body {
 input,
 button,
 textarea {
-  font-family: "Muller";
+  font-family: "Montserrat";
   font-size: inherit;
 }
 
@@ -567,6 +567,10 @@ body.lock {
 .logo__title a {
   margin-left: 2px;
 }
+.logo__title.active {
+  font-family: "Montserrat";
+  max-width: 453px;
+}
 
 .actions-header__language {
   position: relative;
@@ -904,6 +908,8 @@ body.lock {
 .title__text {
   text-align: center;
   font-weight: 600;
+  font-family: "Russo One";
+  letter-spacing: 5px;
 }
 @supports (font-size: clamp( 1.5rem , 0.5681818182rem  +  4.6590909091vw , 4.0625rem )) {
   .title__text {
@@ -947,6 +953,7 @@ body.lock {
 .portfolio__title-text {
   font-weight: 600;
   margin-bottom: 10px;
+  font-family: "Muller";
 }
 @supports (font-size: clamp( 1.25rem , 0.5681818182rem  +  3.4090909091vw , 3.125rem )) {
   .portfolio__title-text {
@@ -991,6 +998,7 @@ body.lock {
   position: relative;
   cursor: pointer;
   border-radius: 6px;
+  margin-bottom: 40px;
   overflow: hidden;
 }
 @media (max-width: 71.875em) {
@@ -1055,10 +1063,9 @@ body.lock {
 .portfolio__image:hover .image-portfolio__skills, .portfolio__image:hover .image-portfolio__development {
   left: 0;
 }
-.portfolio__description {
-  margin-top: 30px;
+.portfolio__feature {
+  margin-bottom: 40px;
 }
-
 .image-portfolio {
   position: relative;
 }
@@ -1215,6 +1222,73 @@ body.lock {
   }
   100% {
     background-position: 152% 0%;
+  }
+}
+.item-feature__row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.item-feature__img {
+  margin-right: 20px;
+  position: relative;
+  border-radius: 50%;
+}
+.item-feature__img::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -0.25rem;
+  left: -0.25rem;
+  width: calc(100% + 0.5rem);
+  height: calc(100% + 0.5rem);
+  border-radius: 0.25em;
+  background-image: linear-gradient(45deg, #104d61, #288FB1, #288FB1, #5073b8, #1098ad, #07b39b, #6fba82);
+  background-size: 200%;
+  border-radius: 50%;
+}
+.item-feature__img img {
+  position: relative;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+  border-radius: 50%;
+}
+.item-feature__img:hover::after {
+  -webkit-animation: animateborder 2s ease infinite;
+          animation: animateborder 2s ease infinite;
+  box-shadow: 0px 1px 5px 2px #288FB1;
+}
+.item-feature__text {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+@-webkit-keyframes animateborder {
+  0% {
+    background-position: 100%;
+  }
+  /*  50% {
+        background-position: 200%;
+
+    }*/
+  100% {
+    background-position: 200%;
+  }
+}
+@keyframes animateborder {
+  0% {
+    background-position: 100%;
+  }
+  /*  50% {
+        background-position: 200%;
+
+    }*/
+  100% {
+    background-position: 200%;
   }
 }
 .description-portfolio {
@@ -1408,13 +1482,13 @@ body.lock {
   transition: all 0.8s ease 0.3s;
 }
 .description-portfolio__text span::before {
-  content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique dolorum ipsa, dolore nemo maxime porro ea autem voluptate, iste harum soluta tempora! Recusandae laudantium rerum debitis esse minus vitae sint.";
+  content: "";
   position: absolute;
   top: -15px;
   left: -40px;
   -webkit-clip-path: circle(15px at 20px 20px);
           clip-path: circle(15px at 20px 20px);
-  background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1);
+  background: linear-gradient(90deg, #288FB1, 5%, #000);
   transition: all 0.8s ease 0s;
   color: #fff;
   padding: 42px 32px;
