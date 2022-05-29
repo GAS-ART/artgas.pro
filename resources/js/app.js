@@ -122,6 +122,10 @@ window.onload = function () {
       if (!target.closest('.description-portfolio__text span')) {
          $('.description-portfolio__text span').removeClass('active');
       }
+      //Close features more info
+      if (!target.closest('.item-feature__more-info') && !target.closest('.item-feature__btn') || target.closest('.close')) {
+         $('.item-feature__more-info').removeClass('active');
+      }
    }
 
    //file preview
@@ -358,6 +362,20 @@ window.onload = function () {
       } else {
          e.target.classList.add('right');
       }
+   });
+
+   //Open feater info
+   $('.item-feature__btn').click(function (event) {
+      $('.item-feature__btn').not($(event.target)).next().removeClass('active');
+      $(event.target).next().addClass('active');
+   });
+
+   //backlight pictures (feater info)
+   $('.item-feature__btn').mouseenter(function (event) {
+      $(event.target).prev().children(".item-feature__img").addClass('active');
+   });
+   $('.item-feature__btn').mouseleave(function (event) {
+      $(event.target).prev().children(".item-feature__img").removeClass('active');
    });
 
    //Open info

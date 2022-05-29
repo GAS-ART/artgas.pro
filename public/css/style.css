@@ -1224,15 +1224,52 @@ body.lock {
     background-position: 152% 0%;
   }
 }
+.feature-portfolio__tittle {
+  text-align: center;
+  margin-bottom: 35px;
+  font-weight: 600;
+  font-family: "Muller";
+}
+@supports (font-size: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+  .feature-portfolio__tittle {
+    font-size: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem );
+  }
+}
+@supports not (font-size: clamp( 1.25rem , 0.7954545455rem  +  2.2727272727vw , 2.5rem )) {
+  .feature-portfolio__tittle {
+    font-size: calc(
+         1.25rem + 1.25 * (100vw - 20rem) / 55
+      );
+  }
+}
+.feature-portfolio__body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feature-portfolio__body:not(:last-child) {
+  margin-bottom: 45px;
+}
+.feature-portfolio__item {
+  flex: 1 1 600px;
+}
+
+.item-feature__body {
+  position: relative;
+}
 .item-feature__row {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  justify-content: center;
+  flex: 0 0 auto;
 }
 .item-feature__img {
   margin-right: 20px;
   position: relative;
   border-radius: 50%;
+  width: 228px;
+  height: 228px;
 }
 .item-feature__img::after {
   content: "";
@@ -1257,7 +1294,7 @@ body.lock {
      object-fit: fill;
   border-radius: 50%;
 }
-.item-feature__img:hover::after {
+.item-feature__img:hover::after, .item-feature__img.active::after {
   -webkit-animation: animateborder 2s ease infinite;
           animation: animateborder 2s ease infinite;
   box-shadow: 0px 1px 5px 2px #288FB1;
@@ -1266,7 +1303,96 @@ body.lock {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 1.25rem;
+  flex: 0 0 192px;
+  cursor: default;
 }
+.item-feature__btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  min-width: unset !important;
+  color: aliceblue;
+  font-size: 1.875rem;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  font-weight: 600;
+  background-image: radial-gradient(100% 100% at 100% 50%, #288FB1 0, #000 0%);
+  border-radius: 6px;
+  box-shadow: #288fb1 0 0 0 1.5px inset, rgba(40, 143, 177, 0.4) 0 2px 4px, rgba(40, 143, 177, 0.3) 0 7px 13px -3px, #288fb1 0 -3px 0 inset;
+  transition: box-shadow 0.15s, transform 0.15s;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  cursor: pointer;
+  margin-top: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.item-feature__btn:hover {
+  text-shadow: 0 0 10px rgba(0, 123, 255, 0.7), 0 0 40px rgba(0, 123, 255, 0.7), 0 0 100px rgba(0, 123, 255, 0.7);
+}
+.item-feature .item-feature__btn:active {
+  box-shadow: #288FB1 0 3px 7px inset;
+  transform: translateY(2px);
+}
+.item-feature__more-info {
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 4px);
+  background: linear-gradient(125deg, rgb(40, 143, 177), 15%, rgb(0, 0, 0), 85%, rgb(40, 143, 177), rgb(0, 0, 0));
+  display: flex;
+  align-items: center;
+  line-height: 1.8;
+  font-size: 1.25rem;
+  text-align: justify;
+  padding: 0 20px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 1s ease 0s;
+  transform: scale(0);
+}
+.item-feature__more-info.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.close {
+  position: absolute;
+  top: 3.5px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  background: transparent;
+  cursor: pointer;
+  z-index: 5;
+}
+.close:after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0px;
+  width: 25px;
+  height: 2px;
+  transform: rotate(45deg);
+  background: #288FB1;
+}
+.close::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: 0px;
+  width: 25px;
+  height: 2px;
+  transform: rotate(-45deg);
+  background: #288FB1;
+}
+
 @-webkit-keyframes animateborder {
   0% {
     background-position: 100%;
@@ -1279,6 +1405,7 @@ body.lock {
     background-position: 200%;
   }
 }
+
 @keyframes animateborder {
   0% {
     background-position: 100%;
@@ -1334,6 +1461,11 @@ body.lock {
   margin-bottom: 50px;
   font-weight: 600;
   text-align: center;
+  /* text-align: center;
+   margin-bottom: 50px;
+   @include adaptiveValueREM('font-size', 40,20 );
+   font-weight: 600;
+   font-family: 'Muller';*/
 }
 @supports (font-size: clamp( 1rem , 0.6818181818rem  +  1.5909090909vw , 1.875rem )) {
   .description-portfolio__title {
