@@ -352,7 +352,6 @@ window.onload = function () {
    //Change image
    const portfolioImg = document.querySelector('.portfolio__image')
    portfolioImg.addEventListener('click', function (e) {
-      console.log(e.target)
       if (e.target.classList.contains('left')) {
          e.target.classList.remove('left');
          e.target.classList.add('right');
