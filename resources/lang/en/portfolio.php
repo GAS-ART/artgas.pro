@@ -3,6 +3,7 @@
    return [
    'title' => 'PORTFOLIO',
    'laravel' => 'Developed with: Laravel',
+   'gulp' => 'Website built with: Gulp',
    'features' => 'Features and cool things',
    'features_btn' => 'More info',
    'standarts'=>

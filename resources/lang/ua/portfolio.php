@@ -3,6 +3,7 @@
    return [
    'title' => 'ПОРТФОЛІО',
    'laravel' => 'Розроблено на: Laravel',
+   'gulp' => 'Сайт зібраний на: Gulp',
    'features' => 'Фішки та круті штучки',
    'features_btn' => 'Детальніше',
    'standarts'=>
