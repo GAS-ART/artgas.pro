@@ -30,5 +30,17 @@
       'loading' => 'Image download optimization',
       'loading_text' => 'The site loads images gradually at the time of scrolling (scrolling). This helps to significantly increase the loading speed of pages with a lot of pictures.',
    ],
+   'furino' =>
+   [
+      'title' => 'Website selling furniture',
+      'cart' => 'Secure shopping cart',
+      'cart_text' => 'A complete shopping cart for furniture buyers. All data at the time of purchase is checked on the server, this excludes manipulations with the price, replacement of names or the quantity of goods in the shopping cart',
+      'slider' => 'Fancy sliders',
+      'slider_text' => 'Two very cool unusual sliders',
+      'loading' => 'Loading goods from JSON file',
+      'loading_text' => 'Loading goods from the server is performed asynchronously (without reloading the page). Allows you to place a large number of products on the page',
+      'gallery' => 'Stylish gallery',
+      'gallery_text' => 'Impressive gallery adapted to mouse movements, no scrolling required',
+   ],
    ];
 ?>
