@@ -556,11 +556,22 @@
 
    &__body {
       position: relative;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto auto;
+      grid-gap: 20px;
+      @media (max-width: em(1250)) {
+      grid-template-columns: minmax(270px,400px) minmax(270px,400px);
+      grid-template-rows:repeat(5,auto);
+      justify-content: center;
+      }
+      @media (max-width: $mobile) {
+         grid-template-columns: 270px;
+         grid-template-rows:repeat(9,auto);
+      }
    }
 
-   &__row{
+  /* &__row{
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -749,7 +760,7 @@
             }
          }
       }
-   }
+   }*/
 
    &__item {
       position: relative;
@@ -760,19 +771,242 @@
       //flex-basis: 380px;
     // width: min-content;
     // left: 3%;
-     @include adaptiveValueREM('left',34,20,1920,1200,1);
+   //  @include adaptiveValueREM('left',34,20,1920,1200,1);
+     left: 50px;
      @include adaptiveValueREM('flex-basis',380,40,1200,768,1);
-     @media (max-width: em(1170)) {
-     &:not(:last-child){
-      margin-right: 40px;
-     }
-     }
-     @media (max-width: $tablet) {
-     min-width: 216px;
-     &:not(:last-child){
-     // margin-right: 80px;
-     }
-     }
+     @media (max-width: $mobileSmall) {
+      left: 12px;
+      }
+
+     &:first-child{
+      span{
+         &.ua{
+            &::before{
+               content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
+            }
+         }
+         &.ru{
+            &::before{
+               content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
+            }
+         }
+         &.en{
+            &::before{
+               content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
+            }
+         }
+         &.active{
+            @media (max-width: $mobile) {
+               margin-bottom: 270px;
+            }
+            @media (max-width: $mobileSmall) {
+               margin-bottom: 300px;
+            }
+         } 
+      }
+      }
+      &:nth-child(2){
+         span{
+            &.ua{
+               &::before{
+                  content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 215px;
+               }
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 240px;
+               }
+            }
+         }
+      }
+      &:nth-child(3){
+         span{
+            &.ua{
+               &::before{
+                  content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 240px;
+               }
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 245px;
+               }
+            } 
+         }
+      }
+      &:nth-child(4){
+         span{
+            &.ua{
+               &::before{
+                  content: "Кожний проект використовує систему контролю версії \"git\". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі \"github\"";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Каждый проект использует систему контроля версии \"git\". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе \"github\".";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 260px;
+               }
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 295px;
+               }
+            } 
+         }
+      }
+      &:nth-child(5){
+         span{
+            &.ua{
+               &::before{
+                  content: "Всі тегі використовуються відповідно до їх тлумачення. Також заповнюються всі технічні тегі заголовок та опис сторінки, опис картинок тощо. Це дозволяє організувати структуру яку добре розуміють пошукові системи і підвищити позиції сайту в пошуковій видачі Google.";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Все теги используются в соответствии с их толкованием. Заполняются все технические тэги - заголовок и описание страницы, описание картинок и т.д. Это позволяет организовать структуру, которую хорошо понимают поисковые системы и повысить позиции сайта в поисковой выдаче Google.";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "All tags are used according to their interpretation. The title and description tags, description tags of pictures are filled in. This allows you to organize a structure that is well understood by search engines and increase the position of the site in Google search results.";
+               }
+            }
+         }
+      }
+      &:nth-child(6){
+         span{
+            &.ua{
+               &::before{
+                  content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 260px;
+               }
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 275px;
+               }
+            } 
+         }
+      }
+      &:nth-child(7){
+         span{
+            &.ua{
+               &::before{
+                  content: "Розокремлення і налаштування ефектів які можуть відбуватися на пристроях які мають мишу, стилус, не мають миші та стилуса. Сайт починає взаємодіяти з користувачем в залежності від елементів керування які використовує пристрій.";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Разделение и настройка эффектов, которые могут происходить на устройствах, имеющие мышь, стилус, не имеющие мыши и стилуса. Сайт начинает взаимодействовать с пользователем в зависимости от используемых елементов управления.";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "Separation and customization of effects that can occur on devices that have a mouse, stylus, and those that do not have a mouse and stylus. The site begins to interact with the user depending on the controls used.";
+               }
+            }
+            &.active{
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 295px;
+               }
+            }
+         }
+      }
+      &:nth-child(8){
+         span{
+            &.ua{
+               &::before{
+                  content: "Сайт однаково відображається та функціонує відповідно до поставленого завдання в усіх браузерах (chrome, opera, safari, тощо)";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Сайт одинаково отображается и функционирует в соответствии с поставленной задачей во всех браузерах (chrome, opera, safari и т.д.)";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "The site is equally displayed and functions in accordance with the task in all browsers (chrome, opera, safari, etc.)";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 200px;
+               }
+               @media (max-width: $mobileSmall) {
+                  margin-bottom: 220px;
+               }
+            }
+         }
+      }
+      &:nth-child(9){
+         span{
+            &.ua{
+               &::before{
+                  content: "Стиснення картинок і відео без втрати якості, а також їх переформатування в сучасні розширення файлів. Стиснення всіх скриптів та стилів (production версія).";
+               }
+            }
+            &.ru{
+               &::before{
+                  content: "Сжатие картинок и видео без потери качетва, а также их переформатирование в современные расширений файлов. Сжатие всех скриптов и стилей (production версия).";
+               }
+            }
+            &.en{
+               &::before{
+                  content: "Compressing pictures and videos without losing quality, as well as reformatting them into modern file extensions. Compression of all scripts and styles (production version).";
+               }
+            }
+            &.active{
+               @media (max-width: $mobile) {
+                  margin-bottom: 200px;
+               }
+            }
+         }
+      }
    }
 
    &__text {
@@ -780,6 +1014,7 @@
  font-weight: 600;
      span{
         display: inline-block;
+        white-space: nowrap;
       cursor: pointer;
       transition: all 0.8s ease 0.3s;
       &::before{
@@ -794,6 +1029,7 @@
          color: #fff;
          padding: 42px 32px;
          line-height: 1.2;
+         white-space: normal;
       }
      
       &::after{
@@ -807,12 +1043,21 @@
          font-weight: 600;
       }
       &.active{
-         margin-bottom: 180px;
+         margin-bottom: 230px;
+         @media (max-width: $mobile) {
+            margin-bottom: 270px;
+        }
+         @media (max-width: $mobileSmall) {
+            margin-bottom: 325px;
+        }
          transition: all 0.3s ease 0s;
          &::before{
        clip-path: circle(75%);
        top: 25px;
        left: -80px;
+       @media (max-width: $mobileSmall) {
+          left: -40px;
+      }
          }
          &::after{
             transition: all 0.8s ease 0.3s;

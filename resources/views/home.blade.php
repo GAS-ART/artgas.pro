@@ -561,7 +561,8 @@
                            <div class="item-feature__text ">@lang('portfolio.colorit.lang')</div>
                         </div>
                         <div class="item-feature__btn">@lang('portfolio.features_btn')</div>
-                        <div class="item-feature__more-info"><span class="close"></span><span>@lang('portfolio.colorit.lang_text')</span></div>
+                        <div class="item-feature__more-info"><span
+                              class="close"></span><span>@lang('portfolio.colorit.lang_text')</span></div>
                      </div>
                   </div>
                   <div class="feature-portfolio__item item-feature">
@@ -618,57 +619,55 @@
             <div class="description-portfolio__container">
                <div class="description-portfolio__title">@lang('portfolio.standarts.title')</div>
                <div class="description-portfolio__body">
-                  <div class="description-portfolio__row">
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')">
-                              <i class="fa fa-info"></i>@lang('portfolio.standarts.adaptive')</span>
-                        </div>
+
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')">
+                           <i class="fa fa-info"></i>@lang('portfolio.standarts.adaptive')</span>
                      </div>
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.responsive')</span>
-                        </div>
+                  </div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.responsive')</span>
                      </div>
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.mobile')</span>
-                        </div>
+                  </div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.mobile')</span>
                      </div>
                   </div>
 
-                  <div class="description-portfolio__row">
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.save')</span></div>
-                     </div>
 
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.tags')</span>
-                        </div>
-                     </div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.save')</span></div>
+                  </div>
 
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.messengers')</span></div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.tags')</span>
                      </div>
                   </div>
 
-                  <div class="description-portfolio__row">
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.events')</span></div>
-                     </div>
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.cross-browser')</span>
-                        </div>
-                     </div>
-                     <div class="description-portfolio__item">
-                        <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
-                                 class="fa fa-info"></i>@lang('portfolio.standarts.events')</span></div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.messengers')</span></div>
+                  </div>
+
+
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.events')</span></div>
+                  </div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.cross-browser')</span>
                      </div>
                   </div>
+                  <div class="description-portfolio__item">
+                     <div class="description-portfolio__text"><span class="@lang('language.current_lang')"><i
+                              class="fa fa-info"></i>@lang('portfolio.standarts.quick')</span></div>
+                  </div>
+
                </div>
             </div>
          </div>

@@ -1505,6 +1505,196 @@ body.lock {
   }
 }
 .description-portfolio {
+  /* &__row{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      margin-bottom: 40px;
+      &:last-child{
+         margin-bottom: 0;
+      }
+      @media (max-width: $tablet) {
+      flex-wrap: wrap;
+      }
+      &:first-child{
+         .description-portfolio__item:first-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:nth-child(2){
+            span{
+               &.ua{
+                  &::before{
+                     content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:last-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
+                  }
+               }
+            }
+         }
+      }
+      &:nth-child(2){
+         .description-portfolio__item:first-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Кожний проект використовує систему контролю версії \"git\". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі \"github\"";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Каждый проект использует систему контроля версии \"git\". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе \"github\".";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:nth-child(2){
+            span{
+               &.ua{
+                  &::before{
+                     content: "Заголовок та опис сторінки необхідні для просування вашого сайту в пошуковій системі Google. Це опис повинен буди на кожній сторонці сайту та містити ключові слова.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Заголовок и описание страницы необходимы для продвижения вашего сайта в поисковой системе Google. Это описание должно быть на каждой странице сайта и содержать ключевые слова.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "The title and description of the page are necessary to promote your site in the Google search engine. This description should be on every page of the site and contain keywords.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:last-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
+                  }
+               }
+            }
+         }
+      }
+      &:last-child{
+         .description-portfolio__item:first-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Розокремлення і налаштування ефектів які можуть відбуватися на пристроях які мають мишу, стилус, не мають миші та стилуса. Сайт починає взаємодіяти з користувачем в залежності від елементів керування які використовує пристрій.";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Разделение и настройка эффектов, которые могут происходить на устройствах, имеющие мышь, стилус, не имеющие мыши и стилуса. Сайт начинает взаимодействовать с пользователем в зависимости от используемых елементов управления.";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Separation and customization of effects that can occur on devices that have a mouse, stylus, and those that do not have a mouse and stylus. The site begins to interact with the user depending on the controls used.";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:nth-child(2){
+            span{
+               &.ua{
+                  &::before{
+                     content: "Сайт однаково відображається та функціонує відповідно до поставленого завдання в усіх браузерах (chrome, opera, safari, тощо)";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Сайт одинаково отображается и функционирует в соответствии с поставленной задачей во всех браузерах (chrome, opera, safari и т.д.)";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "The site is equally displayed and functions in accordance with the task in all browsers (chrome, opera, safari, etc.)";
+                  }
+               }
+            }
+         }
+         .description-portfolio__item:last-child{
+            span{
+               &.ua{
+                  &::before{
+                     content: "Стиснення картинок і відео без втрати якості, а також їх переформатування в сучасні розширення файлів. Стиснення всіх скриптів та стилів (production версія).";
+                  }
+               }
+               &.ru{
+                  &::before{
+                     content: "Сжатие картинок и видео без потери качетва, а также их переформатирование в современные расширений файлов. Сжатие всех скриптов и стилей (production версия).";
+                  }
+               }
+               &.en{
+                  &::before{
+                     content: "Compressing pictures and videos without losing quality, as well as reformatting them into modern file extensions. Compression of all scripts and styles (production version).";
+                  }
+               }
+            }
+         }
+      }
+   }*/
   /*   &__info-card {
         align-self: flex-start;
         position: relative;
@@ -1567,121 +1757,29 @@ body.lock {
 }
 .description-portfolio__body {
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-gap: 20px;
 }
-.description-portfolio__row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: flex-start;
-  margin-bottom: 40px;
-}
-.description-portfolio__row:last-child {
-  margin-bottom: 0;
-}
-@media (max-width: 61.99875em) {
-  .description-portfolio__row {
-    flex-wrap: wrap;
+@media (max-width: 78.125em) {
+  .description-portfolio__body {
+    grid-template-columns: minmax(270px, 400px) minmax(270px, 400px);
+    grid-template-rows: repeat(5, auto);
+    justify-content: center;
   }
 }
-.description-portfolio__row:first-child .description-portfolio__item:first-child span.ua::before {
-  content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:first-child span.ru::before {
-  content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:first-child span.en::before {
-  content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.ua::before {
-  content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.ru::before {
-  content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:nth-child(2) span.en::before {
-  content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:last-child span.ua::before {
-  content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:last-child span.ru::before {
-  content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
-}
-.description-portfolio__row:first-child .description-portfolio__item:last-child span.en::before {
-  content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.ua::before {
-  content: 'Кожний проект використовує систему контролю версії "git". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі "github"';
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.ru::before {
-  content: 'Каждый проект использует систему контроля версии "git". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе "github".';
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:first-child span.en::before {
-  content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.ua::before {
-  content: "Заголовок та опис сторінки необхідні для просування вашого сайту в пошуковій системі Google. Це опис повинен буди на кожній сторонці сайту та містити ключові слова.";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.ru::before {
-  content: "Заголовок и описание страницы необходимы для продвижения вашего сайта в поисковой системе Google. Это описание должно быть на каждой странице сайта и содержать ключевые слова.";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:nth-child(2) span.en::before {
-  content: "The title and description of the page are necessary to promote your site in the Google search engine. This description should be on every page of the site and contain keywords.";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.ua::before {
-  content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.ru::before {
-  content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
-}
-.description-portfolio__row:nth-child(2) .description-portfolio__item:last-child span.en::before {
-  content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
-}
-.description-portfolio__row:last-child .description-portfolio__item:first-child span.ua::before {
-  content: "Розокремлення і налаштування ефектів які можуть відбуватися на пристроях які мають мишу, стилус, не мають миші та стилуса. Сайт починає взаємодіяти з користувачем в залежності від елементів керування які використовує пристрій.";
-}
-.description-portfolio__row:last-child .description-portfolio__item:first-child span.ru::before {
-  content: "Разделение и настройка эффектов, которые могут происходить на устройствах, имеющие мышь, стилус, не имеющие мыши и стилуса. Сайт начинает взаимодействовать с пользователем в зависимости от используемых елементов управления.";
-}
-.description-portfolio__row:last-child .description-portfolio__item:first-child span.en::before {
-  content: "Separation and customization of effects that can occur on devices that have a mouse, stylus, and those that do not have a mouse and stylus. The site begins to interact with the user depending on the controls used.";
-}
-.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.ua::before {
-  content: "Сайт однаково відображається та функціонує відповідно до поставленого завдання в усіх браузерах (chrome, opera, safari, тощо)";
-}
-.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.ru::before {
-  content: "Сайт одинаково отображается и функционирует в соответствии с поставленной задачей во всех браузерах (chrome, opera, safari и т.д.)";
-}
-.description-portfolio__row:last-child .description-portfolio__item:nth-child(2) span.en::before {
-  content: "The site is equally displayed and functions in accordance with the task in all browsers (chrome, opera, safari, etc.)";
-}
-.description-portfolio__row:last-child .description-portfolio__item:last-child span.ua::before {
-  content: "Стиснення картинок і відео без втрати якості, а також їх переформатування в сучасні розширення файлів. Стиснення всіх скриптів та стилів (production версія).";
-}
-.description-portfolio__row:last-child .description-portfolio__item:last-child span.ru::before {
-  content: "Сжатие картинок и видео без потери качетва, а также их переформатирование в современные расширений файлов. Сжатие всех скриптов и стилей (production версия).";
-}
-.description-portfolio__row:last-child .description-portfolio__item:last-child span.en::before {
-  content: "Compressing pictures and videos without losing quality, as well as reformatting them into modern file extensions. Compression of all scripts and styles (production version).";
+@media (max-width: 47.99875em) {
+  .description-portfolio__body {
+    grid-template-columns: 270px;
+    grid-template-rows: repeat(9, auto);
+  }
 }
 .description-portfolio__item {
   position: relative;
   display: flex;
   flex-direction: column;
-}
-@supports (left: clamp( 1.25rem , -0.2083333333rem  +  1.9444444444vw , 2.125rem )) {
-  .description-portfolio__item {
-    left: clamp( 1.25rem , -0.2083333333rem  +  1.9444444444vw , 2.125rem );
-  }
-}
-@supports not (left: clamp( 1.25rem , -0.2083333333rem  +  1.9444444444vw , 2.125rem )) {
-  .description-portfolio__item {
-    left: calc(
-         1.25rem + 0.875 * (100vw - 75rem) / 45
-      );
-  }
+  left: 50px;
 }
 @supports (flex-basis: clamp( 2.5rem , -35.2777777778rem  +  78.7037037037vw , 23.75rem )) {
   .description-portfolio__item {
@@ -1695,14 +1793,160 @@ body.lock {
       );
   }
 }
-@media (max-width: 73.125em) {
-  .description-portfolio__item:not(:last-child) {
-    margin-right: 40px;
+@media (max-width: 29.99875em) {
+  .description-portfolio__item {
+    left: 12px;
   }
 }
-@media (max-width: 61.99875em) {
-  .description-portfolio__item {
-    min-width: 216px;
+.description-portfolio__item:first-child span.ua::before {
+  content: "Забезпечує оптимальне відображення та взаємодію сайту з користувачем незалежно від роздільної здатності та формату пристрою, з якого здійснюється перегляд сторінки. Максимально збурігає структуру блоків при зміні контенту.";
+}
+.description-portfolio__item:first-child span.ru::before {
+  content: "Обеспечивает оптимальное отображение и взаимодействие сайта с пользователем независимо от разрешения и формата устройства, с которого производится просмотр страницы. Максимально сохраняет структуру блоков при изменении контента.";
+}
+.description-portfolio__item:first-child span.en::before {
+  content: "It is an approach to web design that aims to make web pages render well on a variety of devices and window or screen sizes from minimum to maximum display size to ensure usability and satisfaction.";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:first-child span.active {
+    margin-bottom: 270px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:first-child span.active {
+    margin-bottom: 300px;
+  }
+}
+.description-portfolio__item:nth-child(2) span.ua::before {
+  content: "Розміри компонентів веб-сторінок сайту пропорційно «розтягуються» і «стискаються», підлаштовуючись під розширення та розмір монітора користувача.";
+}
+.description-portfolio__item:nth-child(2) span.ru::before {
+  content: "Размеры компонентов веб-страниц сайта пропорционально растягиваются и сжимаются, подстраиваясь под расширение и размер монитора пользователя.";
+}
+.description-portfolio__item:nth-child(2) span.en::before {
+  content: "The dimensions of the components of the web pages of the site are proportionally stretched and compressed, adjusting to the extension and size of the user's monitor.";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(2) span.active {
+    margin-bottom: 215px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(2) span.active {
+    margin-bottom: 240px;
+  }
+}
+.description-portfolio__item:nth-child(3) span.ua::before {
+  content: "Окремий набір правил відображення сайту на мобільних пристроях та планшетах. Зміна контенту, структури, та способів взаємодії зі сторінками для зручності користування.";
+}
+.description-portfolio__item:nth-child(3) span.ru::before {
+  content: "Отдельный набор правил для отображения сайта на мобильных устройствах и планшетах. Изменение контента, структуры и способов взаимодействия со страницами для удобства пользования.";
+}
+.description-portfolio__item:nth-child(3) span.en::before {
+  content: "A separate set of rules for displaying the site on mobile devices and tablets. Changing the content, structure and ways of interacting with pages for ease of use.";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(3) span.active {
+    margin-bottom: 240px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(3) span.active {
+    margin-bottom: 245px;
+  }
+}
+.description-portfolio__item:nth-child(4) span.ua::before {
+  content: 'Кожний проект використовує систему контролю версії "git". Це дозволяє зберігати всі зміни сайту в якості версій та повернутись то будь якої версії в разі необхідності. Копія сайту та всіх його змін зберігається на сервісі "github"';
+}
+.description-portfolio__item:nth-child(4) span.ru::before {
+  content: 'Каждый проект использует систему контроля версии "git". Это позволяет сохранять все изменения сайта в качестве версий и вернуться к любой версии в случае необходимости. Копия сайта и всех его изменений сохраняется на сервисе "github".';
+}
+.description-portfolio__item:nth-child(4) span.en::before {
+  content: "Every project uses the \"git\" version control system. This allows you to save all site changes as versions and revert to any version if needed. A copy of the site and all it's changes is stored on the \"github\" service.";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(4) span.active {
+    margin-bottom: 260px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(4) span.active {
+    margin-bottom: 295px;
+  }
+}
+.description-portfolio__item:nth-child(5) span.ua::before {
+  content: "Всі тегі використовуються відповідно до їх тлумачення. Також заповнюються всі технічні тегі заголовок та опис сторінки, опис картинок тощо. Це дозволяє організувати структуру яку добре розуміють пошукові системи і підвищити позиції сайту в пошуковій видачі Google.";
+}
+.description-portfolio__item:nth-child(5) span.ru::before {
+  content: "Все теги используются в соответствии с их толкованием. Заполняются все технические тэги - заголовок и описание страницы, описание картинок и т.д. Это позволяет организовать структуру, которую хорошо понимают поисковые системы и повысить позиции сайта в поисковой выдаче Google.";
+}
+.description-portfolio__item:nth-child(5) span.en::before {
+  content: "All tags are used according to their interpretation. The title and description tags, description tags of pictures are filled in. This allows you to organize a structure that is well understood by search engines and increase the position of the site in Google search results.";
+}
+.description-portfolio__item:nth-child(6) span.ua::before {
+  content: "Налаштування картинки (відео), заголовку та додаткового опису сторінки які будуть відображатися при пересилці посилання сайту через месенджери (viber, telegram, whatsapp, facebook, instagram, skype, та інші).";
+}
+.description-portfolio__item:nth-child(6) span.ru::before {
+  content: "Настройка картинки (видео), заголовка и дополнительного описания страницы, которые будут отображаться при пересылке ссылки сайта через мессенджеры (viber, telegram, whatsapp, facebook, instagram, skype, и другие).";
+}
+.description-portfolio__item:nth-child(6) span.en::before {
+  content: "Setting up a picture (video), title and additional description of the page that will be displayed when sending a site link through instant messengers (viber, telegram, whatsapp, facebook, instagram, skype, and others).";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(6) span.active {
+    margin-bottom: 260px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(6) span.active {
+    margin-bottom: 275px;
+  }
+}
+.description-portfolio__item:nth-child(7) span.ua::before {
+  content: "Розокремлення і налаштування ефектів які можуть відбуватися на пристроях які мають мишу, стилус, не мають миші та стилуса. Сайт починає взаємодіяти з користувачем в залежності від елементів керування які використовує пристрій.";
+}
+.description-portfolio__item:nth-child(7) span.ru::before {
+  content: "Разделение и настройка эффектов, которые могут происходить на устройствах, имеющие мышь, стилус, не имеющие мыши и стилуса. Сайт начинает взаимодействовать с пользователем в зависимости от используемых елементов управления.";
+}
+.description-portfolio__item:nth-child(7) span.en::before {
+  content: "Separation and customization of effects that can occur on devices that have a mouse, stylus, and those that do not have a mouse and stylus. The site begins to interact with the user depending on the controls used.";
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(7) span.active {
+    margin-bottom: 295px;
+  }
+}
+.description-portfolio__item:nth-child(8) span.ua::before {
+  content: "Сайт однаково відображається та функціонує відповідно до поставленого завдання в усіх браузерах (chrome, opera, safari, тощо)";
+}
+.description-portfolio__item:nth-child(8) span.ru::before {
+  content: "Сайт одинаково отображается и функционирует в соответствии с поставленной задачей во всех браузерах (chrome, opera, safari и т.д.)";
+}
+.description-portfolio__item:nth-child(8) span.en::before {
+  content: "The site is equally displayed and functions in accordance with the task in all browsers (chrome, opera, safari, etc.)";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(8) span.active {
+    margin-bottom: 200px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__item:nth-child(8) span.active {
+    margin-bottom: 220px;
+  }
+}
+.description-portfolio__item:nth-child(9) span.ua::before {
+  content: "Стиснення картинок і відео без втрати якості, а також їх переформатування в сучасні розширення файлів. Стиснення всіх скриптів та стилів (production версія).";
+}
+.description-portfolio__item:nth-child(9) span.ru::before {
+  content: "Сжатие картинок и видео без потери качетва, а также их переформатирование в современные расширений файлов. Сжатие всех скриптов и стилей (production версия).";
+}
+.description-portfolio__item:nth-child(9) span.en::before {
+  content: "Compressing pictures and videos without losing quality, as well as reformatting them into modern file extensions. Compression of all scripts and styles (production version).";
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__item:nth-child(9) span.active {
+    margin-bottom: 200px;
   }
 }
 .description-portfolio__text {
@@ -1711,6 +1955,7 @@ body.lock {
 }
 .description-portfolio__text span {
   display: inline-block;
+  white-space: nowrap;
   cursor: pointer;
   transition: all 0.8s ease 0.3s;
 }
@@ -1726,6 +1971,7 @@ body.lock {
   color: #fff;
   padding: 42px 32px;
   line-height: 1.2;
+  white-space: normal;
 }
 .description-portfolio__text span::after {
   content: "";
@@ -1738,14 +1984,29 @@ body.lock {
   font-weight: 600;
 }
 .description-portfolio__text span.active {
-  margin-bottom: 180px;
+  margin-bottom: 230px;
   transition: all 0.3s ease 0s;
+}
+@media (max-width: 47.99875em) {
+  .description-portfolio__text span.active {
+    margin-bottom: 270px;
+  }
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__text span.active {
+    margin-bottom: 325px;
+  }
 }
 .description-portfolio__text span.active::before {
   -webkit-clip-path: circle(75%);
           clip-path: circle(75%);
   top: 25px;
   left: -80px;
+}
+@media (max-width: 29.99875em) {
+  .description-portfolio__text span.active::before {
+    left: -40px;
+  }
 }
 .description-portfolio__text span.active::after {
   transition: all 0.8s ease 0.3s;
