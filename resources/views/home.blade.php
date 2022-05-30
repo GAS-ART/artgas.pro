@@ -16,7 +16,7 @@
    <div class="portfolio__container">
       <div class="portfolio__item">
          <div class="portfolio__title">
-            <h2 class="portfolio__title-text">@lang('portfolio.colorit')</h2>
+            <h2 class="portfolio__title-text">@lang('portfolio.colorit.title')</h2>
             <a href="https://colorit.agency/" target="_blank" class="portfolio__title-link">colorit.agency</a>
          </div>
          <div class="portfolio__image image-portfolio">
@@ -550,7 +550,7 @@
          </div>
          <div class="portfolio__feature feature-portfolio">
             <div class="feature-portfolio__container">
-               <div class="feature-portfolio__tittle">Фішки та ніштячки</div>
+               <div class="feature-portfolio__tittle">@lang('portfolio.features')</div>
                <div class="feature-portfolio__body">
                   <div class="feature-portfolio__item item-feature">
                      <div class="item-feature__body">
@@ -558,14 +558,10 @@
                            <div class="item-feature__img">
                               <img src="{{asset('img/home/colorit/colorit_lang_1.jpg')}}" alt="Сайт с двумя языками">
                            </div>
-                           <div class="item-feature__text ">Дві мови</div>
+                           <div class="item-feature__text ">@lang('portfolio.colorit.lang')</div>
                         </div>
-                        <div class="item-feature__btn">Детальніше</div>
-                        <div class="item-feature__more-info"><span class="close"></span><span>Для кожної мови формується
-                              окреме посилання що
-                              дозволяє
-                              пошуковим системам розрізняти ці сторінки а майстрам з SEO проводити окремі заходи для
-                              підвищення позицій ціх сторінок в пошуковій системі Google</span></div>
+                        <div class="item-feature__btn">@lang('portfolio.features_btn')</div>
+                        <div class="item-feature__more-info"><span class="close"></span><span>@lang('portfolio.colorit.lang_text')</span></div>
                      </div>
                   </div>
                   <div class="feature-portfolio__item item-feature">
@@ -574,13 +570,12 @@
                            <div class="item-feature__img">
                               <img src="{{asset('img/home/colorit/colorit_run.jpg')}}" alt="Сайт с двумя языками">
                            </div>
-                           <div class="item-feature__text ">Рухомий рядок</div>
+                           <div class="item-feature__text ">@lang('portfolio.colorit.ticker')</div>
                         </div>
-                        <div class="item-feature__btn">Детальніше</div>
+                        <div class="item-feature__btn">@lang('portfolio.features_btn')</div>
                         <div class="item-feature__more-info">
                            <span class="close"></span>
-                           <span>Створено універсальний код який дозволяє записувати рухомі фрази будь-якої довжини та
-                              адаптує їх під розміри всіх моніторів та мобільних пристроїв</span>
+                           <span>@lang('portfolio.colorit.ticker_text')</span>
                         </div>
                      </div>
                   </div>
@@ -592,15 +587,12 @@
                            <div class="item-feature__img">
                               <img src="{{asset('img/home/colorit/colorit_messenger.jpg')}}" alt="Сайт с двумя языками">
                            </div>
-                           <div class="item-feature__text ">Месенджер</div>
+                           <div class="item-feature__text ">@lang('portfolio.colorit.messenger')</div>
                         </div>
-                        <div class="item-feature__btn">Детальніше</div>
+                        <div class="item-feature__btn">@lang('portfolio.features_btn')</div>
                         <div class="item-feature__more-info">
                            <span class="close"></span>
-                           <span>Стильна кнопка яка перенаправляє відвідувачів сайту прямо обраний на месенджер на
-                              робочому
-                              столі або мобільному пристрої. Допомагає отримати більше звернень та продовжити розмову,
-                              навіть якщо відвідувач покинув сайт.</span>
+                           <span>@lang('portfolio.colorit.messenger_text')</span>
                         </div>
                      </div>
                   </div>
@@ -610,13 +602,12 @@
                            <div class="item-feature__img">
                               <img src="{{asset('img/home/colorit/colorit_portfolio.jpg')}}" alt="Сайт с двумя языками">
                            </div>
-                           <div class="item-feature__text ">Оптимізація завантажень картинок</div>
+                           <div class="item-feature__text ">@lang('portfolio.colorit.loading')</div>
                         </div>
-                        <div class="item-feature__btn">Детальніше</div>
+                        <div class="item-feature__btn">@lang('portfolio.features_btn')</div>
                         <div class="item-feature__more-info">
                            <span class="close"></span>
-                           <span>Сайт вантажить картинки поступово в момент прокрутки (скролу). Це допомагає значно
-                              підвищити швидкість завантаження сторінок з великою кількістю картинок</span>
+                           <span>@lang('portfolio.colorit.loading_text')</span>
                         </div>
                      </div>
                   </div>
