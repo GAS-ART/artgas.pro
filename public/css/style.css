@@ -1436,7 +1436,7 @@ body.lock {
   background-size: 200%;
   border-radius: 50%;
 }
-.item-feature__img img {
+.item-feature__img img, .item-feature__img video {
   position: relative;
   top: 0px;
   left: 0;

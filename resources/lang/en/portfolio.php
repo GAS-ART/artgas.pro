@@ -55,5 +55,17 @@
       'marker' => 'Own marker with information',
       'marker_text' => 'The map has self-designed markers with information about the store. You can see the address, work schedule or follow the link to the point on the map',
    ],
+   'clining' =>
+   [
+      'title' => 'Cleaning company website',
+      'ga' => 'Passing events to GA',
+      'ga_text' => 'The site contains text for different target audiences. Viewing specific text sends an event to the Google Analytics service. This helps to understand which services are more popular and adjust the advertising campaign and content',
+      'ads' => 'Advertising settings',
+      'ads_text' => 'Development and implementation of an advertising company. Creation of a semantic core, ads, ad extensions, links with Google Analytics. Weekly analysis and management',
+      'img' => 'Image comparison',
+      'img_text' => 'Animated view of the result of work',
+      'video' => 'video in telegram',
+      'video_text' => 'Link in telegram chat is displayed as video and has title and description',
+   ],
    ];
 ?>
