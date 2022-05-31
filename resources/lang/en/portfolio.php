@@ -6,6 +6,7 @@
    'gulp' => 'Website built with: Gulp',
    'features' => 'Features and cool things',
    'features_btn' => 'More info',
+   'sub_text' => 'Development of a site on a layout to demonstrate skills. Not a commercial project.',
    'standarts'=>
    [
       'title' => 'Site contains all modern development standards',
@@ -70,7 +71,6 @@
    'scip' =>
    [
       'title' => 'Site for obtaining licenses',
-      'sub_text' => 'Development of a site on a layout to demonstrate skills. Not a commercial project.',
       'link' => 
       [
          'main' => 'Main',
@@ -78,6 +78,10 @@
          'certification' => 'Certificates',
          'contacts' => 'Contacts',
       ],
+   ],
+   'bike' =>
+   [
+      'title' => 'Landing page for selling bikes',
    ],
    ];
 ?>
