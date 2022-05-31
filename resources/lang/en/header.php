@@ -14,7 +14,8 @@ return [
          'github' => 'GitHub',
       ],
    ],
-   'lead' => 'Feedback',
+   'lead_head' => 'Feedback',
+   'lead_burger' => 'Feedback',
    'popup' => 
    [
       'title' => 'Feedback form',

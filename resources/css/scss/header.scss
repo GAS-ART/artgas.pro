@@ -73,6 +73,14 @@ z-index: 200;
 		white-space: nowrap;
 		padding-left: 16px;
 		padding-right: 16px;
+		&[data-popup-id='lead']{
+			@media (max-width: $tablet) {
+				text-transform: capitalize;
+				span{
+					display: none;
+				}
+			}
+		}
 		@media (max-width: em(800)) {
 			padding-left: 8px;
 			padding-right: 8px;
@@ -108,9 +116,9 @@ z-index: 200;
 				box-shadow: #288FB1 0 3px 7px inset;
          transform: translateY(2px);
 			}
-@media (max-width: $mobile) {
-	display: none ;
-}
+		@media (max-width: $mobile) {
+			display: none ;
+		}
 	}
 
 .contacts-header {
@@ -300,9 +308,8 @@ z-index: 200;
 	.messengers-header-viber {
 		background-color: #7B519D;
 	}
-	
-
 }
+
 .logo {
 	&__video{
 		position: absolute;

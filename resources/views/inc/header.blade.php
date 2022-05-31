@@ -97,7 +97,7 @@
                   </div>
                </div>
             </div>
-            <div data-popup-id="lead" class="header__contacts link-on-popup">@lang('header.lead')</div>
+            <div data-popup-id="lead" class="header__contacts link-on-popup">@lang('header.lead_head')</div>
          </div>
          <div class="header__icon-menu icon-menu"><span></span></div>
          <div class="header__burger burger">
@@ -126,7 +126,7 @@
                </div>
                <nav class="burger__menu menu-burger">
                   <ul class="menu-burger__list">
-                     <li data-popup-id="lead" class="menu-burger__item link-on-popup">@lang('header.lead')</li>
+                     <li data-popup-id="lead" class="menu-burger__item link-on-popup">@lang('header.lead_burger')</li>
                   </ul>
                </nav>
             </div>

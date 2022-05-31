@@ -332,6 +332,14 @@ body.lock {
       );
   }
 }
+@media (max-width: 61.99875em) {
+  .header__contacts[data-popup-id=lead] {
+    text-transform: capitalize;
+  }
+  .header__contacts[data-popup-id=lead] span {
+    display: none;
+  }
+}
 @media (max-width: 50em) {
   .header__contacts {
     padding-left: 8px;
