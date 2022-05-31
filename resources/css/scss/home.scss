@@ -48,6 +48,28 @@
       font-family: "Muller";
    }
 
+   &__title-sub-text{
+      margin-bottom: 15px;
+      @include adaptiveValueREM('font-size', 20,18 );
+   }
+
+   &__title-links{
+      display: flex;
+      justify-content: space-evenly;
+      a{
+         &:not(:last-child){
+            margin-right: 15px;
+         }
+      }
+      @media (max-width: $mobileSmall) {
+         flex-direction: column;
+         align-items: center;
+         a{
+            margin-bottom: 15px;
+         }
+      }
+   }
+
    &__title-link {
       @include adaptiveValueREM('font-size', 24,16);
       text-decoration: underline !important;

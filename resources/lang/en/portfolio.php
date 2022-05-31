@@ -67,5 +67,17 @@
       'video' => 'video in telegram',
       'video_text' => 'Link in telegram chat is displayed as video and has title and description',
    ],
+   'scip' =>
+   [
+      'title' => 'Site for obtaining licenses',
+      'sub_text' => 'Development of a site on a layout to demonstrate skills. Not a commercial project.',
+      'link' => 
+      [
+         'main' => 'Main',
+         'news' => 'News',
+         'certification' => 'Certificates',
+         'contacts' => 'Contacts',
+      ],
+   ],
    ];
 ?>

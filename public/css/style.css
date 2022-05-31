@@ -978,6 +978,37 @@ body.lock {
       );
   }
 }
+.portfolio__title-sub-text {
+  margin-bottom: 15px;
+}
+@supports (font-size: clamp( 1.125rem , 1.0795454545rem  +  0.2272727273vw , 1.25rem )) {
+  .portfolio__title-sub-text {
+    font-size: clamp( 1.125rem , 1.0795454545rem  +  0.2272727273vw , 1.25rem );
+  }
+}
+@supports not (font-size: clamp( 1.125rem , 1.0795454545rem  +  0.2272727273vw , 1.25rem )) {
+  .portfolio__title-sub-text {
+    font-size: calc(
+         1.125rem + 0.125 * (100vw - 20rem) / 55
+      );
+  }
+}
+.portfolio__title-links {
+  display: flex;
+  justify-content: space-evenly;
+}
+.portfolio__title-links a:not(:last-child) {
+  margin-right: 15px;
+}
+@media (max-width: 29.99875em) {
+  .portfolio__title-links {
+    flex-direction: column;
+    align-items: center;
+  }
+  .portfolio__title-links a {
+    margin-bottom: 15px;
+  }
+}
 .portfolio__title-link {
   text-decoration: underline !important;
   transition: all 0.3s ease 0s;
