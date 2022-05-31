@@ -43,5 +43,17 @@
       'gallery' => 'Stylish gallery',
       'gallery_text' => 'Impressive gallery adapted to mouse movements, no scrolling required',
    ],
+   'zorya' =>
+   [
+      'title' => 'Store map',
+      'road' => 'Search for the nearest store',
+      'road_text' => 'Determines the user\'s location by GPS coordinates and builds a route to the nearest store',
+      'filter' => 'Search by filters',
+      'filter_text' => 'You have an opportunity to select the city and the address of the store in a particular city. There is also a word search.',
+      'claster' => 'Clustering',
+      'claster_text' => 'Combining stores on the map into groups at a large scale and separating them when zooming in on the map',
+      'marker' => 'Own marker with information',
+      'marker_text' => 'The map has self-designed markers with information about the store. You can see the address, work schedule or follow the link to the point on the map',
+   ],
    ];
 ?>
