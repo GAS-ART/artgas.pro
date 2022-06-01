@@ -74,6 +74,9 @@ z-index: 200;
 		padding-left: 16px;
 		padding-right: 16px;
 		&[data-popup-id='lead']{
+			span{
+				pointer-events: none;
+			}
 			@media (max-width: $tablet) {
 				text-transform: capitalize;
 				span{
