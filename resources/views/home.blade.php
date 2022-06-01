@@ -5,6 +5,8 @@
 @section('ogDescription', __('tittles.home.ogDescription'))
 @section('ogUrl', __('tittles.home.ogUrl'))
 
+@section('page', 'home')
+
 
 @section('content')
 <section class="title">
@@ -683,7 +685,7 @@
       <div class="portfolio__container">
          <div class="portfolio__title">
             <h2 class="portfolio__title-text">@lang('portfolio.furino.title')</h2>
-            <a href="https://colorit.agency/" target="_blank" class="portfolio__title-link">furino</a>
+            <a href="{{ route('furino.lang', ['locale' => __('language.current_lang')]) }}" target="_blank" class="portfolio__title-link">furino</a>
          </div>
          <div class="portfolio__image image-portfolio">
             <img src="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">

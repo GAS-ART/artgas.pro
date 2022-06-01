@@ -8,7 +8,7 @@
                <source type="video/mp4" src="{{ asset('/video/1.mp4')}}">
                <source type="video/webm" src="{{ asset('/video/1.webm')}}">
             </video>
-            <h1 class="logo__title"> <a href="#">ARTGAS</a></h1>
+            <h1 class="logo__title @yield('page')"> <a href="{{ route('home.lang', ['locale' => __('language.current_lang')]) }}">ARTGAS</a></h1>
          </div>
          <div class="header__actions actions-header">
             <div class="header__language">

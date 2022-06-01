@@ -46,7 +46,7 @@ Route::get('/{locale}', function ($locale) {
 })->name('home.lang');
 
 
-Route::get('/{locale}/test', function ($locale) {
+Route::get('/{locale}/portfolio/furino', function ($locale) {
    
    if (! in_array($locale, ['ua', 'en', 'ru'])) { 
 
@@ -55,18 +55,18 @@ Route::get('/{locale}/test', function ($locale) {
    } else if ($locale == 'ua') {
 
       App::setLocale('ua');
-      return view('home');
+      return view('furino');
 
    } else if ($locale == 'en') {
 
       App::setLocale('en');
-      return view('home');
+      return view('furino');
 
    }
    else if ($locale == 'ru') {
 
     App::setLocale('ru');
-    return view('home');
+    return view('furino');
 
  }
-})->name('test.lang');
+})->name('furino.lang');

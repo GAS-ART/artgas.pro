@@ -31,6 +31,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
 
    <link rel="stylesheet" href="{{asset('css/style.css')}}"> 
+   @if(Request::is('furino'))
+   <link rel="stylesheet" href="{{asset('css/furino.css')}}">
+   @endif
 
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>

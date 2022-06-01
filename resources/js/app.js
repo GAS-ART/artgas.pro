@@ -9,8 +9,10 @@ window.onload = function () {
    //Change logo
    let logo = document.querySelector('.logo__title');
    logo.addEventListener('click', function (e) {
-      logo.classList.toggle('active');
-      e.preventDefault();
+      if (logo.classList.contains('home')) {
+         logo.classList.toggle('active');
+         e.preventDefault();
+      }
    });
 
    //popUp

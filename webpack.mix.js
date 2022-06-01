@@ -16,6 +16,6 @@ mix.browserSync({
  */
 
 mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/css/scss/style.scss', 'public/css', [
-        //
-    ]);
+    .js('resources/js/furino.js', 'public/js')
+    .sass('resources/css/scss/style.scss', 'public/css', [])
+    .css('resources/css/scss/furino.css', 'public/css', []);

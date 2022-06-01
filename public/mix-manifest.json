@@ -1,4 +1,6 @@
 {
     "/js/app.js": "/js/app.js",
+    "/js/furino.js": "/js/furino.js",
+    "/css/furino.css": "/css/furino.css",
     "/css/style.css": "/css/style.css"
 }

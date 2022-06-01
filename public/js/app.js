@@ -18,8 +18,10 @@ window.onload = function () {
 
   var logo = document.querySelector('.logo__title');
   logo.addEventListener('click', function (e) {
-    logo.classList.toggle('active');
-    e.preventDefault();
+    if (logo.classList.contains('home')) {
+      logo.classList.toggle('active');
+      e.preventDefault();
+    }
   }); //popUp
 
   var popUpButtons = document.querySelectorAll('.link-on-popup');
@@ -657,6 +659,18 @@ __webpack_require__.r(__webpack_exports__);
 // extracted by mini-css-extract-plugin
 
 
+/***/ }),
+
+/***/ "./resources/css/scss/furino.css":
+/*!***************************************!*\
+  !*** ./resources/css/scss/furino.css ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
 /***/ })
 
 /******/ 	});
@@ -758,6 +772,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/furino": 0,
 /******/ 			"css/style": 0
 /******/ 		};
 /******/ 		
@@ -808,8 +823,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/style"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/style"], () => (__webpack_require__("./resources/css/scss/style.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/furino","css/style"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/furino","css/style"], () => (__webpack_require__("./resources/css/scss/style.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/furino","css/style"], () => (__webpack_require__("./resources/css/scss/furino.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
