@@ -6,10 +6,10 @@
 
 
 
-<!--<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png')}} ">
-<link rel="manifest" href="{{ asset('img/favicon/site.webmanifest')}}"> -->
+<link rel="manifest" href="{{ asset('img/favicon/site.webmanifest')}}">
 
 
    <title>@yield('title')</title>
@@ -18,9 +18,9 @@
    <meta property="og:url" content="@yield('ogUrl')" />
    <meta property="og:type" content="website" />
    <meta property="og:title" content="@yield('ogTitle')" />
-   <meta property="og:description" content="@yield('ogDescription')" />
+   <meta property="og:description" content="@yield('ogDescription')"/>
    <meta property="og:site_name" content="artgas.pro" />
-   <meta property="og:image" content="" />
+   <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/>
 
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />

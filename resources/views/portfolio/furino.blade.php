@@ -6,17 +6,23 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <!-- FAVICON https://favicon.io/favicon-converter/
+   <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
+   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
+   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png')}} ">
+   <link rel="manifest" href="{{ asset('img/favicon/site.webmanifest')}}">
 
-   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
-   <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
-   <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
-   <link rel="manifest" href="img/favicon/site.webmanifest">
 
-   -->
+   <title>Разработка сайтов по современным стандартам. Верстка сайтов. Создам качественный сайт.</title>
+   <meta name="description" content="Качественная адаптивно-резиновая верстка сайтов с мобильной версией, кросбраузерностью и настройками ориентированными под Ваши задачи. Любые виды сайтов - Landing Page, Интернет магазин, Сайт визитка. Использую самые передовые и продвинутые технологии разработки. Помощь в выборе стратегии развития сайта.">
 
-   <title>Главная страница</title>
-   <meta name="description" content="Описание главной страницы">
+   <meta property="og:url" content="https://artgas.pro" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Адаптивно-резиновая верстка сайтов." />
+   <meta property="og:description" content="Разработка сайтов по современным стандартам с мобильной версией, кросбраузерностью и настройками ориентированными под Ваши задачи. Помощь в выборе стратегии развития сайта."/>
+   <meta property="og:site_name" content="artgas.pro" />
+   <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/>
+
+   
 
    <meta property="og:url" content="" />
    <meta property="og:type" content="website" />

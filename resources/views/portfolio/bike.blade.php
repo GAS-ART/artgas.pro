@@ -3,10 +3,27 @@
 
 <head>
    <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width">
+
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <link rel="stylesheet" type="text/css" href="{{asset('css/bike.css')}}">
-   <title>bicycle</title>
-   <meta name="viewport" content="width=device-width">
+
+   <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('img/favicon/apple-touch-icon.png') }}">
+   <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
+   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png')}} ">
+   <link rel="manifest" href="{{ asset('img/favicon/site.webmanifest')}}">
+
+
+   <title>Разработка сайтов по современным стандартам. Верстка сайтов. Создам качественный сайт.</title>
+   <meta name="description" content="Качественная адаптивно-резиновая верстка сайтов с мобильной версией, кросбраузерностью и настройками ориентированными под Ваши задачи. Любые виды сайтов - Landing Page, Интернет магазин, Сайт визитка. Использую самые передовые и продвинутые технологии разработки. Помощь в выборе стратегии развития сайта.">
+
+   <meta property="og:url" content="https://artgas.pro" />
+   <meta property="og:type" content="website" />
+   <meta property="og:title" content="Адаптивно-резиновая верстка сайтов." />
+   <meta property="og:description" content="Разработка сайтов по современным стандартам с мобильной версией, кросбраузерностью и настройками ориентированными под Ваши задачи. Помощь в выборе стратегии развития сайта."/>
+   <meta property="og:site_name" content="artgas.pro" />
+   <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/>
+
    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
    <script src="{{asset('js/bike.js')}}"></script>
