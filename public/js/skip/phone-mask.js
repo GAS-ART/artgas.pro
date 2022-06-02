@@ -6,7 +6,7 @@ window.addEventListener("DOMContentLoaded", function () {
          event.keyCode && (keyCode = event.keyCode);
          let pos = this.selectionStart;
          if (pos < 3) event.preventDefault();
-         let matrix = "+7 (___) ___ ____",
+         let matrix = "+3 (___) ___ ____",
             i = 0,
             def = matrix.replace(/\D/g, ""),
             val = this.value.replace(/\D/g, ""),

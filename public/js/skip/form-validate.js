@@ -1,11 +1,56 @@
 //"use strict"
 /*-------------------FORM-VALIDATE-JS----------------------------*/
 $("#skip").submit(function (form) {
-   validate();
+   validateLead();
    form.preventDefault();
 });
-function validate() {
+$("#certificate").submit(function (form) {
+   validateCertificate();
+   form.preventDefault();
+});
+$("#contacts").submit(function (form) {
+   validateContacts();
+   form.preventDefault();
+});
+
+function validateLead() {
+   let form = document.forms.popupform;
+   fail = validatePopupName(form.name.value);
+   fail += validatePopupPhone(form.phone.value);
+   if (fail == false) {
+      formSend(form);
+   }
+}
+
+function validateCertificate() {
+   let form = document.forms.mainform;
+   fail = validateName(form.name.value)
+   fail += validateProfessions(form.professions.value)
+   fail += validateGroup(form.group.value)
+   fail += validatePhone(form.phone.value)
+   fail += validateEmail(form.email.value)
+   if (fail == false) {
+      formSend(form);
+      return false
+   }
+}
+
+function validateContacts() {
+   let form = document.forms.pagecontactsform;
+   fail = validateName(form.name.value)
+   fail += validateDocs(form.docs.value)
+   fail += validatePhone(form.phone.value)
+   fail += validateEmail(form.email.value)
+   if (fail == false) {
+      formSend(form);
+      return false
+   } else { return false }
+}
+
+
+/*function validate() {
    if (document.forms.mainform) {
+      let form = document.forms.mainform;
       fail = validateName(form.name.value)
       fail += validateProfessions(form.professions.value)
       fail += validateGroup(form.group.value)
@@ -32,7 +77,7 @@ function validate() {
          return false
       } else { return false }
    }
-}
+}*/
 
 function formSend(form) {
    console.log(form);
