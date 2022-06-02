@@ -53,4 +53,6 @@ Route::get('/portfolio/skip/news', function () {return view('portfolio.skip.news
 Route::get('/portfolio/skip/certification', function () {return view('portfolio.skip.certification');})->name('skip_certification');
 Route::get('/portfolio/skip/contacts', function () {return view('portfolio.skip.contacts');})->name('skip_contacts');
 
+Route::get('/portfolio/bike', function () {return view('portfolio.bike');})->name('bike');
+
 

@@ -2408,7 +2408,7 @@
          <div class="portfolio__title">
             <h2 class="portfolio__title-text">@lang('portfolio.bike.title')</h2>
             <p class="portfolio__title-sub-text">@lang('portfolio.sub_text')</p>
-               <a href="https://colorit.agency/" target="_blank"
+               <a href="{{ route('bike') }}" target="_blank"
                   class="portfolio__title-link">bike</a>
          </div>
          <div class="portfolio__image image-portfolio">
