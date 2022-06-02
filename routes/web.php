@@ -46,27 +46,11 @@ Route::get('/{locale}', function ($locale) {
 })->name('home.lang');
 
 
-Route::get('/{locale}/portfolio/furino', function ($locale) {
-   
-   if (! in_array($locale, ['ua', 'en', 'ru'])) { 
+Route::get('/portfolio/furino', function () {return view('portfolio.furino');})->name('furino');
 
-      abort(404);
+Route::get('/portfolio/skip', function () {return view('portfolio.skip.skip');})->name('skip');
+Route::get('/portfolio/skip/news', function () {return view('portfolio.skip.news');})->name('skip_news');
+Route::get('/portfolio/skip/certification', function () {return view('portfolio.skip.certification');})->name('skip_certification');
+Route::get('/portfolio/skip/contacts', function () {return view('portfolio.skip.contacts');})->name('skip_contacts');
 
-   } else if ($locale == 'ua') {
 
-      App::setLocale('ua');
-      return view('furino');
-
-   } else if ($locale == 'en') {
-
-      App::setLocale('en');
-      return view('furino');
-
-   }
-   else if ($locale == 'ru') {
-
-    App::setLocale('ru');
-    return view('furino');
-
- }
-})->name('furino.lang');

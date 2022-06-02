@@ -685,7 +685,7 @@
       <div class="portfolio__container">
          <div class="portfolio__title">
             <h2 class="portfolio__title-text">@lang('portfolio.furino.title')</h2>
-            <a href="{{ route('furino.lang', ['locale' => __('language.current_lang')]) }}" target="_blank" class="portfolio__title-link">furino</a>
+            <a href="{{ route('furino') }}" target="_blank" class="portfolio__title-link">furino</a>
          </div>
          <div class="portfolio__image image-portfolio">
             <img src="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">
@@ -2240,13 +2240,13 @@
             <h2 class="portfolio__title-text">@lang('portfolio.scip.title')</h2>
             <p class="portfolio__title-sub-text">@lang('portfolio.sub_text')</p>
             <div class="portfolio__title-links">
-               <a href="https://colorit.agency/" target="_blank"
+               <a href="{{ route('skip') }}" target="_blank"
                   class="portfolio__title-link">@lang('portfolio.scip.link.main')</a>
-               <a href="https://colorit.agency/" target="_blank"
+               <a href="{{ route('skip_news') }}" target="_blank"
                   class="portfolio__title-link">@lang('portfolio.scip.link.news')</a>
-               <a href="https://colorit.agency/" target="_blank"
+               <a href="{{ route('skip_certification') }}" target="_blank"
                   class="portfolio__title-link">@lang('portfolio.scip.link.certification')</a>
-               <a href="https://colorit.agency/" target="_blank"
+               <a href="{{ route('skip_contacts') }}" target="_blank"
                   class="portfolio__title-link">@lang('portfolio.scip.link.contacts')</a>
             </div>
          </div>
