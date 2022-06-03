@@ -2229,7 +2229,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   btn.classList.add('_hold');
                 }
 
-                file = "http://localhost:3000/json/furino/products.json";
+                file = "https://artgas.pro/json/furino/products.json";
                 _context.next = 4;
                 return fetch(file, {
                   method: 'GET'
@@ -2425,7 +2425,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 productAdd = _args2.length > 3 && _args2[3] !== undefined ? _args2[3] : true;
                 makeOrder = _args2.length > 4 && _args2[4] !== undefined ? _args2[4] : false;
-                file = "http://localhost:3000/json/furino/products.json";
+                file = "https://artgas.pro/json/furino/products.json";
                 _context2.next = 5;
                 return fetch(file, {
                   method: 'GET'

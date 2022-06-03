@@ -402,7 +402,7 @@
          if (!btn.classList.contains('_hold')) {
             btn.classList.add('_hold');
          }
-         const file = "http://localhost:3000/json/furino/products.json";
+         const file = "https://artgas.pro/json/furino/products.json";
          let responce = await fetch(file, {
             method: 'GET',
          });
@@ -578,7 +578,7 @@
       }
 
       async function getPrice(cartProduct, productId, productBtn, productAdd = true, makeOrder = false) {
-         const file = "http://localhost:3000/json/furino/products.json";
+         const file = "https://artgas.pro/json/furino/products.json";
          let responce = await fetch(file, {
             method: 'GET',
          });
