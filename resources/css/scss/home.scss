@@ -113,8 +113,10 @@
          .feature-portfolio__container{
             .feature-portfolio__body:nth-child(3){
                .item-feature:nth-child(1){
-                  .item-feature__img::after{
-                     display: none;
+                  .item-feature__img{
+                     video{
+                        border-radius: 0 !important;
+                     }
                   }
                }
             }
