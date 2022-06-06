@@ -109,19 +109,27 @@
             background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
          }*/
       }
-  /*    &:nth-child(4){
+      &:nth-child(4){
          .feature-portfolio__container{
             .feature-portfolio__body:nth-child(3){
                .item-feature:nth-child(1){
                   .item-feature__img{
+                     display: inline-block;
+                     -webkit-border-radius: 50%;
+                     -moz-border-radius: 50%;
+                     border-radius: 50%;
+                     -khtml-border-radius: 50%;
                      video{
-                        border-radius: 0 !important;
+                        -webkit-border-radius: 50%;
+                        -moz-border-radius: 50%;
+                        -khtml-border-radius: 50%;
+                        vertical-align: middle;
                      }
                   }
                }
             }
          }
-      }*/
+      }
 
    }
   /* &__body{
