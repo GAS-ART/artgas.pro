@@ -1047,6 +1047,19 @@ body.lock {
        background:linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1,);
     }*/
   position: relative;
+  /*    &:nth-child(4){
+         .feature-portfolio__container{
+            .feature-portfolio__body:nth-child(3){
+               .item-feature:nth-child(1){
+                  .item-feature__img{
+                     video{
+                        border-radius: 0 !important;
+                     }
+                  }
+               }
+            }
+         }
+      }*/
 }
 @supports (margin-bottom: clamp( 2.5rem , 1.5909090909rem  +  4.5454545455vw , 5rem )) {
   .portfolio__item {
@@ -1091,9 +1104,6 @@ body.lock {
   width: 100%;
   height: 6px;
   background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1);
-}
-.portfolio__item:nth-child(4) .feature-portfolio__container .feature-portfolio__body:nth-child(3) .item-feature:nth-child(1) .item-feature__img video {
-  border-radius: 0 !important;
 }
 .portfolio__image {
   height: 600px;

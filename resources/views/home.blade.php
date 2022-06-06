@@ -2144,8 +2144,8 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <video autoplay="" playsinline="" muted="" loop="" preload="auto" class="gif">
-                                 <source type="video/webm" src="{{asset('img/home/clining/video.mp4')}}">
-                                 <source type="video/mp4" src="{{asset('img/home/clining/video.webm')}}">
+                                 <source type="video/mp4" src="{{asset('img/home/clining/video.mp4')}}">
+                                 <source type="video/webm" src="{{asset('img/home/clining/video.webm')}}">
                               </video>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.clining.video')</div>
