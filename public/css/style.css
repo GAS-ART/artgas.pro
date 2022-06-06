@@ -1092,16 +1092,9 @@ body.lock {
   height: 6px;
   background: linear-gradient(90deg, #288FB1, 15%, #000, 85%, #288FB1);
 }
-.portfolio__item:nth-child(4) .feature-portfolio__container .feature-portfolio__body:nth-child(3) .item-feature:nth-child(1) .item-feature__img {
-  display: inline-block;
-  border-radius: 50%;
-  -khtml-border-radius: 50%;
-}
 .portfolio__item:nth-child(4) .feature-portfolio__container .feature-portfolio__body:nth-child(3) .item-feature:nth-child(1) .item-feature__img video {
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -khtml-border-radius: 50%;
-  vertical-align: middle;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .portfolio__image {
   height: 600px;

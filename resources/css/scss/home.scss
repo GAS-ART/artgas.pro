@@ -114,16 +114,9 @@
             .feature-portfolio__body:nth-child(3){
                .item-feature:nth-child(1){
                   .item-feature__img{
-                     display: inline-block;
-                     -webkit-border-radius: 50%;
-                     -moz-border-radius: 50%;
-                     border-radius: 50%;
-                     -khtml-border-radius: 50%;
+                    
                      video{
-                        -webkit-border-radius: 50%;
-                        -moz-border-radius: 50%;
-                        -khtml-border-radius: 50%;
-                        vertical-align: middle;
+                       object-fit: cover;
                      }
                   }
                }
