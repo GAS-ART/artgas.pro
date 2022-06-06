@@ -1465,10 +1465,10 @@ body.lock {
   width: 228px;
   height: 228px;
 }
-.item-feature__img::before {
+.item-feature__img::after {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: -1;
   top: -0.25rem;
   left: -0.25rem;
   width: calc(100% + 0.5rem);
@@ -1487,9 +1487,8 @@ body.lock {
   -o-object-fit: fill;
      object-fit: fill;
   border-radius: 50%;
-  z-index: 5;
 }
-.item-feature__img:hover::before, .item-feature__img.active::before {
+.item-feature__img:hover::after, .item-feature__img.active::after {
   -webkit-animation: animateborder 2s ease infinite;
           animation: animateborder 2s ease infinite;
   box-shadow: 0px 1px 5px 2px #288FB1;
