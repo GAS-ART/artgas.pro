@@ -282,12 +282,12 @@
                <div class="products__items">
 
                   <div data-id="1" class="products__item item-product">
-                     <a href="#" class="item-product__img">
+                     <div class="item-product__img">
                         <picture>
                            <source srcset="{{asset('/img/furino/products/syltherine.webp')}}" type="image/webp"><img
                               src="{{asset('/img/furino/products/syltherine.jpg')}}" alt="Syltherine">
                         </picture>
-                     </a>
+                     </div>
                      <div class="item-product__description description-product">
                         <h5 class="description-product__tittle">Syltherine</h5>
                         <div class="description-product__text">Stylish cafe chair</div>
@@ -319,12 +319,12 @@
                   </div>
 
                   <div data-id="2" class="products__item item-product">
-                     <a href="#" class="item-product__img">
+                     <div class="item-product__img">
                         <picture>
                            <source srcset="{{asset('/img/furino/products/leviosa.webp')}}" type="image/webp"><img
                               src="{{asset('/img/furino/products/leviosa.jpg')}}" alt="Leviosa">
                         </picture>
-                     </a>
+                     </div>
                      <div class="item-product__description description-product">
                         <h5 class="description-product__tittle">Leviosa</h5>
                         <div class="description-product__text">Stylish cafe chair</div>
@@ -356,12 +356,12 @@
                   </div>
 
                   <div data-id="3" class="products__item item-product">
-                     <a href="#" class="item-product__img">
+                     <div class="item-product__img">
                         <picture>
                            <source srcset="{{asset('/img/furino/products/lolito.webp')}}" type="image/webp"><img
                               src="{{asset('/img/furino/products/lolito.jpg')}}" alt="Lolito">
                         </picture>
-                     </a>
+                     </div>
                      <div class="item-product__description description-product">
                         <h5 class="description-product__tittle">Lolito</h5>
                         <div class="description-product__text">Luxury big sofa</div>
@@ -393,12 +393,12 @@
                   </div>
 
                   <div data-id="4" class="products__item item-product">
-                     <a href="#" class="item-product__img">
+                     <div class="item-product__img">
                         <picture>
                            <source srcset="{{asset('/img/furino/products/respira.webp')}}" type="image/webp"><img
                               src="{{asset('/img/furino/products/respira.jpg')}}" alt="Respira">
                         </picture>
-                     </a>
+                     </div>
                      <div class="item-product__description description-product">
                         <h5 class="description-product__tittle">Respira</h5>
                         <div class="description-product__text">Minimalist fan</div>
@@ -882,7 +882,7 @@
       </div>
    </div>
    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-   <script src="{{asset('js/furino.js')}}"></script>
+   <script src="{{asset('js/furino.js') . '?_v=2'}}"></script>
 </body>
 
 </html>

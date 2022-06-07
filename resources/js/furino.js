@@ -419,9 +419,9 @@
          data.products.forEach((product) => {
             if (product.id > +currentLastProductBlockId && product.id < +currentLastProductBlockId + 5) {
                let productCard = `<div data-id="${product.id}" class="products__item item-product">
-               <a href="${product.linkUrl}" class="item-product__img">
+               <div class="item-product__img">
                <picture><source srcset="https://artgas.pro/img/furino/products/${product.image}.webp" type="image/webp"><img src="https://artgas.pro/img/furino/products/${product.image}.jpg" alt="${product.name}"></picture>
-               </a>
+               </div>
                <div class="item-product__description description-product">
                <h5 class="description-product__tittle">${product.name}</h5>
                <div class="description-product__text">${product.description}</div>
