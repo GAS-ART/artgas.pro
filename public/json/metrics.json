@@ -1,0 +1,14 @@
+{
+   "mm": {
+      "name": "Millimeter",
+      "baseMetric": "0.1"
+   },
+   "km": {
+      "name": "Kilometer",
+      "baseMetric": "100000"
+   },
+   "yd": {
+      "name": "Yard",
+      "baseMetric": "91.44"
+   }
+}
