@@ -10,12 +10,24 @@ window.onload = function () {
    //Add the metrics to the dropdown menu
    function includeMetricsToSelect(metrics) {
       selects.forEach(function (select) {
-         select.length = 0;
-         for (let i = 0; i < metrics.length; i++) {
-            let option = document.createElement("option");
-            option.value = metrics[i].unit;
-            option.text = metrics[i].name;
-            select.appendChild(option);
+         if (select.querySelectorAll('option').length == 0) {
+            for (let i = 0; i < metrics.length; i++) {
+               let option = document.createElement("option");
+               option.value = metrics[i].unit;
+               option.text = metrics[i].name;
+               select.appendChild(option);
+            }
+         } else {
+            //do not add those options that are already there
+            let options = select.querySelectorAll('option');
+            for (let i = 0; i < metrics.length; i++) {
+               if (!Array.from(options).find(function (option) { return option.value === metrics[i].unit })) {
+                  let option = document.createElement("option");
+                  option.value = metrics[i].unit;
+                  option.text = metrics[i].name;
+                  select.appendChild(option);
+               }
+            }
          }
       });
    }
@@ -75,7 +87,20 @@ window.onload = function () {
    function removeMetric(unit) {
       let metricToRemove = metrics.find(function (metric) { return metric.unit === unit; });
       metrics.splice(metrics.indexOf(metricToRemove), 1);
-      includeMetricsToSelect(metrics);
+      const optionToRemove = document.querySelectorAll(`option[value="${unit}"]`);
+      optionToRemove.forEach(function (option) {
+         option.remove();
+      });
+      clearResult(unit);
+   }
+
+   function clearResult(unit) {
+      const incomingResult = document.querySelector('.convert__data-incoming');
+      if (incomingResult.innerHTML.includes(unit)) {
+         texetField.value = '';
+         pastIncomingParameters();
+         convert();
+      }
    }
 
 
