@@ -1,7 +1,5 @@
 window.onload = function () {
 
-   const partUrlJsonSort_1 = '/json/sort_1.json'
-   const partUrlJsonSort_2 = '/json/sort_2.json'
    let tipeOfSort = document.querySelectorAll('.type-sort__checkbox');
 
    let sorts = {
@@ -33,17 +31,8 @@ window.onload = function () {
       }
    };
 
-   //get JSON url
-   function getJsonUrl() {
-      const fullUrl = window.location.href;
-      const url = fullUrl.split('/').slice(0, -1).join('/');
-      const metricsJsonFile = url + partUrlJsonSort_2; // enter the path to the JSON file
-      return metricsJsonFile;
-   }
-
    function writeIncomingData() {
       const incomingData = document.querySelector('.sort__incoming-data');
-      let jsonUrl = getJsonUrl();
       fetch("https://artgas.pro/json/sort_2.json")
          .then(response => response.json())
          .then(data => {
@@ -144,8 +133,7 @@ window.onload = function () {
       selectsKey.forEach(function (select) {
          select.addEventListener('change', function (e) {
             let selectedKey = select.value;
-            let jsonUrl = getJsonUrl();
-            fetch(jsonUrl)
+            fetch("https://artgas.pro/json/sort_2.json")
                .then(response => response.json())
                .then(data => {
                   writeValueDataToSelects(data.data, selectedKey, e.target);
