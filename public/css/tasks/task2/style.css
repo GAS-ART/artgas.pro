@@ -1,0 +1,90 @@
+.sort {
+   margin-top: 50px;
+}
+.sort__container {
+}
+.sort__incoming-data {
+   max-width:550px;
+   margin: 0 auto 30px auto;
+   text-align: right;
+   line-height: 1.5;
+}
+.sort__incoming-data-title{
+   margin: 0 auto 20px auto;
+   text-align: center;
+   max-width: unset;
+   font-size: 1.5rem;
+   font-weight: bold;
+}
+.sort__type {
+}
+.type-sort {
+}
+.type-sort__title { 
+   margin: 0 auto 20px auto;
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+.type-sort__items {
+   max-width: 300px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto 30px auto;
+   font-weight: bold;
+}
+.type-sort__item {
+}
+.type-sort__checkbox {
+}
+.sort__items {
+}
+.item-sort {
+}
+.item-sort__item {
+}
+.item-sort__title {
+   margin: 0 auto 20px auto;
+   text-align: center;
+   font-size: 1.2rem;
+   font-weight: bold;
+}
+.item-sort__selects {
+   max-width: 550px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 0 auto 30px auto;
+}
+.item-sort__selects-body{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+.item-sort__selects-body:not(:last-child) {
+   margin-right: 20px;
+}
+.item-sort__select {
+   width: 280px;
+   border: 2px solid #ccc;
+   height: 50px;
+}
+.sort__order {
+}
+.order-sort {
+}
+.order-sort__title {
+}
+.order-sort__selects {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-bottom: 30px;
+}
+.sort__output-data {
+   max-width:550px;
+   margin: 0 auto 30px auto;
+   text-align: right;
+   line-height: 1.5;
+}

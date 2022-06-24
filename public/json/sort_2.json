@@ -1,0 +1,44 @@
+{
+   "data": [
+      {
+         "user": "greg@mail.com",
+         "rating": 20,
+         "disabled": false
+      },
+      {
+         "user": "mike@mail.com",
+         "rating": 14,
+         "disabled": false
+      },
+      {
+         "user": "john@mail.com",
+         "rating": 20,
+         "disabled": true
+      },
+      {
+         "user": "asa@mail.com",
+         "rating": 20,
+         "disabled": false
+      },
+      {
+         "user": "rdsds@mail.com",
+         "rating": 14,
+         "disabled": false
+      },
+      {
+         "user": "bfd@mail.com",
+         "rating": 14,
+         "disabled": true
+      },
+      {
+         "user": "fde@mail.com",
+         "rating": 14,
+         "disabled": true
+      },
+      {
+         "user": "sddsdssds@mail.com",
+         "rating": 20,
+         "disabled": true
+      }
+   ]
+}

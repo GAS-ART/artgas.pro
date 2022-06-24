@@ -56,5 +56,6 @@ Route::get('/portfolio/skip/contacts', function () {return view('portfolio.skip.
 Route::get('/portfolio/bike', function () {return view('portfolio.bike');})->name('bike');
 
 Route::get('/portfolio/newtask1', function () {return view('task.task1');})->name('task1');
+Route::get('/portfolio/task_2', function () {return view('task.task2');})->name('task2');
 
 
