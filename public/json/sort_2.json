@@ -16,7 +16,7 @@
          "disabled": true
       },
       {
-         "user": "asa@mail.com",
+         "user": "Asa@mail.com",
          "rating": 20,
          "disabled": false
       },
@@ -27,6 +27,11 @@
       },
       {
          "user": "bfd@mail.com",
+         "rating": 14,
+         "disabled": true
+      },
+      {
+         "user": "asa@mail.com",
          "rating": 14,
          "disabled": true
       },

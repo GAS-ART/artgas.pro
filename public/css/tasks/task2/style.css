@@ -88,3 +88,24 @@
    text-align: right;
    line-height: 1.5;
 }
+.item-sort__row{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0 auto 20px auto;
+}
+.item-sort__btn{
+   text-align: center;
+   margin: 50px 0;
+}
+.item-sort__btn-add{
+   margin-right: 20px;
+   padding: 10px 20px;
+   border: 2px solid #ccc;
+   min-width: 104px;
+}
+.item-sort__btn-remove{
+   padding: 10px 20px;
+   border: 2px solid #ccc;
+   min-width: 104px;
+}
