@@ -13,7 +13,7 @@
             <div class="svg-messengers__label">WhatsApp</div>
          </div>
          <div class="svg-messengers__icon telegram-icon">
-            <a href="tg://resolve?domain=GAS_ART" class="svg-messengers__telegram">
+            <a href="tg://resolve?domain=ARTGAS_PRO" class="svg-messengers__telegram">
                <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                   style="width: 100%; height: 100%; fill: rgb(255, 255, 255); stroke: none;">
                   <path d="M15.02 20.814l9.31-12.48L9.554 17.24l1.92 6.42c.225.63.114.88.767.88l.344-5.22 2.436 1.494z"
