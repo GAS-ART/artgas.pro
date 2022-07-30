@@ -1,9 +1,10 @@
 export { makeSort, removeSort, makeSelects, makeBtn };
 
-function makeSort(sortName, key = false, value = false, moreBtn = false) {
+function makeSort(sortName, key = false, value = false, moreBtn = false, ownPropertiesValues = false) {
    const sortTypesBody = document.querySelector('.type-sort__items');
    const html = `<div class="type-sort__item"> <input class="type-sort__checkbox" type="checkbox" id="${sortName}" data-key="${key}" data-value="${value}" data-btn="${moreBtn}"> <label for="${sortName}">${sortName}</label> </div>`;
    sortTypesBody.insertAdjacentHTML('beforeend', html);
+   if (ownPropertiesValues) return [sortName, ownPropertiesValues];
 }
 
 function removeSort(html) {
@@ -20,7 +21,7 @@ function makeSelects(selectKey = false, selectValue = false, sort, id = 0) {
       document.querySelector(`[data-sort-body="${sort}"]`).insertAdjacentHTML('beforeend', row);
    }
    if (selectKey == 'true') {
-      const selectKey = `<div class="item-sort__selects-body"><label for="Key">Key</label><select data-sort="${sort}" data-id="key-${sort}_${id}" data-type="key" class="item-sort__select select-key" name="key"><option value="select_key">Select key</option></select></div>`
+      const selectKey = `<div class="item-sort__selects-body"><label for="Key">Key</label><select data-sort="${sort}" data-id="key-${sort}_${id}" data-type="key" data-value='${selectValue}' class="item-sort__select select-key" name="key"><option value="select_key">Select key</option></select></div>`
       const selectBody = document.querySelector(`[data-sort-body="${sort}"] .item-sort__row:last-child`);
       selectBody.insertAdjacentHTML('beforeend', selectKey);
    }

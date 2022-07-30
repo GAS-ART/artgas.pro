@@ -19,26 +19,21 @@
             <div class="sort__container">
                <h1 class="sort__incoming-data-title">Incoming data:</h1>
                <div class="sort__incoming-data">
-
                </div>
                <div class="sort__type type-sort">
                   <h2 class="type-sort__title">Select the sort type:</h2>
                   <div class="type-sort__items">
-
                   </div>
                </div>
             </div>
             <div class="sort__items item-sort">
-
             </div>
             <div class="sort__output-data">
                <h2 class="sort__output-data-title"></h2>
             </div>
+         </section>
+      </main>
    </div>
-   </section>
-   </main>
-   </div>
-
 </body>
 
 </html>

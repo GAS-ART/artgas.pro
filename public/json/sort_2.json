@@ -44,6 +44,11 @@
          "user": "sddsdssds@mail.com",
          "rating": 20,
          "disabled": true
+      },
+      {
+         "user": "ASa@mail.com",
+         "rating": 14,
+         "disabled": true
       }
    ]
 }
