@@ -136,17 +136,18 @@
    }*/
    &__image {
       $border-width: 6px;
-      height: 600px;
+      //height: 600px;
       position: relative;
       cursor: pointer;
       border-radius: $border-width;
       margin-bottom: 40px;
-      @media (max-width: em(1150)) {
+      @include adaptiveValueREM('height',600,200,1150,320,1);
+      /*@media (max-width: em(1150)) {
       height: 450px;
       }
       @media (max-width: $mobile) {
          height: 200px;
-         }
+         }*/
       &::after{
          content: '';
          position: absolute;
