@@ -584,8 +584,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/colorit/colorit_lang_1.jpg')}}"
-                                 alt="@lang('portfolio.colorit.lang')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/colorit/colorit_lang_1.webp')}}">
+                                 <source srcset="{{asset('/img/home/colorit/colorit_lang_1.jpg')}}">
+                                 <img src="{{asset('img/home/colorit/colorit_lang_1.jpg')}}"
+                                    alt="@lang('portfolio.colorit.lang')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.colorit.lang')</div>
                         </div>
@@ -598,8 +602,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/colorit/colorit_run.jpg')}}"
-                                 alt="@lang('portfolio.colorit.ticker')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/colorit/colorit_run.webp')}}">
+                                 <source srcset="{{asset('/img/home/colorit/colorit_run.jpg')}}">
+                                 <img src="{{asset('img/home/colorit/colorit_run.jpg')}}"
+                                    alt="@lang('portfolio.colorit.ticker')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.colorit.ticker')</div>
                         </div>
@@ -616,8 +624,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/colorit/colorit_messenger.jpg')}}"
-                                 alt="@lang('portfolio.colorit.messenger')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/colorit/colorit_messenger.webp')}}">
+                                 <source srcset="{{asset('/img/home/colorit/colorit_messenger.jpg')}}">
+                                 <img src="{{asset('img/home/colorit/colorit_messenger.jpg')}}"
+                                    alt="@lang('portfolio.colorit.messenger')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.colorit.messenger')</div>
                         </div>
@@ -632,8 +644,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/colorit/colorit_portfolio.jpg')}}"
-                                 alt="@lang('portfolio.colorit.loading')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/colorit/colorit_portfolio.webp')}}">
+                                 <source srcset="{{asset('/img/home/colorit/colorit_portfolio.jpg')}}">
+                                 <img src="{{asset('img/home/colorit/colorit_portfolio.jpg')}}"
+                                    alt="@lang('portfolio.colorit.loading')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.colorit.loading')</div>
                         </div>
@@ -838,7 +854,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/furino/cart_1.jpg')}}" alt="@lang('portfolio.furino.cart')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/furino/cart_1.webp')}}">
+                                 <source srcset="{{asset('/img/home/furino/cart_1.jpg')}}">
+                                 <img src="{{asset('img/home/furino/cart_1.jpg')}}"
+                                    alt="@lang('portfolio.furino.cart')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.furino.cart')</div>
                         </div>
@@ -851,7 +872,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/furino/slider.jpg')}}" alt="@lang('portfolio.furino.slider')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/furino/slider.webp')}}">
+                                 <source srcset="{{asset('/img/home/furino/slider.jpg')}}">
+                                 <img src="{{asset('img/home/furino/slider.jpg')}}"
+                                    alt="@lang('portfolio.furino.slider')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.furino.slider')</div>
                         </div>
@@ -868,8 +894,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/furino/loading.jpg')}}"
-                                 alt="@lang('portfolio.furino.loading')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/furino/loading.webp')}}">
+                                 <source srcset="{{asset('/img/home/furino/loading.jpg')}}">
+                                 <img src="{{asset('img/home/furino/loading.jpg')}}"
+                                    alt="@lang('portfolio.furino.loading')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.furino.loading')</div>
                         </div>
@@ -884,8 +914,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/furino/gallery.jpg')}}"
-                                 alt="@lang('portfolio.furino.gallery')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/furino/gallery.webp')}}">
+                                 <source srcset="{{asset('/img/home/furino/gallery.jpg')}}">
+                                 <img src="{{asset('img/home/furino/gallery.jpg')}}"
+                                    alt="@lang('portfolio.furino.gallery')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.furino.gallery')</div>
                         </div>
@@ -1514,7 +1548,11 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/zorya/road.jpg')}}" alt="@lang('portfolio.zorya.road')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/zorya/road.webp')}}">
+                                 <source srcset="{{asset('/img/home/zorya/road.jpg')}}">
+                                 <img src="{{asset('img/home/zorya/road.jpg')}}" alt="@lang('portfolio.zorya.road')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.zorya.road')</div>
                         </div>
@@ -1527,7 +1565,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/zorya/filter.jpg')}}" alt="@lang('portfolio.zorya.filter')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/zorya/filter.webp')}}">
+                                 <source srcset="{{asset('/img/home/zorya/filter.jpg')}}">
+                                 <img src="{{asset('img/home/zorya/filter.jpg')}}"
+                                    alt="@lang('portfolio.zorya.filter')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.zorya.filter')</div>
                         </div>
@@ -1544,7 +1587,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/zorya/claster.jpg')}}" alt="@lang('portfolio.zorya.claster')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/zorya/claster.webp')}}">
+                                 <source srcset="{{asset('/img/home/zorya/claster.jpg')}}">
+                                 <img src="{{asset('img/home/zorya/claster.jpg')}}"
+                                    alt="@lang('portfolio.zorya.claster')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.zorya.claster')</div>
                         </div>
@@ -1559,7 +1607,12 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/zorya/marker.jpg')}}" alt="@lang('portfolio.zorya.marker')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/zorya/marker.webp')}}">
+                                 <source srcset="{{asset('/img/home/zorya/marker.jpg')}}">
+                                 <img src="{{asset('img/home/zorya/marker.jpg')}}"
+                                    alt="@lang('portfolio.zorya.marker')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.zorya.marker')</div>
                         </div>
@@ -2197,7 +2250,11 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/clining/ga.jpg')}}" alt="@lang('portfolio.clining.ga')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/clining/ga.webp')}}">
+                                 <source srcset="{{asset('/img/home/clining/ga.jpg')}}">
+                                 <img src="{{asset('img/home/clining/ga.jpg')}}" alt="@lang('portfolio.clining.ga')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.clining.ga')</div>
                         </div>
@@ -2210,7 +2267,11 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/clining/ads.jpg')}}" alt="@lang('portfolio.clining.ads')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/clining/ads.webp')}}">
+                                 <source srcset="{{asset('/img/home/clining/ads.jpg')}}">
+                                 <img src="{{asset('img/home/clining/ads.jpg')}}" alt="@lang('portfolio.clining.ads')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.clining.ads')</div>
                         </div>
@@ -2245,7 +2306,11 @@
                      <div class="item-feature__body">
                         <div class="item-feature__row">
                            <div class="item-feature__img">
-                              <img src="{{asset('img/home/clining/img.jpg')}}" alt="@lang('portfolio.clining.img')">
+                              <picture>
+                                 <source srcset="{{asset('/img/home/clining/img.webp')}}">
+                                 <source srcset="{{asset('/img/home/clining/img.jpg')}}">
+                                 <img src="{{asset('img/home/clining/img.jpg')}}" alt="@lang('portfolio.clining.img')">
+                              </picture>
                            </div>
                            <div class="item-feature__text ">@lang('portfolio.clining.img')</div>
                         </div>
