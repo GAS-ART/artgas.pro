@@ -332,10 +332,48 @@
       padding: 0;
       }
    }
-
+   &__content{
+      display: flex;
+      align-items: center;
+      &:hover{
+         .image-portfolio__icon{
+            transform: scale(1.2);
+         }
+      }
+   }
    &__icon{
       margin-right: 5px;
       transition: all 0.3s ease 0s;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease 0s;
+      &._laravel{
+         background-image: url('/img/icons/laravel.svg');
+      }
+      &._html{
+         background-image: url('/img/icons/html.svg');
+      }
+      &._scss{
+         background-image: url('/img/icons/scss.svg');
+      }
+      &._css{
+         background-image: url('/img/icons/css.svg');
+      }
+      &._js{
+         background-image: url('/img/icons/js.svg');
+      }
+      &._php{
+         background-image: url('/img/icons/php.svg');
+      }
+      &._gulp{
+         background-image: url('/img/icons/gulp.svg');
+      }
+      @media (max-width: $mobile) {
+         width: 15px;
+         height: 15px;
+         }
       svg{
          transition: all 0.3s ease 0s;
          width: 30px;

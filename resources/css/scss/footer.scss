@@ -113,6 +113,9 @@
       justify-content: flex-start;
       white-space: nowrap;
       width: min-content;
+      &:not(:last-child){
+         margin-bottom: 10px;
+      }
       &:hover{
          .footer__icon{
             transform: scale(1.2);
@@ -139,6 +142,51 @@
    &__icon {
       transition: all 0.5s ease 0s;
       margin-right: 10px;
+      width: 30px;
+      height: 30px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: all 0.3s ease 0s;
+      &._gulp{
+         background-image: url('/img/icons/gulp.svg');
+      }
+      &._github{
+         background-image: url('/img/icons/github.svg');
+      }
+      &._git{
+         background-image: url('/img/icons/git.svg');
+      }
+      &._vscode{
+         background-image: url('/img/icons/vscode.svg');
+      }
+      &._ga{
+         background-image: url('/img/icons/ga.svg');
+      }
+      &._ads{
+         background-image: url('/img/icons/ads.svg');
+      }
+      &._laravel{
+         background-image: url('/img/icons/laravel.svg');
+      }
+      &._html{
+         background-image: url('/img/icons/html.svg');
+      }
+      &._scss{
+         background-image: url('/img/icons/scss.svg');
+      }
+      &._css{
+         background-image: url('/img/icons/css.svg');
+      }
+      &._js{
+         background-image: url('/img/icons/js.svg');
+      }
+      &._php{
+         background-image: url('/img/icons/php.svg');
+      }
+      &._wordpress{
+         background-image: url('/img/icons/wordpress.svg');
+      }
       svg{
          width:30px;
          height: 30px;
