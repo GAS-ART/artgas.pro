@@ -37,7 +37,19 @@
                <img src="{{asset('/img/home/colorit/colorit_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
             </picture>
 
-            <img src="{{asset('/img/home/colorit/colorit_2_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mobs.jpg')}}">
+
+               <img src="{{asset('/img/home/colorit/colorit_2_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
@@ -701,8 +713,31 @@
             <a href="{{ route('furino') }}" target="_blank" class="portfolio__title-link">furino</a>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">
-            <img src="{{asset('/img/home/furino/furino_2_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mobs.jpg')}}">
+               <img src="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
+
+            <picture>
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mobs.jpg')}}">
+               <img src="{{asset('/img/home/furino/furino_2_1528x815.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
@@ -930,8 +965,21 @@
             <a href="https://zoryadnepra.com/shops" target="_blank" class="portfolio__title-link">zoryadnepra</a>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/zorya/zorya.jpg')}}" alt="@lang('portfolio.zorya.title')">
-            <img src="{{asset('/img/home/zorya/zorya_1.jpg')}}" alt="@lang('portfolio.zorya.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/zorya/zorya.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_mobs.jpg')}}">
+               <img src="{{asset('/img/home/zorya/zorya.jpg')}}" alt="@lang('portfolio.zorya.title')">
+            </picture>
+
+            <picture>
+               <source srcset="{{asset('/img/home/zorya/zorya_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/zorya/zorya_1_mobs.jpg')}}">
+               <img src="{{asset('/img/home/zorya/zorya_1.jpg')}}" alt="@lang('portfolio.zorya.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
@@ -1591,8 +1639,31 @@
             <a href="https://xn--c1ajagfnb.dp.ua/" target="_blank" class="portfolio__title-link">клининг.dp.ua</a>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/clining/clining.jpg')}}" alt="@lang('portfolio.clining.title')">
-            <img src="{{asset('/img/home/clining/clining_1.jpg')}}" alt="@lang('portfolio.clining.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/clining/clining.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/clining/clining_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/clining/clining_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/clining/clining_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/clining/clining.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/clining/clining_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/clining/clining_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/clining/clining_mobs.jpg')}}">
+               <img src="{{asset('/img/home/clining/clining.jpg')}}" alt="@lang('portfolio.clining.title')">
+            </picture>
+
+            <picture>
+               <source srcset="{{asset('/img/home/clining/clining_1.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/clining/clining_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/clining/clining_1_mobs.jpg')}}">
+               <img src="{{asset('/img/home/clining/clining_1.jpg')}}" alt="@lang('portfolio.clining.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
@@ -2264,8 +2335,30 @@
             </div>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/scip/scip.jpg')}}" alt="@lang('portfolio.furino.title')">
-            <img src="{{asset('/img/home/scip/scip_1.jpg')}}" alt="@lang('portfolio.furino.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/scip/scip.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/scip/scip_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/scip/scip_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/scip/scip_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/scip/scip.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/scip/scip_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/scip/scip_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/scip/scip_mobs.jpg')}}">
+               <img src="{{asset('/img/home/scip/scip.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
+            <picture>
+               <source srcset="{{asset('/img/home/scip/scip_1.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/scip/scip_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/scip/scip_1_mobs.jpg')}}">
+               <img src="{{asset('/img/home/scip/scip_1.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
@@ -2424,8 +2517,30 @@
             <a href="{{ route('bike') }}" target="_blank" class="portfolio__title-link">bike</a>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/bike/bike.jpg')}}" alt="@lang('portfolio.furino.title')">
-            <img src="{{asset('/img/home/bike/bike_1.jpg')}}" alt="@lang('portfolio.furino.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/bike/bike.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/bike/bike_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/bike/bike_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/bike/bike_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/bike/bike.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/bike/bike_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/bike/bike_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/bike/bike_mobs.jpg')}}">
+               <img src="{{asset('/img/home/bike/bike.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
+            <picture>
+               <source srcset="{{asset('/img/home/bike/bike_1.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/bike/bike_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/bike/bike_1_mobs.jpg')}}">
+               <img src="{{asset('/img/home/bike/bike_1.jpg')}}" alt="@lang('portfolio.furino.title')">
+            </picture>
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
                   <div class="image-portfolio__development--body">
