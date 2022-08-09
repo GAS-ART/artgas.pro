@@ -32,7 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Montserrat:ital,wght@0,400;0,500;0,600;1,600&display=swap" rel="stylesheet">
 
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=8'}}"> 
+   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=9'}}"> 
    @if(Request::is('furino'))
    <link rel="stylesheet" href="{{asset('css/furino.css')}}">
    @endif
