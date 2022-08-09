@@ -461,9 +461,15 @@ z-index: 200;
 		cursor: pointer;
 		&.ua{
 			background-image: url('/img/flags/ua/2.jpg');
+			@supports (background-image: url('/img/flags/ua/2.webp')) {
+				background-image: url('/img/flags/ua/2.webp')
+			}
+			
+			
 		}
 		&.en{
 			background-image: url('/img/flags/en/1.jpg');
+			background-image: url('/img/flags/en/1.webp');
 		}
 		&.ru{
 			position: relative;
@@ -475,6 +481,7 @@ z-index: 200;
 		}
 	}
 }
+
 @keyframes neon {
 	from {
 		 text-shadow:

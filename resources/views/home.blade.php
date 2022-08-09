@@ -23,10 +23,13 @@
          </div>
          <div class="portfolio__image image-portfolio">
             <picture>
-               <source srcset="{{asset('/img/home/colorit/colorit_1587_1.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_1587_1.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_1587_1_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_1587_1_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_1587_1_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/colorit/colorit_1587_1.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/colorit/colorit_1587_1_tab.jpg')}} " media="(min-width: 768px)">
@@ -37,10 +40,13 @@
             </picture>
 
             <picture>
-               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_2_1587_1.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_2_1587_1_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_2_1587_1_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/colorit/colorit_2_1587_1_tab.jpg')}} " media="(min-width: 768px)">
@@ -100,7 +106,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/colorit/colorit_lang_1.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_lang_1.webp')}}">
                                  <source srcset="{{asset('/img/home/colorit/colorit_lang_1.jpg')}}">
                                  <img src="{{asset('img/home/colorit/colorit_lang_1.jpg')}}"
                                     alt="@lang('portfolio.colorit.lang')">
@@ -118,7 +124,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/colorit/colorit_run.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/colorit/colorit_run.webp')}}">
                                  <source srcset="{{asset('/img/home/colorit/colorit_run.jpg')}}">
                                  <img src="{{asset('img/home/colorit/colorit_run.jpg')}}"
                                     alt="@lang('portfolio.colorit.ticker')">
@@ -140,7 +146,8 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/colorit/colorit_messenger.webp')}}">
+                                 <source type="image/webp"
+                                    srcset="{{asset('/img/home/colorit/colorit_messenger.webp')}}">
                                  <source srcset="{{asset('/img/home/colorit/colorit_messenger.jpg')}}">
                                  <img src="{{asset('img/home/colorit/colorit_messenger.jpg')}}"
                                     alt="@lang('portfolio.colorit.messenger')">
@@ -160,7 +167,8 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/colorit/colorit_portfolio.webp')}}">
+                                 <source type="image/webp"
+                                    srcset="{{asset('/img/home/colorit/colorit_portfolio.webp')}}">
                                  <source srcset="{{asset('/img/home/colorit/colorit_portfolio.jpg')}}">
                                  <img src="{{asset('img/home/colorit/colorit_portfolio.jpg')}}"
                                     alt="@lang('portfolio.colorit.loading')">
@@ -245,10 +253,13 @@
          </div>
          <div class="portfolio__image image-portfolio">
             <picture>
-               <source srcset="{{asset('/img/home/furino/furino_1_1528x815.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/furino/furino_1_1528x815_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_1_1528x815.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_1_1528x815_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_1_1528x815_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_1_1528x815_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/furino/furino_1_1528x815.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/furino/furino_1_1528x815_tab.jpg')}} " media="(min-width: 768px)">
@@ -258,10 +269,13 @@
             </picture>
 
             <picture>
-               <source srcset="{{asset('/img/home/furino/furino_2_1528x815.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/furino/furino_2_1528x815_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_2_1528x815.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_2_1528x815_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_2_1528x815_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/furino/furino_2_1528x815_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/furino/furino_2_1528x815.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/furino/furino_2_1528x815_tab.jpg')}} " media="(min-width: 768px)">
@@ -314,7 +328,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/furino/cart_1.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/furino/cart_1.webp')}}">
                                  <source srcset="{{asset('/img/home/furino/cart_1.jpg')}}">
                                  <img src="{{asset('img/home/furino/cart_1.jpg')}}"
                                     alt="@lang('portfolio.furino.cart')">
@@ -332,7 +346,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/furino/slider.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/furino/slider.webp')}}">
                                  <source srcset="{{asset('/img/home/furino/slider.jpg')}}">
                                  <img src="{{asset('img/home/furino/slider.jpg')}}"
                                     alt="@lang('portfolio.furino.slider')">
@@ -354,7 +368,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/furino/loading.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/furino/loading.webp')}}">
                                  <source srcset="{{asset('/img/home/furino/loading.jpg')}}">
                                  <img src="{{asset('img/home/furino/loading.jpg')}}"
                                     alt="@lang('portfolio.furino.loading')">
@@ -374,7 +388,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/furino/gallery.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/furino/gallery.webp')}}">
                                  <source srcset="{{asset('/img/home/furino/gallery.jpg')}}">
                                  <img src="{{asset('img/home/furino/gallery.jpg')}}"
                                     alt="@lang('portfolio.furino.gallery')">
@@ -524,7 +538,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/zorya/road.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/zorya/road.webp')}}">
                                  <source srcset="{{asset('/img/home/zorya/road.jpg')}}">
                                  <img src="{{asset('img/home/zorya/road.jpg')}}" alt="@lang('portfolio.zorya.road')">
                               </picture>
@@ -541,7 +555,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/zorya/filter.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/zorya/filter.webp')}}">
                                  <source srcset="{{asset('/img/home/zorya/filter.jpg')}}">
                                  <img src="{{asset('img/home/zorya/filter.jpg')}}"
                                     alt="@lang('portfolio.zorya.filter')">
@@ -563,7 +577,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/zorya/claster.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/zorya/claster.webp')}}">
                                  <source srcset="{{asset('/img/home/zorya/claster.jpg')}}">
                                  <img src="{{asset('img/home/zorya/claster.jpg')}}"
                                     alt="@lang('portfolio.zorya.claster')">
@@ -583,7 +597,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/zorya/marker.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/zorya/marker.webp')}}">
                                  <source srcset="{{asset('/img/home/zorya/marker.jpg')}}">
                                  <img src="{{asset('img/home/zorya/marker.jpg')}}"
                                     alt="@lang('portfolio.zorya.marker')">
@@ -668,10 +682,13 @@
          </div>
          <div class="portfolio__image image-portfolio">
             <picture>
-               <source srcset="{{asset('/img/home/clining/clining.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/clining/clining_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/clining/clining_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/clining/clining_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/clining/clining.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/clining/clining_tab.jpg')}} " media="(min-width: 768px)">
@@ -681,10 +698,13 @@
             </picture>
 
             <picture>
-               <source srcset="{{asset('/img/home/clining/clining_1.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/clining/clining_1_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/clining/clining_1_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/clining/clining_1_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_1.webp')}}"
+                  media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_1_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_1_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/clining/clining_1_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/clining/clining_1.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/clining/clining_1_tab.jpg')}} " media="(min-width: 768px)">
@@ -743,7 +763,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/clining/ga.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/clining/ga.webp')}}">
                                  <source srcset="{{asset('/img/home/clining/ga.jpg')}}">
                                  <img src="{{asset('img/home/clining/ga.jpg')}}" alt="@lang('portfolio.clining.ga')">
                               </picture>
@@ -760,7 +780,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/clining/ads.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/clining/ads.webp')}}">
                                  <source srcset="{{asset('/img/home/clining/ads.jpg')}}">
                                  <img src="{{asset('img/home/clining/ads.jpg')}}" alt="@lang('portfolio.clining.ads')">
                               </picture>
@@ -799,7 +819,7 @@
                         <div class="item-feature__row">
                            <div class="item-feature__img">
                               <picture>
-                                 <source srcset="{{asset('/img/home/clining/img.webp')}}">
+                                 <source type="image/webp" srcset="{{asset('/img/home/clining/img.webp')}}">
                                  <source srcset="{{asset('/img/home/clining/img.jpg')}}">
                                  <img src="{{asset('img/home/clining/img.jpg')}}" alt="@lang('portfolio.clining.img')">
                               </picture>
@@ -893,10 +913,10 @@
          </div>
          <div class="portfolio__image image-portfolio">
             <picture>
-               <source srcset="{{asset('/img/home/scip/scip.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/scip/scip_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/scip/scip_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/scip/scip_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip.webp')}}" media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_tab.webp')}} " media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_mob.webp')}} " media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/scip/scip.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/scip/scip_tab.jpg')}} " media="(min-width: 768px)">
@@ -905,10 +925,12 @@
                <img src="{{asset('/img/home/scip/scip.jpg')}}" alt="@lang('portfolio.furino.title')">
             </picture>
             <picture>
-               <source srcset="{{asset('/img/home/scip/scip_1.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/scip/scip_1_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/scip/scip_1_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/scip/scip_1_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_1.webp')}}" media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_1_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_1_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/scip/scip_1_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/scip/scip_1.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/scip/scip_1_tab.jpg')}} " media="(min-width: 768px)">
@@ -1019,10 +1041,10 @@
          </div>
          <div class="portfolio__image image-portfolio">
             <picture>
-               <source srcset="{{asset('/img/home/bike/bike.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/bike/bike_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/bike/bike_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/bike/bike_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike.webp')}}" media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_tab.webp')}} " media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_mob.webp')}} " media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/bike/bike.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/bike/bike_tab.jpg')}} " media="(min-width: 768px)">
@@ -1031,10 +1053,12 @@
                <img src="{{asset('/img/home/bike/bike.jpg')}}" alt="@lang('portfolio.furino.title')">
             </picture>
             <picture>
-               <source srcset="{{asset('/img/home/bike/bike_1.webp')}}" media="(min-width: 992px)">
-               <source srcset="{{asset('/img/home/bike/bike_1_tab.webp')}} " media="(min-width: 768px)">
-               <source srcset="{{asset('/img/home/bike/bike_1_mob.webp')}} " media="(min-width: 449px)">
-               <source srcset="{{asset('/img/home/bike/bike_1_mobs.webp')}}">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_1.webp')}}" media="(min-width: 992px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_1_tab.webp')}} "
+                  media="(min-width: 768px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_1_mob.webp')}} "
+                  media="(min-width: 449px)">
+               <source type="image/webp" srcset="{{asset('/img/home/bike/bike_1_mobs.webp')}}">
 
                <source srcset="{{asset('/img/home/bike/bike_1.jpg')}}" media="(min-width: 992px)">
                <source srcset="{{asset('/img/home/bike/bike_1_tab.jpg')}} " media="(min-width: 768px)">
