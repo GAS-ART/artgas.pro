@@ -104,12 +104,27 @@
    &__whatsapp {
       width: 40px;
       height: 40px;
-      
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease 0s;
+      background-image: url('/img/icons/whatsapp.svg');
    }
 
    &__telegram {
       width: 40px;
       height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease 0s;
+      background-image: url('/img/icons/telegram.svg');
+   }
+   &__viber {
+      width: 40px;
+      height: 40px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transition: all 0.3s ease 0s;
+      background-image: url('/img/icons/viber.svg');
    }
    &__label{
       display: none;
