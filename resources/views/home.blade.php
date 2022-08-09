@@ -23,7 +23,20 @@
             <a href="https://colorit.agency/" target="_blank" class="portfolio__title-link">colorit.agency</a>
          </div>
          <div class="portfolio__image image-portfolio">
-            <img src="{{asset('/img/home/colorit/colorit_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
+            <picture>
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1.webp')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_tab.webp')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mob.webp')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mobs.webp')}}">
+
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1.jpg')}}" media="(min-width: 992px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_tab.jpg')}} " media="(min-width: 768px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mob.jpg')}} " media="(min-width: 449px)">
+               <source srcset="{{asset('/img/home/colorit/colorit_1587_1_mobs.jpg')}}">
+
+               <img src="{{asset('/img/home/colorit/colorit_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
+            </picture>
+
             <img src="{{asset('/img/home/colorit/colorit_2_1587_1.jpg')}}" alt="@lang('portfolio.colorit.title')">
             <div class="image-portfolio__body">
                <div class="image-portfolio__development">
@@ -2408,8 +2421,7 @@
          <div class="portfolio__title">
             <h2 class="portfolio__title-text">@lang('portfolio.bike.title')</h2>
             <p class="portfolio__title-sub-text">@lang('portfolio.sub_text')</p>
-               <a href="{{ route('bike') }}" target="_blank"
-                  class="portfolio__title-link">bike</a>
+            <a href="{{ route('bike') }}" target="_blank" class="portfolio__title-link">bike</a>
          </div>
          <div class="portfolio__image image-portfolio">
             <img src="{{asset('/img/home/bike/bike.jpg')}}" alt="@lang('portfolio.furino.title')">
